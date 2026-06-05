@@ -60,3 +60,8 @@ You don't earn trust by asking for it. You earn it by being the same person ever
 - [[the-debrief|The Debrief]] — where this philosophy gets applied most directly
 - [[training-ftos|Training FTOs]] — how to teach it to others
 - [[first-90-days|First 90 Days]] — how to start building it
+
+---
+
+> [!tip] Take this further
+> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=leadership-philosophy)** is on Gumroad. Free with your email, or a few bucks to own.

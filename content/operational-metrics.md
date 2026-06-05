@@ -5,7 +5,7 @@ tags: [metrics, data, operations, performance]
 
 # Operational Metrics
 
-Data doesn't manage itself. Most EMS supervisors inherit a dashboard full of numbers and no clear sense of which ones actually matter or what to do when they move.
+Most EMS supervisors inherit a dashboard full of numbers and no clear sense of which ones actually matter or what to do when they move.
 
 Here's how I think about it.
 
@@ -86,3 +86,10 @@ Same data. Different frame.
 - [[fleet-safety|Fleet Safety]] — deep dive on incident metrics
 - [[first-90-days|First 90 Days]] — where to start with metrics when you're new
 - [[leadership-philosophy|Leadership Philosophy]] — data as a coaching tool, not a weapon
+
+---
+
+> [!tip] Take this further
+> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=operational-metrics)** is on Gumroad. Free with your email, or a few bucks to own.
+>
+> For organizations that want this data layer built into their incident investigation process, that's **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=operational-metrics)**.

@@ -11,7 +11,10 @@ const config: QuartzConfig = {
     pageTitle: "Ops Knowledge Garden",
     enableSPA: true,
     enablePopovers: true,
-    analytics: null, // Add GA4 or Plausible config here if desired
+    // Analytics: replace G-XXXXXXXXXX with your GA4 Measurement ID
+    // Get it at analytics.google.com → Admin → Data Streams → your stream
+    // Also enable Vercel Analytics in your Vercel project dashboard (one toggle, free)
+    analytics: { provider: "google", tagId: "G-XXXXXXXXXX" },
     locale: "en-US",
     baseUrl: "garden.christopherjharper.com",
     ignorePatterns: ["private", "templates", ".obsidian"],

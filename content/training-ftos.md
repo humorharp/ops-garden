@@ -25,17 +25,17 @@ The goal isn't for your trainee to have watched you do the thing. It's for your 
 
 When I trained FTOs, or mentored them through training questions, the through-line was always the same: **shift from demonstrating to developing.**
 
-Practical framework:
+Practical framework — see one, do one, teach one:
 
-**1. I do, you watch.** (Once. Maybe twice.)
+**1. See one.** They watch. Once, maybe twice. Before you start, tell them what to pay attention to — not a running commentary during. Let them observe without narration cluttering it.
 
-**2. We do together.** FTO does the skill, narrates their thinking out loud — not the steps, the *reasoning*. "I'm starting here because... I'm checking this because..." This is the hardest part. Most experienced providers have automated their reasoning. Making it explicit again takes practice.
+**2. Do one.** Trainee attempts. Before you hand it over, narrate your reasoning out loud — not the steps, the *thinking*. "I'm starting here because... I'm checking this because..." Most experienced providers have automated their reasoning. Making it explicit again takes practice. Then step back and let them work. Resist the urge to jump in.
 
-**3. You do, I watch.** Trainee attempts. FTO resists the urge to jump in. Let them work. Note what you see.
+**3. Teach one.** They can walk someone else through it. That's the real test. Not whether they can execute — whether they understand it well enough to explain the *why*. If they can't teach it, they don't own it yet.
 
-**4. Debrief immediately.** Not a list of corrections. See [[the-debrief|The Debrief]]. "What were you thinking when you did X? What would you want to check next time?"
+Debrief after every attempt. Not a list of corrections — use the Socratic method. See [[the-debrief|The Debrief]]. "What were you working with when you made that decision? What would you pay attention to next time?"
 
-The ratio should move toward "you do, I watch" as fast as the trainee can handle. The FTO's job is to become unnecessary.
+Move through the progression as fast as the trainee can handle. The FTO's job is to become unnecessary.
 
 ---
 
@@ -80,3 +80,8 @@ The ability to remember what it was like to not know something. This gets harder
 - [[the-debrief|The Debrief]] — the most important FTO skill
 - [[leadership-philosophy|Leadership Philosophy]] — the mindset underneath all of this
 - [[hard-conversations|Hard Conversations]] — the uncomfortable stuff FTOs face
+
+---
+
+> [!tip] Take this further
+> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=training-ftos)** is on Gumroad. Free with your email, or a few bucks to own.

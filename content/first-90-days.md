@@ -87,3 +87,8 @@ You're probably still uncomfortable. That's correct. The discomfort means you're
 - [[operational-metrics|Operational Metrics]] — the numbers you need to know
 - [[hard-conversations|Hard Conversations]] — you'll need this sooner than you think
 - [[training-ftos|Training FTOs]] — if you have FTOs reporting to you
+
+---
+
+> [!tip] Take this further
+> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=first-90-days)** is on Gumroad. Free with your email, or a few bucks to own.

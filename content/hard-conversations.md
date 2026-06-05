@@ -74,3 +74,8 @@ And sometimes you'll be right, make the case clearly, and still not win. That's 
 - [[the-debrief|The Debrief]] — for conversations about specific calls
 - [[training-ftos|Training FTOs]] — coaching FTOs through their first hard conversations
 - [[leadership-philosophy|Leadership Philosophy]] — trust as the foundation
+
+---
+
+> [!tip] Take this further
+> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=hard-conversations)** is on Gumroad. Free with your email, or a few bucks to own.

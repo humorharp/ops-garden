@@ -76,3 +76,10 @@ That's the goal. Make yourself unnecessary.
 - [[leadership-philosophy|Leadership Philosophy]] — the mindset behind this approach
 - [[training-ftos|Training FTOs]] — how to teach FTOs to run debriefs
 - [[hard-conversations|Hard Conversations]] — when the conversation isn't about the call
+
+---
+
+> [!tip] Take this further
+> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=the-debrief)** is on Gumroad. Free with your email, or a few bucks to own.
+>
+> This same Socratic method — applied to incident investigation — is what **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=the-debrief)** automates at scale.

@@ -5,7 +5,7 @@ tags: [safety, fleet, dmaic, metrics, ambulance]
 
 # Fleet Safety
 
-In my time as Operations Supervisor at Royal Ambulance, Santa Clara County, we reduced ambulance accidents by 30% in Year 1. This is how we did it.
+We reduced ambulance accidents by 30% in Year 1. This is how.
 
 Not theory. The actual methodology.
 
@@ -76,3 +76,10 @@ This is the same philosophy behind [[ChatIR]] — the AI incident investigation 
 - [[operational-metrics|Operational Metrics]] — what to track and why
 - [[leadership-philosophy|Leadership Philosophy]] — coaching over punishment
 - [[first-90-days|First 90 Days]] — where fleet safety fits in your early priorities
+
+---
+
+> [!tip] Take this further
+> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=fleet-safety)** is on Gumroad. Free with your email, or a few bucks to own.
+>
+> If you're working on fleet safety or incident investigation at an organizational level, that's what **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=fleet-safety)** is built for.

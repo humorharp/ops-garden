@@ -35,4 +35,8 @@ ChatIR gathers the vitals. The analysis reads the chord.
 
 ## Learn More
 
-→ [chatir.io](https://chatir.io)
+→ [chatir.io](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=chatir) — the platform
+
+→ [christopherjharper.com](https://christopherjharper.com?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=chatir) — consulting, background, contact
+
+The methodology in ChatIR is the same one behind this garden. If you want the full framework in one place before you go — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=chatir)** is on Gumroad, free with email.

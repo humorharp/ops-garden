@@ -4,11 +4,15 @@ title: Christopher Harper — Ops Knowledge Garden
 
 # Ops Knowledge Garden
 
-Ten years in EMS. EMT → Field Training Officer → Operations Supervisor at Royal Ambulance, Santa Clara County.
+You got promoted because you were good in the field. Nobody told you the job was about to change completely.
 
-This is where I keep my professional thinking — the frameworks, methodologies, and hard-won lessons from running operations in one of the most demanding environments there is: emergency medicine in the field.
+This is the playbook they didn't give you.
 
-Not theory. Stuff that actually moved numbers.
+I spent ten years in EMS — EMT, FTO, and Operations Supervisor at Royal Ambulance in Santa Clara County. We cut ambulance accidents by 30% in Year 1. I trained 30+ providers and FTOs. Everything I learned that actually moved numbers is here, free, organized the way it was useful in the field.
+
+Read it all. Use it. If you want it as a PDF you can keep and share with your crew, the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=index)** is on Gumroad — free with your email, or a few bucks to own.
+
+> **Note:** Gumroad URL is a placeholder — update before publishing.
 
 ---
 
@@ -36,6 +40,8 @@ If you want to understand the philosophy behind everything else here — [[leade
 
 ## About
 
-I built [[ChatIR]] — an AI-powered safety incident investigation platform for EMS — because I believe the methodology behind this garden deserves to scale. This site is the thinking. ChatIR is the tool.
+I'm [Christopher Harper](https://christopherjharper.com?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=index) — EMS operations consultant and founder of **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=index)**, an AI-powered incident investigation platform that puts this methodology to work at scale.
 
-If anything here is useful, I'd love to hear about it. → [christopherjharper.com](https://christopherjharper.com)
+This site is the thinking. ChatIR is the tool. If any of this is useful — or if you disagree with something — I'd like to hear about it.
+
+*Built with [Quartz](https://quartz.jzhao.xyz). Source on GitHub.*
