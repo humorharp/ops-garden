@@ -64,4 +64,4 @@ You don't earn trust by asking for it. You earn it by being the same person ever
 ---
 
 > [!tip] Take this further
-> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=leadership-philosophy)** is on Gumroad. Free with your email, or a few bucks to own.
+> The companion tool for this chapter is **[[tools|Tool 07: Supervisor Self-Evaluation]]** — a quarterly reflection built around five questions drawn directly from this garden. Ends with one commitment. Run it every 90 days. Included in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=leadership-philosophy)**, free with your email on Gumroad.

@@ -84,4 +84,4 @@ The ability to remember what it was like to not know something. This gets harder
 ---
 
 > [!tip] Take this further
-> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=training-ftos)** is on Gumroad. Free with your email, or a few bucks to own.
+> Three tools go with this chapter: **[[tools|Tool 03/04: Provider Development Review]]** (monthly coaching log with See/Do/Teach progression tracking) and **[[tools|Tool 08: FTO Selection Guide]]** (behavioral interview questions for selecting FTO candidates). All three are in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=training-ftos)**, free with your email on Gumroad.

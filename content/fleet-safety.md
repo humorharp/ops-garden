@@ -80,6 +80,6 @@ This is the same philosophy behind [[ChatIR]] — the AI incident investigation 
 ---
 
 > [!tip] Take this further
-> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=fleet-safety)** is on Gumroad. Free with your email, or a few bucks to own.
+> The companion tools for this chapter are **[[tools|Tool 01: Vehicle Accident Investigation Form]]** and **Tool 02: Incident Findings Report** — the SPECS framework and findings write-up on paper. Both are in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=fleet-safety)**, free with your email on Gumroad.
 >
-> If you're working on fleet safety or incident investigation at an organizational level, that's what **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=fleet-safety)** is built for.
+> For organizations scaling this investigation methodology, that's what **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=fleet-safety)** is built for.

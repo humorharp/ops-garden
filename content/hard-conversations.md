@@ -78,4 +78,4 @@ And sometimes you'll be right, make the case clearly, and still not win. That's 
 ---
 
 > [!tip] Take this further
-> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=hard-conversations)** is on Gumroad. Free with your email, or a few bucks to own.
+> The companion tool for this chapter is **[[tools|Tool 05: Performance Conversation Record]]** — documents the conversation, sets clear expectations, tracks severity level. Not a disciplinary form. A record of a conversation that already happened. Included in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=hard-conversations)**, free with your email on Gumroad.

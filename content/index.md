@@ -10,9 +10,7 @@ This is the playbook they didn't give you.
 
 I spent ten years in EMS — EMT, FTO, and Operations Supervisor at Royal Ambulance in Santa Clara County. We cut ambulance accidents by 30% in Year 1. I trained 30+ providers and FTOs. Everything I learned that actually moved numbers is here, free, organized the way it was useful in the field.
 
-Read it all. Use it. If you want it as a PDF you can keep and share with your crew, the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=index)** is on Gumroad — free with your email, or a few bucks to own.
-
-> **Note:** Gumroad URL is a placeholder — update before publishing.
+Read it all. Use it. If you want it as a PDF you can keep and share with your crew, the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=index)** is on Gumroad — free with your email.
 
 ---
 
@@ -35,6 +33,10 @@ If you want to understand the philosophy behind everything else here — [[leade
 - [[operational-metrics|Operational Metrics]] — what to track and what it actually means
 - [[hard-conversations|Hard Conversations]] — the stuff nobody teaches you
 - [[leadership-philosophy|Leadership Philosophy]] — empower, don't answer
+
+## Field Tools
+
+Seven printable tools built around the frameworks in this garden — investigation forms, coaching scorecards, interview guides, a supervisor self-eval. All included in the ebook, or browse them at [[tools|Field Tools]].
 
 ---
 

@@ -90,6 +90,6 @@ Same data. Different frame.
 ---
 
 > [!tip] Take this further
-> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=operational-metrics)** is on Gumroad. Free with your email, or a few bucks to own.
+> The full methodology — including the fleet safety metrics framework and how to build a review cadence that actually works — is in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=operational-metrics)**, free with your email on Gumroad.
 >
 > For organizations that want this data layer built into their incident investigation process, that's **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=operational-metrics)**.

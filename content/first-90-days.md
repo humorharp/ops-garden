@@ -91,4 +91,4 @@ You're probably still uncomfortable. That's correct. The discomfort means you're
 ---
 
 > [!tip] Take this further
-> This garden is free. For everything in one place — all the frameworks, plus templates and checklists — the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=first-90-days)** is on Gumroad. Free with your email, or a few bucks to own.
+> At Day 90, run **[[tools|Tool 07: Supervisor Self-Evaluation]]** against what you've built. It's a quarterly reflection mapped to the five things this chapter sets up — crew independence, debrief quality, hard conversation timing, metrics, and whether you're leading or answering. Included in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=first-90-days)**, free with your email on Gumroad.
