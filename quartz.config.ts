@@ -1,5 +1,5 @@
-import { QuartzConfig } from "./quartz/cfg"
-import * as Plugin from "./quartz/plugins"
+import { QuartzConfig } from "./quartz/cfg";
+import * as Plugin from "./quartz/plugins";
 
 /**
  * Quartz 4 Configuration
@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "Ops Knowledge Garden",
     enableSPA: true,
     enablePopovers: true,
-    analytics: { provider: "google", tagId: "G-YE0DRC8G1R" },
+    analytics: { provider: "vercel" },
     locale: "en-US",
     baseUrl: "garden.christopherjharper.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
@@ -86,6 +86,6 @@ const config: QuartzConfig = {
       Plugin.NotFoundPage(),
     ],
   },
-}
+};
 
-export default config
+export default config;
