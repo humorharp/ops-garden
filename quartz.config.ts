@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "Ops Knowledge Garden",
     enableSPA: true,
     enablePopovers: true,
-    analytics: { provider: "vercel" },
+    analytics: { provider: "google", tagId: "G-YE0DRC8G1R" },
     locale: "en-US",
     baseUrl: "garden.christopherjharper.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
