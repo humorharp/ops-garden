@@ -27,7 +27,7 @@ We used DMAIC — Define, Measure, Analyze, Improve, Control — borrowed from L
 
 **Define:** What exactly are we trying to reduce? We got specific. Not "accidents" in general — we broke them down by type. Backing incidents. Intersection incidents. Low-speed lot incidents. Each type has different causes and requires different interventions.
 
-**Measure:** What did we actually have, and how were we capturing it? We implemented Samsara telematics — GPS, accelerometer data, hard braking events, speed profiles. This gave us objective data instead of self-reported incidents. Incidents you don't capture can't be fixed.
+**Measure:** What did we actually have, and how were we capturing it? We implemented fleet telematics — GPS, accelerometer data, hard braking events, speed profiles. This gave us objective data instead of self-reported incidents. Incidents you don't capture can't be fixed.
 
 **Analyze:** Where were incidents clustering? What conditions preceded them? Time of day, shift length, call volume, specific units, specific locations. We ran fishbone analysis on the high-frequency incident types. The causes were almost never "operator error" alone — they were layered.
 
@@ -43,7 +43,7 @@ We used DMAIC — Define, Measure, Analyze, Improve, Control — borrowed from L
 
 ## The Telematics Layer
 
-Samsara changed what was possible. Before objective telematics data, you were relying on self-reporting and witness accounts — both unreliable. With telematics you could see hard braking events, speeding patterns, and backing behavior across the entire fleet in near-real-time.
+Telematics changed what was possible. Before objective telematics data, you were relying on self-reporting and witness accounts — both unreliable. With telematics you could see hard braking events, speeding patterns, and backing behavior across the entire fleet in near-real-time.
 
 This isn't about surveillance. It's about accurate data. You can't coach someone on behavior you can't observe, and you can't observe every unit every shift. Telematics is the eyes you don't have.
 
