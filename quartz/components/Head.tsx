@@ -1,5 +1,5 @@
 import { i18n } from "../i18n"
-import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
+import { FullSlug, getFileExtension, joinSegments, pathToRoot, simplifySlug } from "../util/path"
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
 import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
@@ -29,9 +29,9 @@ export default (() => {
 
     // Url of current page
     const socialUrl =
-      fileData.slug === "404" || fileData.slug === "index"
+      fileData.slug === "404"
         ? url.toString()
-        : joinSegments(url.toString(), fileData.slug!)
+        : joinSegments(url.toString(), simplifySlug(fileData.slug!))
 
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
       (e) => e.name === CustomOgImagesEmitterName,
@@ -85,7 +85,7 @@ export default (() => {
         )}
 
         <link rel="icon" href={iconPath} />
-        {cfg.baseUrl && <link rel="canonical" href={socialUrl} />}
+        {cfg.baseUrl && fileData.slug !== "404" && <link rel="canonical" href={socialUrl} />}
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 
