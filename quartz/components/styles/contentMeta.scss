@@ -2,6 +2,20 @@
   margin-top: 0;
   color: var(--darkgray);
 
+  .note-status {
+    display: inline-block;
+    padding: 0.08rem 0.45rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 999px;
+    font-size: 0.85em;
+    line-height: 1.35;
+  }
+
+  .status-growing,
+  .status-seedling {
+    border-color: var(--tertiary);
+  }
+
   &[show-comma="true"] {
     > *:not(:last-child) {
       margin-right: 8px;

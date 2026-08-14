@@ -1,6 +1,12 @@
 ---
 title: Leadership Philosophy
+aliases: [Empower Other People, Make Yourself Unnecessary]
+description: My working philosophy of trust, questions, warmth, and building people who do not need me in the room.
 tags: [leadership, philosophy, coaching]
+type: synthesis
+status: evergreen
+created: 2026-06-04
+modified: 2026-08-14
 ---
 
 # Leadership Philosophy
@@ -15,13 +21,15 @@ Most of the leadership advice out there is about authority, accountability, and 
 
 ## Don't Answer. Lead.
 
-The most formative leadership lesson I ever got came from Daniel Franklin, a duty chief at Santa Clara County EMS. The man wrote more policy than anyone I've worked with. And whenever you came to him with a question about policy, he never answered it directly.
+The most formative leadership lesson I ever got came from a duty chief I worked with. He wrote more policy than anyone I knew, and whenever you came to him with a question about policy, he almost never answered it directly.
 
 He asked you questions until you found the answer yourself.
 
-At first this was maddening. Then I understood it. Retention is dramatically better when you discover the answer on your own. You sought it, you wrestled with it, you found it — so now it lives in you. Not in him. EMS protocol is dense and dry and critical. When it matters, it really matters. The version of it that sticks is the version you worked for.
+At first this was maddening. Then I understood it. I remembered an answer differently when I had to find it myself. I sought it, wrestled with it, and found it, so it lived in me instead of remaining something he knew. EMS protocol is dense and dry and critical. When it matters, it really matters. The version that stuck for me was usually the version I had worked for.
 
-I built everything on top of that model. Every [[the-debrief|debrief]], every [[training-ftos|FTO shift]], every field call. Not "here's the answer." Always "what do you think is happening here?"
+I built a lot on top of that model. Every [[the-debrief|debrief]], every [[training-ftos|FTO shift]], every field call. Not "here's the answer." Always "what do you think is happening here?"
+
+I understand the model less cleanly now than I did then. [[stop-being-the-answer|Questions can build judgment, but they can also become a frustrating performance if the person actually needs information, authority, or help carrying the risk.]] The point is not to refuse answers. It is to notice what kind of help the person is asking for.
 
 ---
 
@@ -45,6 +53,8 @@ When I became a supervisor and an FTO, the audience got bigger. But the drive di
 
 Don't underestimate what a well-timed joke does for a crew that just ran something awful.
 
+This eventually grew into a more specific idea: [[recognition-is-evidence-of-attention|recognition is evidence that a leader actually noticed the work]]. Warmth matters. Precision keeps warmth from becoming background noise.
+
 ---
 
 ## Trust Is a Condition You Create
@@ -53,6 +63,14 @@ People brought me things they didn't bring to others — clinical questions, tra
 
 You don't earn trust by asking for it. You earn it by being the same person every single time, especially when it's inconvenient.
 
+## Where this philosophy is incomplete
+
+“Empower people” is easy to say from the supervisor's side of the desk.
+
+It becomes harder when the person lacks access, the policy is unclear, the risk is real, or leadership wants them to own an outcome without giving them control over it. I still believe the job is to help people trust themselves. I no longer think confidence alone is the answer to every constraint.
+
+Sometimes leadership development means stepping back. Sometimes it means using your position to remove the thing they should never have been expected to overcome alone.
+
 ---
 
 ## Related
@@ -60,8 +78,7 @@ You don't earn trust by asking for it. You earn it by being the same person ever
 - [[the-debrief|The Debrief]] — where this philosophy gets applied most directly
 - [[training-ftos|Training FTOs]] — how to teach it to others
 - [[first-90-days|First 90 Days]] — how to start building it
+- [[stop-being-the-answer|Stop Being the Answer]] — the dependence my own expertise could create
+- [[recognition-is-evidence-of-attention|Recognition Is Evidence of Attention]] — attention made visible
 
----
-
-> [!tip] Take this further
-> The companion tool for this chapter is **[[tools|Tool 07: Supervisor Self-Evaluation]]** — a quarterly reflection built around five questions drawn directly from this garden. Ends with one commitment. Run it every 90 days. Included in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=leadership-philosophy)**, free with your email on Gumroad.
+The [[tools|Supervisor Self-Evaluation]] is the practical companion to this note.

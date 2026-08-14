@@ -1,6 +1,12 @@
 ---
 title: The Debrief
+aliases: [Debriefing After Difficult Calls, Lead Do Not Tell]
+description: Debriefing as a way to recover reasoning, confidence, and learning without turning the conversation into a lecture.
 tags: [coaching, mental-health, crew-support, tools]
+type: practice
+status: evergreen
+created: 2026-06-04
+modified: 2026-08-14
 ---
 
 # The Debrief
@@ -23,9 +29,9 @@ Your job is to help them find that.
 
 ## The Method: Lead, Don't Tell
 
-Borrowed from [[leadership-philosophy#Don't Answer. Lead.|Daniel Franklin's model]], but applied to crew support:
+Borrowed from the question-led model in [[leadership-philosophy#Don't Answer. Lead.|Leadership Philosophy]], but applied to crew support:
 
-Never give the answer first.
+My default was not to give the answer first.
 
 **Instead:**
 
@@ -59,15 +65,27 @@ Pediatric calls. Traumatic deaths. Calls where things went wrong and the outcome
 
 For these, the clinical debrief comes second. First: normalize that this was hard, that the response they're having is appropriate, that it means they care. Then — and only then — if they want to talk through the clinical — go there.
 
-Never lead with "here's what you should have done differently" after a call that ended badly. Even if it's true and useful, the timing will bury it.
+After a call that ended badly, I would not lead with “here is what you should have done differently.” Even when the feedback is true and necessary, the timing can bury it.
 
 ---
 
 ## What I Noticed Over Years of This
 
-Crews that were regularly debriefed — not punished, actually debriefed — made fewer errors over time. Not because someone corrected them repeatedly, but because they built the habit of reflection. They started doing it on their own, with each other, without needing a supervisor in the room.
+My observation was that crews who were regularly debriefed—not punished, actually debriefed—became more reflective over time. They began talking through calls with one another without waiting for a supervisor to initiate it.
+
+I did not run a controlled study of whether those crews made fewer errors. I believed they did, and the mechanism made sense to me, but that is a retrospective operational judgment rather than a measured result. The part I can state more confidently is that the habit began to move from the supervisor into the crew.
 
 That's the goal. Make yourself unnecessary.
+
+## A debrief is not an investigation or therapy
+
+These boundaries matter.
+
+A supportive debrief can help someone process a difficult call and recover their reasoning. It does not replace professional mental-health support when that is what the person needs. It also does not replace a formal investigation when patient care, policy, safety, or misconduct requires one.
+
+The conversations may connect. Their purposes are different.
+
+That is the same distinction I am trying to preserve in [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]] A conversation can reveal context a formal record did not carry. More context does not erase the need for process, evidence, or accountable review.
 
 ---
 
@@ -76,10 +94,7 @@ That's the goal. Make yourself unnecessary.
 - [[leadership-philosophy|Leadership Philosophy]] — the mindset behind this approach
 - [[training-ftos|Training FTOs]] — how to teach FTOs to run debriefs
 - [[hard-conversations|Hard Conversations]] — when the conversation isn't about the call
+- [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]] — how conversation and formal records serve different purposes
+- [[stop-being-the-answer|Stop Being the Answer]] — the tension between helping and taking over
 
----
-
-> [!tip] Take this further
-> The debrief prompts from this chapter are embedded directly in **[[tools|Tool 03 and Tool 04: Provider Development Review]]** — so any FTO using those scorecards has the methodology in front of them on every shift. Both tools are in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=the-debrief)**, free with your email on Gumroad.
->
-> This same Socratic method — applied to incident investigation — is what **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=the-debrief)** automates at scale.
+The prompts are embedded in the [[tools|Provider Development Review]] tools. The same question-led instinct influenced [[chatir|chatIR]], although a product-supported incident conversation and a human debrief are not interchangeable.

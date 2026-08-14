@@ -1,6 +1,12 @@
 ---
 title: Hard Conversations
+aliases: [Difficult Conversations, Have the Conversation Earlier]
+description: What I learned about being direct without making another person smaller.
 tags: [leadership, hr, trust, communication]
+type: practice
+status: evergreen
+created: 2026-06-04
+modified: 2026-08-14
 ---
 
 # Hard Conversations
@@ -55,7 +61,7 @@ Crew makes a mistake. Something bad happens on a call. Now what?
 
 Resist the urge to make it immediately about accountability. Lead with the person first — how are they doing, what are they carrying. Then, when the moment is right, move into the debrief. See [[the-debrief|The Debrief]] for the full framework.
 
-The goal is not to assign blame. The goal is to understand what happened, support the crew member through it, and extract whatever learning is available. Those are three different things and they need to happen in that order.
+The goal is not to begin with blame. The goal is to understand what happened, support the crew member through it, and recover whatever learning is available. Those are related jobs, but they are not the same conversation. [[incident-reports-can-be-accurate-and-still-incomplete|The formal record may establish the event without carrying the reasoning and conditions the later conversation reveals.]]
 
 ---
 
@@ -74,8 +80,6 @@ And sometimes you'll be right, make the case clearly, and still not win. That's 
 - [[the-debrief|The Debrief]] — for conversations about specific calls
 - [[training-ftos|Training FTOs]] — coaching FTOs through their first hard conversations
 - [[leadership-philosophy|Leadership Philosophy]] — trust as the foundation
+- [[recognition-is-evidence-of-attention|Recognition Is Evidence of Attention]] — specificity when the conversation is about what went well
 
----
-
-> [!tip] Take this further
-> The companion tool for this chapter is **[[tools|Tool 05: Performance Conversation Record]]** — documents the conversation, sets clear expectations, tracks severity level. Not a disciplinary form. A record of a conversation that already happened. Included in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=hard-conversations)**, free with your email on Gumroad.
+The [[tools|Performance Conversation Record]] is the practical companion to this note: a record of a conversation that already happened, not a substitute for having it.

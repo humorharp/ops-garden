@@ -1,49 +1,59 @@
 ---
 title: Christopher Harper — Ops Knowledge Garden
+aliases: [Home, Ops Knowledge Garden]
+description: Curated working notes about operational leadership, safety, learning, and building chatIR.
+tags: [index, start-here]
+type: map
+status: reference
+created: 2026-06-04
+modified: 2026-08-14
 ---
 
 # Ops Knowledge Garden
 
 You got promoted because you were good in the field. Nobody told you the job was about to change completely.
 
-This is the playbook they didn't give you.
+That was the original reason I built this site: the playbook I wish somebody had given me.
 
-I spent ten years in EMS — EMT, FTO, and Operations Supervisor at Royal Ambulance in Santa Clara County. We cut ambulance accidents by 30% in Year 1. I trained 30+ providers and FTOs. Everything I learned that actually moved numbers is here, free, organized the way it was useful in the field.
+It has become something larger.
 
-Read it all. Use it. If you want it as a PDF you can keep and share with your crew, the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=index)** is on Gumroad — free with your email.
+I spent about ten years in EMS as an EMT, field training officer, and operations supervisor. I kept writing after I left the field. About leadership, incident investigation, operational systems, safety, the limits of formal records, and eventually the company I started building from those ideas.
 
----
+This Garden is the public part of that record: selected from my private notes, cleaned up enough to be useful, but not cleaned until the uncertainty and history disappear.
 
-## Start Here
-
-If you just got promoted into a supervisory role and you're not sure what you're doing yet — [[first-90-days|First 90 Days]] is the place to start.
-
-If you're an FTO trying to figure out how to actually train someone — [[training-ftos|Training FTOs]] is yours.
-
-If you want to understand the philosophy behind everything else here — [[leadership-philosophy|Leadership Philosophy]].
+It is not a raw export. I decide what belongs here. [[about-these-notes|About These Notes]] explains the boundary and the slightly strange reason I want to preserve the thinking while I am still inside it.
 
 ---
 
-## The Garden
+## Find your way in
 
-- [[first-90-days|First 90 Days as an EMS Supervisor]] — what to focus on, what to ignore
-- [[the-debrief|The Debrief]] — the most underused tool in EMS leadership
-- [[training-ftos|Training FTOs]] — how to teach people to teach
-- [[fleet-safety|Fleet Safety]] — how we reduced ambulance accidents by 30% in Year 1
-- [[operational-metrics|Operational Metrics]] — what to track and what it actually means
-- [[hard-conversations|Hard Conversations]] — the stuff nobody teaches you
-- [[leadership-philosophy|Leadership Philosophy]] — empower, don't answer
+If you just got promoted into a supervisory role and need something useful now, start with [[first-90-days|First 90 Days]].
+
+If you are developing other people, follow [[training-ftos|Training FTOs]], [[the-debrief|The Debrief]], and [[stop-being-the-answer|Stop Being the Answer]].
+
+If you are trying to understand the systems thesis underneath my work, start with [[build-the-sprinkler-system|Build the Sprinkler System]] and [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]]
+
+If you want the whole landscape, use the [[garden-map|Garden Map]]. If you want to see where the thinking is unfinished, read [[open-questions|Open Questions]].
+
+## Notes currently at the center
+
+- [[build-the-sprinkler-system|Build the Sprinkler System]] — why competent recovery can conceal the need for prevention
+- [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]] — the record problem underneath chatIR
+- [[stop-being-the-answer|Stop Being the Answer]] — how a supervisor's expertise can create dependence
+- [[recognition-is-evidence-of-attention|Recognition Is Evidence of Attention]] — making otherwise invisible work legible
+- [[a-problem-passed-around-is-owned-by-nobody|A Problem Passed Around Is a Problem Owned by Nobody]] — why handoffs create motion without resolution
+- [[fleet-safety|Fleet Safety]] — the measured accident-reduction project where several of these ideas became real
 
 ## Field Tools
 
-Seven printable tools built around the frameworks in this garden — investigation forms, coaching scorecards, interview guides, a supervisor self-eval. All included in the ebook, or browse them at [[tools|Field Tools]].
+The practical EMS-supervision material is still here. Seven printable tools grew from the methods in these notes: investigation forms, coaching scorecards, interview guides, and a supervisor self-evaluation. Browse [[tools|Field Tools]], or keep the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=index)** as a PDF. It is free with your email.
 
 ---
 
 ## About
 
-I'm [Christopher Harper](https://christopherjharper.com?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=index) — EMS operations consultant and founder of **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=index)**, an AI-powered incident investigation platform that puts this methodology to work at scale.
+I'm [Christopher Harper](https://christopherjharper.com?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=index), founder of [[chatir|chatIR]]. I am trying to build software that helps operational and safety teams recover context, see recurring conditions, and make better-informed decisions without pretending the software should replace their judgment.
 
-This site is the thinking. ChatIR is the tool. If any of this is useful — or if you disagree with something — I'd like to hear about it.
+This site is the thinking. chatIR is one tool growing from it. If something here is useful—or if you think I have it wrong—I would like to hear about it.
 
-*Built with [Quartz](https://quartz.jzhao.xyz). Source on GitHub.*
+*Built with [Quartz](https://quartz.jzhao.xyz). [Source on GitHub](https://github.com/humorharp/ops-garden).*

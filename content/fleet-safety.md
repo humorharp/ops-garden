@@ -1,6 +1,12 @@
 ---
 title: Fleet Safety
+aliases: [Ambulance Accident Reduction, The Driving Safety Project]
+description: The system behind a measured 30 percent reduction in ambulance accidents during the first year.
 tags: [safety, fleet, dmaic, metrics, ambulance]
+type: case-study
+status: evergreen
+created: 2026-06-04
+modified: 2026-08-14
 ---
 
 # Fleet Safety
@@ -13,9 +19,9 @@ Not theory. The actual methodology.
 
 ## The Problem With How EMS Handles Accidents
 
-Most EMS agencies respond to accidents reactively. Something happens, someone fills out a form, maybe there's a conversation, maybe there's a retraining, and then everyone moves on and waits for the next one.
+The reactive pattern I saw in EMS was familiar: something happens, someone fills out a form, maybe there is a conversation, maybe there is retraining, and then everyone moves on and waits for the next one.
 
-The form is the problem. A checkbox form captures what happened. It almost never captures *why* — the real contributing factors, the systemic conditions, the behavioral and environmental context that made the incident possible.
+The form is not useless. It is usually doing the job it was designed to do: notify the organization and preserve a specific set of facts. The problem is expecting that same form to carry the entire investigation. [[incident-reports-can-be-accurate-and-still-incomplete|A record can be accurate and still omit the conditions needed for operational learning.]]
 
 You can't fix what you don't accurately diagnose. And most agencies are diagnosing at the symptom level.
 
@@ -29,9 +35,9 @@ We used DMAIC — Define, Measure, Analyze, Improve, Control — borrowed from L
 
 **Measure:** What did we actually have, and how were we capturing it? We implemented fleet telematics — GPS, accelerometer data, hard braking events, speed profiles. This gave us objective data instead of self-reported incidents. Incidents you don't capture can't be fixed.
 
-**Analyze:** Where were incidents clustering? What conditions preceded them? Time of day, shift length, call volume, specific units, specific locations. We ran fishbone analysis on the high-frequency incident types. The causes were almost never "operator error" alone — they were layered.
+**Analyze:** Where were incidents clustering? What conditions preceded them? Time of day, shift length, call volume, specific units, specific locations. We ran fishbone analysis on the high-frequency incident types. The contributing conditions were almost never "operator error" alone—they were layered.
 
-**Improve:** Targeted interventions based on actual root causes. This included:
+**Improve:** Targeted interventions based on the contributing conditions we could support. This included:
 - A behavioral coaching program for high-incident operators (not punitive — coaching)
 - Deployment videos for consistent backing and spotting procedures
 - Spotter protocol enforcement at specific high-risk locations
@@ -43,9 +49,9 @@ We used DMAIC — Define, Measure, Analyze, Improve, Control — borrowed from L
 
 ## The Telematics Layer
 
-Telematics changed what was possible. Before objective telematics data, you were relying on self-reporting and witness accounts — both unreliable. With telematics you could see hard braking events, speeding patterns, and backing behavior across the entire fleet in near-real-time.
+Telematics changed what was possible. Before it, we relied heavily on incident reports and witness accounts. Those records remained important, but telematics added a different view: hard-braking events, speeding patterns, and backing behavior across the fleet in near-real time.
 
-This isn't about surveillance. It's about accurate data. You can't coach someone on behavior you can't observe, and you can't observe every unit every shift. Telematics is the eyes you don't have.
+The surveillance concern is real. The distinction is what the organization does with the data. Used primarily as a disciplinary feed, telematics teaches people to fear the measurement. Used as one source in a transparent coaching and safety process, it can make behavior visible that no supervisor could observe across every unit and shift.
 
 The key is what you do with the data. Raw data without structured review and coaching is just noise. We built a review cadence — supervisors were looking at their units' data, not just waiting for incidents to come to them.
 
@@ -57,7 +63,7 @@ Backing incidents were the highest-frequency category. The fix wasn't a memo abo
 
 The behavioral coaching program mattered more than any policy change. When you sit down with a high-incident operator and show them their own data — not accusatorially, as a shared problem to solve — the conversation is completely different than a disciplinary write-up. Most people want to do the job well. Show them the data, ask what they think is happening, and work it together.
 
-The 30% reduction was real and measured. The methodology is replicable.
+The 30% reduction was real and measured: the rate moved from 1.0 to 0.7 accidents per 1,000 trips during the first year. The method can be repeated. The result should not be treated as a promise that every fleet will produce the same number.
 
 ---
 
@@ -65,9 +71,9 @@ The 30% reduction was real and measured. The methodology is replicable.
 
 Every accident has contributing factors that go beyond the individual operator. Equipment condition, shift fatigue, deployment density, policy gaps, training deficits. The individual operator is usually the last line of a much longer causal chain.
 
-Fix the chain. Don't just punish the last link.
+Fix the chain. Do not only punish the last link.
 
-This is the same philosophy behind [[ChatIR]] — the AI incident investigation platform I built to apply this methodology at scale across EMS organizations.
+This project is where [[build-the-sprinkler-system|the sprinkler-system idea]] became measurable for me. It is also part of the lineage of [[chatIR|chatIR]], which is my attempt to make this kind of structured incident learning easier to repeat without pretending the software can conduct the human investigation.
 
 ---
 
@@ -76,10 +82,8 @@ This is the same philosophy behind [[ChatIR]] — the AI incident investigation 
 - [[operational-metrics|Operational Metrics]] — what to track and why
 - [[leadership-philosophy|Leadership Philosophy]] — coaching over punishment
 - [[first-90-days|First 90 Days]] — where fleet safety fits in your early priorities
+- [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]] — why the form and the investigation serve different purposes
+- [[build-the-sprinkler-system|Build the Sprinkler System]] — the broader prevention thesis
+- [[chatir|chatIR]] — the product growing from this methodology
 
----
-
-> [!tip] Take this further
-> The companion tools for this chapter are **[[tools|Tool 01: Vehicle Accident Investigation Form]]** and **Tool 02: Incident Findings Report** — the SPECS framework and findings write-up on paper. Both are in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=fleet-safety)**, free with your email on Gumroad.
->
-> For organizations scaling this investigation methodology, that's what **[ChatIR](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=fleet-safety)** is built for.
+The [[tools|Vehicle Accident Investigation Form and Incident Findings Report]] are the paper companions to this method.

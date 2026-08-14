@@ -1,6 +1,12 @@
 ---
 title: First 90 Days as an EMS Supervisor
+aliases: [New EMS Supervisor, First 90 Days]
+description: What to observe, build, and avoid during the transition from field provider to supervisor.
 tags: [new-supervisor, getting-started, leadership, operations]
+type: practice
+status: evergreen
+created: 2026-06-04
+modified: 2026-08-14
 ---
 
 # First 90 Days as an EMS Supervisor
@@ -64,9 +70,11 @@ Document what you're doing and why. Not for credit — for continuity. If you le
 
 **Friendship vs. leadership.** Some of the people you're now supervising were your peers, maybe your friends. This is the hardest part of the transition for most new supervisors. You can maintain relationships — good ones, even — but the dynamic has changed and pretending it hasn't serves no one. You can be warm and still hold standards.
 
-**Trying to have all the answers.** You won't. And you shouldn't pretend to. "I don't know, let me find out" is a legitimate response, especially in the first 90 days. What erodes credibility isn't not knowing — it's pretending to know and being wrong.
+**Trying to have all the answers.** You will not. And you should not pretend to. “I don't know, let me find out” is a legitimate response, especially in the first 90 days. What erodes credibility is not the absence of an immediate answer; it is pretending to know and being wrong. Later, you may face the opposite problem: [[stop-being-the-answer|knowing so many answers that the team begins routing every decision through you]].
 
 **Neglecting your own crew's development.** You'll be busy with logistics, paperwork, and fires. The first thing that gets dropped is usually the proactive development work — the debriefs, the FTO check-ins, the one-on-ones. Build them into your routine before you get busy, not after.
+
+The fires will always argue that they are more urgent than the system. That is why [[build-the-sprinkler-system|preventive work has to become part of the operating rhythm]] before the crisis decides the rhythm for you.
 
 **Waiting to have hard conversations.** See [[hard-conversations|Hard Conversations]]. The math always works out better when you have them sooner.
 
@@ -87,8 +95,7 @@ You're probably still uncomfortable. That's correct. The discomfort means you're
 - [[operational-metrics|Operational Metrics]] — the numbers you need to know
 - [[hard-conversations|Hard Conversations]] — you'll need this sooner than you think
 - [[training-ftos|Training FTOs]] — if you have FTOs reporting to you
+- [[stop-being-the-answer|Stop Being the Answer]] — the next stage of the provider-to-supervisor transition
+- [[build-the-sprinkler-system|Build the Sprinkler System]] — what “start building systems” is trying to become
 
----
-
-> [!tip] Take this further
-> At Day 90, run **[[tools|Tool 07: Supervisor Self-Evaluation]]** against what you've built. It's a quarterly reflection mapped to the five things this chapter sets up — crew independence, debrief quality, hard conversation timing, metrics, and whether you're leading or answering. Included in the **[EMS Supervisor Field Guide](https://harperchris.gumroad.com/l/field-guide?utm_source=garden&utm_medium=cta&utm_campaign=ebook&utm_content=first-90-days)**, free with your email on Gumroad.
+At Day 90, the [[tools|Supervisor Self-Evaluation]] gives you a structured way to look at what you actually built.

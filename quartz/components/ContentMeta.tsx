@@ -29,8 +29,24 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     if (text) {
       const segments: (string | JSX.Element)[] = []
 
+      const status = fileData.frontmatter?.status
+      if (typeof status === "string") {
+        const labels: Record<string, string> = {
+          reference: "Reference note",
+          evergreen: "Evergreen note",
+          growing: "Growing note",
+          seedling: "Seedling note",
+        }
+        const label = labels[status.toLowerCase()] ?? `${status} note`
+        segments.push(<span class={`note-status status-${status.toLowerCase()}`}>{label}</span>)
+      }
+
       if (fileData.dates) {
-        segments.push(<Date date={getDate(cfg, fileData)!} locale={cfg.locale} />)
+        segments.push(
+          <span>
+            Last tended <Date date={getDate(cfg, fileData)!} locale={cfg.locale} />
+          </span>,
+        )
       }
 
       // Display reading time if enabled
