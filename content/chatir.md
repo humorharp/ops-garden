@@ -1,7 +1,7 @@
 ---
 title: chatIR
 aliases: [ChatIR, The Product I Am Building]
-description: The working product thesis behind chatIR and the boundary around what it should do.
+description: Working notes behind chatIR and the boundary around what it should do.
 tags: [chatir, ems, safety, ai, product]
 type: project
 status: growing
@@ -27,7 +27,7 @@ An incident occurs. Somebody creates the required report. While memory is still 
 
 That information remains connected to the original event, but it also becomes structured enough to compare across events.
 
-I kept picturing the Obsidian graph.
+I kept picturing the Obsidian graph. This graph right here. ———→
 
 An incident report is one node. The contributing conditions extracted from it are nodes too. The relationships among them are edges. The event remains whole while its parts become separately visible and comparable.
 
@@ -43,11 +43,11 @@ Musically, each condition is a note. Fatigue is a note. An unfamiliar equipment 
 
 The analysis should help the team hear the chord without pretending that one note caused the whole event.
 
-That distinction is not decorative. Recurrence and co-occurrence can direct attention. They do not automatically establish cause.
+Recurrence and co-occurrence can direct attention. They do not automatically establish cause, and the product has to preserve that distinction in what it shows and how it speaks.
 
 ## What the product should do
 
-The current role I want chatIR to play is connective tissue for operational learning.
+I want chatIR to help operational teams connect records and conversations that their existing systems keep apart.
 
 It should help a safety or operations team:
 
@@ -68,13 +68,13 @@ The line I use is: **equip the decision; do not make it.**
 
 The largest bet is also the simplest: if operational incident information is recovered and organized well enough, will genuinely useful new connections emerge?
 
-I believe they will. Belief is not validation.
+I believe they will, but I still need to validate that belief with real organizational data and responsible human review.
 
 Better intake alone may be valuable even before sophisticated analysis works. Historical diagnostics may reveal recurring conditions without proving that a particular intervention will improve outcomes. A suggested control may sound sensible and still fail when it meets the local operation.
 
 I do not want to hide those uncertainties behind “AI-powered.” They are the work.
 
-Some of the current questions live in [[open-questions#What should AI be allowed to conclude from an operational record?|What should AI be allowed to conclude from an operational record?]]. The broader prevention thesis is in [[build-the-sprinkler-system|Build the Sprinkler System]].
+Some of the current questions live in [[open-questions#What should AI be allowed to conclude from an operational record?|What should AI be allowed to conclude from an operational record?]]. The broader prevention idea is in [[build-the-sprinkler-system|Build the Sprinkler System]].
 
 ## Current public doorway
 
@@ -85,7 +85,7 @@ This note will keep changing as the product earns—or fails to earn—the claim
 ## Connected notes
 
 - [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]] — the record problem underneath the product
-- [[build-the-sprinkler-system|Build the Sprinkler System]] — the prevention thesis underneath the company
+- [[build-the-sprinkler-system|Build the Sprinkler System]] — the prevention idea underneath the company
 - [[fleet-safety|Fleet Safety]] — the operational project that showed me structured learning could move a measured outcome
 - [[the-debrief|The Debrief]] — the question-led method that influenced the conversational interface
 - [[open-questions|Open Questions]] — the boundaries I do not want the product story to hide

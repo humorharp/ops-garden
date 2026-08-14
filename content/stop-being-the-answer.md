@@ -43,7 +43,7 @@ I do not think the answer is to become the annoying manager who responds to ever
 
 There are times when someone needs an answer. There are decisions they should not have to make alone. Sometimes the information is genuinely held at another level. Sometimes policy or law fixes the boundary. Sometimes a question is really an employee saying, “I need you to own this risk with me.”
 
-That is not necessarily dependence. It may be good judgment.
+Bringing the question to you may be good judgment rather than dependence.
 
 But there are also questions that reach a supervisor because nobody has ever made it clear that the employee is allowed to answer them.
 
@@ -55,7 +55,7 @@ I suspect patterns would become obvious very quickly.
 
 You might find an experienced employee asking permission for a routine schedule change. You might find that every complaint escalates because nobody knows where their authority ends. You might find ten slightly different questions that are all actually the same missing process. Or you might learn that the team is escalating appropriately because leadership has not given them access to what they need.
 
-The point is not to reduce the number of questions as if questions are waste. The point is to understand what the questions reveal.
+I would not judge the exercise by whether the number of questions fell. I would use it to understand what the questions revealed.
 
 ## Authority has to move with responsibility
 
@@ -70,7 +70,7 @@ Real delegation includes a boundary:
 - Bring me a recommendation before you act.
 - Stop and escalate before doing anything.
 
-The categories are not profound. Making them explicit is.
+The categories are simple. Their value is in making the boundary explicit before somebody has to guess.
 
 I would start with the five most frequent, lowest-risk decisions. Not because small decisions are the most important, but because they are somewhere safe to practice moving authority. As judgment grows, the boundary can move.
 
@@ -78,11 +78,11 @@ The person should know what they can decide, what kind of risk changes the answe
 
 That last part matters. If the first imperfect decision causes you to seize the authority back, the original delegation was theater.
 
-## The answer is not to disappear
+## Empowerment can become abandonment
 
 There is a version of “empowerment” that is really just leadership refusing to help.
 
-Handing someone a problem without context, authority, or support and telling them to own it is not development. It is abandonment with better vocabulary.
+Handing someone a problem without context, authority, or support and telling them to own it can leave them alone with a risk leadership should still be carrying.
 
 I am still trying to locate the line between helping someone develop judgment and making them feel alone with a decision they were not prepared to make. I think the line moves by person, by risk, and sometimes by day. Someone can be completely capable and still need a second brain after a difficult shift.
 

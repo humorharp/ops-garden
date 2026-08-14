@@ -47,7 +47,7 @@ If you are trying to understand me rather than solve a specific operational prob
 
 - [[chatir|chatIR]] — the product and the current boundary around what it should do
 - [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]] — the record problem underneath the product
-- [[build-the-sprinkler-system|Build the Sprinkler System]] — the prevention thesis underneath the company
+- [[build-the-sprinkler-system|Build the Sprinkler System]] — the prevention idea underneath the company
 - [[tools|Field Tools]] — paper versions of some of the operational methods
 
 ## What is still unresolved?

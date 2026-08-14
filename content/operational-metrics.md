@@ -29,47 +29,49 @@ The word *hypothesis* matters. A metric moving beside another metric is not proo
 
 ---
 
-## The Metrics That Actually Matter
+## Metrics I kept returning to
 
 **Chute Time (Response Readiness)**
 
-Time from dispatch to unit en route. This is one of the most direct measures of operational readiness. Consistent chute times mean consistent preparation, consistent crew focus, consistent unit condition.
+Time from dispatch to unit en route. Chute time can tell you something about operational readiness, but it cannot tell you by itself why a crew moved quickly or slowly.
 
 When chute times drift up, I would look for conditions such as fatigue, morale, unit maintenance, and post-call delay rather than assuming randomness or immediately blaming effort. Chute time can become a leading signal, but it still needs context.
 
-We improved chute times at Royal not through policy pressure but by identifying the specific conditions that caused delays and addressing those. Deployment patterns, post-call turnaround expectations, and unit prep standards were the levers.
+At Royal, we used the distribution to look more closely at deployment patterns, post-call turnaround, and unit preparation rather than treating every delay as the same problem. Those were the conditions we could act on.
 
 **Documentation Quality (Addenda Rate)**
 
-Addenda — corrections and additions filed after a report is submitted — are expensive. They mean the report wasn't right the first time. They create legal exposure. They create billing delays. They are a reliable proxy for crew stress, training gaps, and policy clarity.
+Addenda are corrections or additions filed after a report is submitted. They are not automatically evidence of poor work; records sometimes need legitimate clarification. But a pattern of avoidable addenda can create rework and delay, and it may be a reason to inspect documentation expectations, training, workload, or the design of the reporting process.
 
-We reduced addenda rates through a combination of: clearer documentation standards, FTO accountability for documentation habits in new providers, and supervisor spot-checks rather than waiting for QA to flag issues.
+The distinction matters enough to check the underlying records rather than treating the count as a verdict. [CMS guidance](https://www.cms.gov/Regulations-and-Guidance/Guidance/Transmittals/2017Downloads/R732PI.pdf), for example, separately recognizes amendments, corrections, and delayed entries when they are properly identified and preserved. The local policy and reason for the entry matter.
+
+In our operation, we worked on addenda through clearer documentation expectations, attention to documentation during field training, and supervisor spot-checks rather than waiting for QA to find every issue.
 
 If your addenda rate is high, newer providers and high-volume units are reasonable places to look first. They are hypotheses, not the answer before you inspect the distribution.
 
 **Incident Rate (Fleet Safety)**
 
-See [[fleet-safety|Fleet Safety]] for the full methodology. The short version: track by incident type, not just total count. Backing incidents, intersection incidents, and lot incidents have different causes and require different interventions.
+See [[fleet-safety|Fleet Safety]] for the full methodology. The short version: track by incident type, not only total count. Backing incidents, intersection incidents, and low-speed lot incidents can involve different conditions and may call for different responses.
 
 **Call Volume Distribution**
 
-Are your units running equal loads, or are some crews chronically overloaded while others are underutilized? Uneven distribution drives burnout on one side and atrophy on the other. Neither is useful.
+Are some crews repeatedly carrying more of the workload than others? I would compare call volume with shift length, acuity, geography, posting, and recovery time before deciding the distribution was fair or harmful. The count is a prompt for a closer look.
 
 ---
 
 ## Leading vs. Lagging Indicators
 
-Most EMS metrics are lagging — they tell you something went wrong after it went wrong. Accidents, addenda, complaints, response time failures. These are important but they're the aftermath.
+Many of the measures I inherited were lagging: accidents, complaints, response-time failures, and documentation returned for correction. They describe something already recorded.
 
-Leading indicators tell you where something is likely to go wrong before it does. Hard braking events, shift overtime rates, high-acuity call clustering, unit downtime. These are the metrics worth building into your regular review.
+Possible leading indicators—hard-braking events, overtime, high-acuity call clustering, unit downtime—can help direct attention earlier. They still need local validation. A signal that precedes an event in one operation may be noise in another.
 
-If you're only looking at lagging indicators, you're managing by rear-view mirror.
+I wanted both: outcomes that told me what had happened and earlier signals that gave us a chance to ask questions before the next event.
 
 This is the measurement problem inside [[build-the-sprinkler-system|preventive work]]. Recovery produces visible outcomes. Prevention often has to make a case from weak signals before the event arrives.
 
 ---
 
-## The Review Cadence That Works
+## The cadence I used
 
 Daily: glance at anything that flagged overnight. Incident reports, major calls, unit issues.
 
@@ -77,7 +79,7 @@ Weekly: chute times, addenda, fleet events. Look for trends, not one-off anomali
 
 Monthly: the full picture. Compare against prior periods. Ask why it moved, not just whether it moved.
 
-The mistake most supervisors make is reviewing data only when something goes wrong. By then you're already in reactive mode. Build the cadence when things are fine so you know what “fine” actually looks like.
+The useful part was the regularity. Reviewing the same measures when nothing dramatic had happened gave us a baseline for what ordinary variation looked like. The exact cadence should follow the pace and risk of the operation.
 
 Include the work that came back. A reopened case, repeated customer contact, or an issue that crossed four departments may say more about the operation than the number of tasks everybody closed. [[a-problem-passed-around-is-owned-by-nobody|Motion and resolution are different things.]]
 
@@ -89,17 +91,15 @@ Know your audience. Frontline crews care about what affects their shift. Directo
 
 Translate the metric into the impact your audience cares about before you walk into the room. “The addenda rate moved” is incomplete unless you can explain what that meant for rework, billing delay, clinical documentation, or the QA team's attention.
 
-Same data. Different frame.
-
-The frame still has to remain true. Translating a measurement is not permission to give it a more dramatic causal story than the evidence supports.
+The explanation should meet the audience where they are without changing what the measurement can support.
 
 ## What the dashboard will not tell you
 
 Some of the work holding an operation together remains difficult to count: the experienced employee who notices a problem before it escalates, the supervisor who creates enough trust that bad news arrives early, the person quietly translating between two teams whose systems do not connect.
 
-That is not an argument against measurement. It is an argument for humility about what the dashboard can see.
+I still want the dashboard. I just do not want what is easy to count to become the boundary of what leadership notices.
 
-[[recognition-is-evidence-of-attention|Precise recognition]] and direct observation are part of the operational record too. The danger is allowing what is easy to count to define what is real.
+[[recognition-is-evidence-of-attention|Precise recognition]] and direct observation belong beside the dashboard, especially when they reveal work the available measures miss.
 
 ---
 

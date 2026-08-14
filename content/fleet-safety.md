@@ -11,9 +11,7 @@ modified: 2026-08-14
 
 # Fleet Safety
 
-We reduced ambulance accidents by 30% in Year 1. This is how.
-
-Not theory. The actual methodology.
+During the first year of this project, the rate moved from 1.0 to 0.7 accidents per 1,000 trips. This is the method we used and what I think it taught me.
 
 ---
 
@@ -23,7 +21,7 @@ The reactive pattern I saw in EMS was familiar: something happens, someone fills
 
 The form is not useless. It is usually doing the job it was designed to do: notify the organization and preserve a specific set of facts. The problem is expecting that same form to carry the entire investigation. [[incident-reports-can-be-accurate-and-still-incomplete|A record can be accurate and still omit the conditions needed for operational learning.]]
 
-You can't fix what you don't accurately diagnose. And most agencies are diagnosing at the symptom level.
+We needed a better diagnosis than "the operator made an error." That description may be accurate and still leave the conditions around the event unexplored.
 
 ---
 
@@ -31,9 +29,9 @@ You can't fix what you don't accurately diagnose. And most agencies are diagnosi
 
 We used DMAIC — Define, Measure, Analyze, Improve, Control — borrowed from Lean Six Sigma. You don't need a Six Sigma certification to apply it. You need discipline and honest data.
 
-**Define:** What exactly are we trying to reduce? We got specific. Not "accidents" in general — we broke them down by type. Backing incidents. Intersection incidents. Low-speed lot incidents. Each type has different causes and requires different interventions.
+**Define:** What exactly are we trying to reduce? We got more specific than "accidents" in general. Backing incidents, intersection incidents, and low-speed lot incidents can involve different conditions. Breaking the total apart gave us a better place to investigate.
 
-**Measure:** What did we actually have, and how were we capturing it? We implemented fleet telematics — GPS, accelerometer data, hard braking events, speed profiles. This gave us objective data instead of self-reported incidents. Incidents you don't capture can't be fixed.
+**Measure:** What did we actually have, and how were we capturing it? We implemented fleet telematics—GPS, accelerometer data, hard-braking events, speed profiles. It added objective signals alongside incident reports and witness accounts. It also showed driving events that had not become reported collisions, giving us more to examine than the outcome count alone.
 
 **Analyze:** Where were incidents clustering? What conditions preceded them? Time of day, shift length, call volume, specific units, specific locations. We ran fishbone analysis on the high-frequency incident types. The contributing conditions were almost never "operator error" alone—they were layered.
 
@@ -57,21 +55,19 @@ The key is what you do with the data. Raw data without structured review and coa
 
 ---
 
-## What Actually Moved the Number
+## What I think mattered
 
-Backing incidents were the highest-frequency category. The fix wasn't a memo about using spotters — it was making spotter use a behavioral norm enforced at the crew level, and making the consequences of skipping it visible and immediate via telematics.
+Backing incidents were the highest-frequency category. We did more than issue another reminder about spotters. We reinforced the behavior at the crew level and used telematics to make backing patterns available for review.
 
-The behavioral coaching program mattered more than any policy change. When you sit down with a high-incident operator and show them their own data — not accusatorially, as a shared problem to solve — the conversation is completely different than a disciplinary write-up. Most people want to do the job well. Show them the data, ask what they think is happening, and work it together.
+My strongest recollection is that the coaching conversations changed the quality of the work. Sitting with an operator and looking at their own data as a shared safety problem produced a different conversation than beginning with a disciplinary write-up. I cannot isolate how much of the measured reduction came from coaching, spotter practice, training, telematics, or other changes happening at the same time.
 
-The 30% reduction was real and measured: the rate moved from 1.0 to 0.7 accidents per 1,000 trips during the first year. The method can be repeated. The result should not be treated as a promise that every fleet will produce the same number.
+The 30% change was measured: the rate moved from 1.0 to 0.7 accidents per 1,000 trips during the first year. The process is documented well enough for another team to adapt and test. The result is not a promise that another fleet—or even the same fleet in another year—will produce the same number.
 
 ---
 
 ## The Deeper Point
 
-Every accident has contributing factors that go beyond the individual operator. Equipment condition, shift fatigue, deployment density, policy gaps, training deficits. The individual operator is usually the last line of a much longer causal chain.
-
-Fix the chain. Do not only punish the last link.
+An accident can involve conditions beyond the individual operator: equipment, fatigue, deployment, training, local layout, and the way a policy meets the actual work. Those conditions do not erase individual decisions. They give the investigation more places to look and the organization more possible controls than discipline alone.
 
 This project is where [[build-the-sprinkler-system|the sprinkler-system idea]] became measurable for me. It is also part of the lineage of [[chatIR|chatIR]], which is my attempt to make this kind of structured incident learning easier to repeat without pretending the software can conduct the human investigation.
 
@@ -83,7 +79,7 @@ This project is where [[build-the-sprinkler-system|the sprinkler-system idea]] b
 - [[leadership-philosophy|Leadership Philosophy]] — coaching over punishment
 - [[first-90-days|First 90 Days]] — where fleet safety fits in your early priorities
 - [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]] — why the form and the investigation serve different purposes
-- [[build-the-sprinkler-system|Build the Sprinkler System]] — the broader prevention thesis
+- [[build-the-sprinkler-system|Build the Sprinkler System]] — the broader prevention idea
 - [[chatir|chatIR]] — the product growing from this methodology
 
 The [[tools|Vehicle Accident Investigation Form and Incident Findings Report]] are the paper companions to this method.

@@ -11,19 +11,19 @@ modified: 2026-08-14
 
 # The Debrief
 
-The debrief is the most underused tool in EMS leadership. Most supervisors skip it, rush it, or do it wrong. Done right, it's the fastest way to build crew confidence and catch problems before they become patterns.
+Some of the most useful conversations I had as an EMS supervisor happened after the call was over.
+
+I called them debriefs, although that word covers several different conversations. What I mean here is a supportive, question-led conversation with a crew member: a chance to recover their reasoning, notice what they learned, and decide what they want to carry into the next call.
 
 ---
 
-## What It's Actually For
+## What I was trying to do
 
-The instinct is to treat a debrief as a performance review — what went wrong, what needs to improve. That's not what this is.
+I did not want the conversation to begin as a performance review. If somebody was replaying a difficult decision, I wanted to understand what they saw and what they were working with before deciding what the call meant.
 
-The debrief is for the crew member. Not for you, not for documentation, not for risk management. For them.
+In my experience, nine times out of ten, the person already had more of the skill and knowledge than they believed they did. They were trying to recover trust in their own judgment. A good conversation could help them find it.
 
-The goal is simple: leave the conversation with the crew member feeling more capable than when they entered it. Nine times out of ten, the thing they're spiraling about — the call they keep replaying, the decision they're second-guessing — comes down to one thing: they already had the skills and knowledge to handle it. They just didn't trust themselves in the moment.
-
-Your job is to help them find that.
+That was not always the answer. Sometimes there was a real knowledge gap, a system problem, or feedback that could not be softened away. The questions helped us determine which situation we were actually in.
 
 ---
 
@@ -33,29 +33,27 @@ Borrowed from the question-led model in [[leadership-philosophy#Don't Answer. Le
 
 My default was not to give the answer first.
 
-**Instead:**
-
 1. **Open with curiosity, not evaluation.** "Walk me through that call." Not "what did you do wrong."
 
 2. **Ask what they were thinking in the moment.** "What were you working with when you made that decision?" This surfaces their internal reasoning without judgment.
 
 3. **Ask what they'd look for next time.** "If that came in again tomorrow, what would you want to pay attention to?" This is forward-facing without implying they failed.
 
-4. **Reflect their competence back.** "You had the right instinct. You were already doing the assessment. What you're describing is exactly what good clinical thinking sounds like."
+4. **Reflect what the conversation supports.** Sometimes that means naming good reasoning they cannot see yet. Sometimes it means identifying a gap plainly. Reassurance is only useful when it is true.
 
 5. **Close with what they can carry forward.** One concrete thing. Not a list.
 
-The crew member should be doing most of the talking. If you're doing most of the talking, you're not debriefing — you're lecturing.
+I tried to let the crew member do most of the talking. If I was delivering a long explanation, I was probably teaching or giving feedback rather than helping them reconstruct the call. Those can be useful too. I just wanted to know which conversation I was having.
 
 ---
 
 ## Timing Matters
 
-Hot debriefs (immediately post-call) are for acute stress. Keep them short, normalize the emotional response, don't go clinical yet.
+Immediately after a call, I usually kept the first check-in short: How are you doing? What do you need right now? Is there anything urgent we need to address before the next call?
 
-Cold debriefs (hours later, next shift) are where the learning happens. Give people time to process before asking them to reflect analytically.
+A later conversation often allowed for more reflection, but learning does not obey a fixed schedule. A brief team debrief immediately after an event can capture operational details while they are fresh. A private conversation later may be better for a person who is still processing what happened.
 
-Not every call needs both. Not every call needs a formal debrief at all. The signal that one is needed: the crew member is still carrying it.
+Not every call needs both. I looked at the event, the person, the crew, and what the operation required. Someone still carrying the call was one reason to return to it, not the only one.
 
 ---
 
@@ -63,7 +61,7 @@ Not every call needs both. Not every call needs a formal debrief at all. The sig
 
 Pediatric calls. Traumatic deaths. Calls where things went wrong and the outcome was bad regardless of what the crew did. 
 
-For these, the clinical debrief comes second. First: normalize that this was hard, that the response they're having is appropriate, that it means they care. Then — and only then — if they want to talk through the clinical — go there.
+For these calls, I would begin with the person rather than forcing an immediate clinical critique. I could acknowledge that the call was hard, ask what they needed, and make room for a later clinical or operational review when appropriate.
 
 After a call that ended badly, I would not lead with “here is what you should have done differently.” Even when the feedback is true and necessary, the timing can bury it.
 
@@ -75,7 +73,7 @@ My observation was that crews who were regularly debriefed—not punished, actua
 
 I did not run a controlled study of whether those crews made fewer errors. I believed they did, and the mechanism made sense to me, but that is a retrospective operational judgment rather than a measured result. The part I can state more confidently is that the habit began to move from the supervisor into the crew.
 
-That's the goal. Make yourself unnecessary.
+What encouraged me was seeing the habit move from the supervisor into the crew. People began asking one another better questions without waiting for me.
 
 ## A debrief is not an investigation or therapy
 
@@ -84,6 +82,8 @@ These boundaries matter.
 A supportive debrief can help someone process a difficult call and recover their reasoning. It does not replace professional mental-health support when that is what the person needs. It also does not replace a formal investigation when patient care, policy, safety, or misconduct requires one.
 
 The conversations may connect. Their purposes are different.
+
+There is also a broader team debrief than the one-on-one practice described here. [AHRQ's TeamSTEPPS material](https://www.ahrq.gov/teamstepps-program/curriculum/team/tools/debrief.html) uses debriefing as a short review of team performance: what happened, what worked, what did not, and what should change. That can happen quickly after an event and may serve a different need than the later supportive conversation I used with an individual crew member.
 
 That is the same distinction I am trying to preserve in [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]] A conversation can reveal context a formal record did not carry. More context does not erase the need for process, evidence, or accountable review.
 

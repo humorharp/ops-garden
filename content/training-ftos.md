@@ -11,9 +11,9 @@ modified: 2026-08-14
 
 # Training FTOs
 
-Training a field training officer is different from training an EMT. You're not teaching clinical skills — you're teaching someone how to teach. That's a harder thing to do, and almost nobody does it deliberately.
+Training a field training officer is different from training an EMT. Clinical competence still matters, but the new work is helping somebody else learn.
 
-I trained 30+ people at Royal Ambulance over my time as an FTO and supervisor. Here's what I learned.
+I trained about 30 people at Royal Ambulance over my time as an FTO and supervisor. Here's what I learned.
 
 ---
 
@@ -21,7 +21,7 @@ I trained 30+ people at Royal Ambulance over my time as an FTO and supervisor. H
 
 Most FTOs were selected because they were excellent clinicians. That's necessary but not sufficient. Being good at a job does not automatically make you good at explaining it to someone who isn't.
 
-The trap new FTOs fall into: they demonstrate instead of develop. They show the trainee how to do the skill, the trainee watches, and everyone moves on. No learning has actually occurred. What's occurred is observation.
+One trap I saw was demonstrating without creating enough room for practice. Observation can be useful. It just does not show that the trainee can recognize the situation, reason through it, and perform when the FTO is not there.
 
 The goal isn't for your trainee to have watched you do the thing. It's for your trainee to be able to do the thing when you're not there.
 
@@ -33,15 +33,15 @@ That is the same identity shift a new supervisor faces in [[stop-being-the-answe
 
 When I trained FTOs, or mentored them through training questions, the through-line was always the same: **shift from demonstrating to developing.**
 
-Practical framework — see one, do one, teach one:
+One progression I used was see one, do one, teach one. It was a prompt for increasing independence, not a rule that every skill is safe to learn in three attempts.
 
 **1. See one.** They watch. Once, maybe twice. Before you start, tell them what to pay attention to — not a running commentary during. Let them observe without narration cluttering it.
 
 **2. Do one.** Trainee attempts. Before you hand it over, narrate your reasoning out loud — not the steps, the *thinking*. "I'm starting here because... I'm checking this because..." Most experienced providers have automated their reasoning. Making it explicit again takes practice. Then step back and let them work. Resist the urge to jump in.
 
-**3. Teach one.** They can walk someone else through it. That's the real test. Not whether they can execute — whether they understand it well enough to explain the *why*. If they can't teach it, they don't own it yet.
+**3. Teach one.** Ask them to walk somebody else through the reasoning. Teaching can reveal gaps that successful execution hides. It is useful evidence of understanding, not the only test of competence.
 
-Debrief after every attempt. Not a list of corrections — use the Socratic method. See [[the-debrief|The Debrief]]. "What were you working with when you made that decision? What would you pay attention to next time?"
+Debrief often enough that practice turns into learning. The depth should match the task and the risk; not every routine attempt needs a formal conversation. See [[the-debrief|The Debrief]]. "What were you working with when you made that decision? What would you pay attention to next time?"
 
 Move through the progression as fast as the trainee can handle. The FTO's job is to become unnecessary.
 
@@ -49,7 +49,7 @@ Move through the progression as fast as the trainee can handle. The FTO's job is
 
 ## Common FTO Mistakes
 
-**Rescuing too early.** The trainee pauses, the FTO steps in. Natural instinct, wrong move. Productive struggle is where learning happens. Let them sit in it a little longer than feels comfortable.
+**Rescuing too early.** The trainee pauses and the FTO steps in. Sometimes safety requires that. When it does not, a little room to think can be more useful than an immediate rescue. The skill is knowing which situation you are in.
 
 **Correcting in front of the patient.** If immediate safety requires intervention, intervene. Otherwise, pull them aside afterward. The debrief is private. The call is not the time for a performance review.
 
@@ -69,7 +69,7 @@ Directly. Privately. Kindly. Quickly.
 
 The longer you wait, the harder it gets, and the more it affects the partnership. These conversations feel enormous beforehand and are usually over in three minutes. The formula: private setting, specific observation, no editorializing, clear expectation, move on.
 
-The same framework applies to almost every uncomfortable FTO conversation. Don't build up to it, don't over-explain, don't apologize for having the conversation. Have it and be done with it.
+The basic approach carried into many uncomfortable FTO conversations: private setting, specific observation, clear expectation, and room for the other person to respond. Some situations require more process than others. Direct does not have to mean abrupt.
 
 ---
 

@@ -31,9 +31,9 @@ If you just got promoted into a supervisory role and need something useful now, 
 
 If you are developing other people, follow [[training-ftos|Training FTOs]], [[the-debrief|The Debrief]], and [[stop-being-the-answer|Stop Being the Answer]].
 
-If you are trying to understand the systems thesis underneath my work, start with [[build-the-sprinkler-system|Build the Sprinkler System]] and [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]]
+If you are trying to understand the systems thinking underneath my work, start with [[build-the-sprinkler-system|Build the Sprinkler System]] and [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]]
 
-If you want the whole landscape, use the [[garden-map|Garden Map]]. If you want to see where the thinking is unfinished, read [[open-questions|Open Questions]].
+The [[garden-map|Garden Map]] shows the current structure. [[open-questions|Open Questions]] collects the parts I have not resolved.
 
 ## Notes currently at the center
 

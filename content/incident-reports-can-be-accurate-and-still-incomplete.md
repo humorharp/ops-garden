@@ -11,11 +11,11 @@ modified: 2026-08-14
 
 # The Report Was Accurate. It Was Still Incomplete.
 
-One of the sentences that has stayed with me from an incident interview was, essentially: I documented everything that belonged in the patient-care report.
+One sentence that stayed with me from an incident interview was, essentially: I documented everything that belonged in the required record.
 
 I believed the person.
 
-The later conversation still surfaced conditions that mattered for understanding the event: how people divided work, where equipment was located, what somebody expected to find when they opened a bag, which organization normally supplied what, how familiar people were with one another's equipment, and what assumptions were being made while several tasks happened at once.
+The later conversation still surfaced conditions that mattered for understanding the event: how people divided the work, what equipment they expected to be available, how familiar they were with the setup, and what assumptions were being made while several tasks happened at once.
 
 Those details did not prove a cause. Some of them may not have belonged in the patient-care report at all.
 
@@ -41,7 +41,7 @@ What did the person expect the system to provide?
 
 Which barrier worked, which barrier failed, and which barrier never existed?
 
-The answer is not to keep adding fields to the original form until it becomes unusable. I have helped build forms. More fields do not automatically produce more understanding. Sometimes they produce shorter answers, copied answers, or a person clicking whatever lets them finish.
+I do not think the solution is to keep adding fields until the original form becomes unusable. I have helped build forms. More fields can produce more information; they can also produce shorter answers, copied answers, or a person clicking whatever lets them finish.
 
 The record and the investigation are related. They are not identical.
 
@@ -75,7 +75,7 @@ The bet is that organizing the record this way can help a safety team see combin
 
 That bet still needs evidence. Better organization can make patterns visible. It does not guarantee that the visible pattern is causal, important, or actionable.
 
-## The human boundary is not decorative
+## Human review is part of the design
 
 I am wary of calling an AI conversation an investigation.
 
@@ -83,7 +83,7 @@ The software can ask questions while memory is fresh. It can help structure info
 
 The investigation begins when responsible people examine that material, validate it against the operation, speak with the people involved, and decide what it means.
 
-That is not a temporary limitation until the model becomes smarter. It is part of the design boundary.
+I consider that division of responsibility part of the design, not a temporary limitation to remove when the model becomes smarter.
 
 The people responsible for the work know things the record does not. They also carry the authority and accountability for whatever happens next. Software should help them recover and compare context. It should not quietly convert an inference into a verdict.
 

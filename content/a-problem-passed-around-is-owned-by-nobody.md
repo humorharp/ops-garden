@@ -68,7 +68,7 @@ A weekly review of a few reopened or repeatedly transferred cases can tell you m
 - Was the blocker information, authority, access, or attention?
 - Where should the case have ended?
 
-The point is not to create a new metric people can game. It is to make the loop visible.
+The purpose is to make the loop visible without turning it into another number people learn to game.
 
 That connects directly to how I think about [[operational-metrics|operational metrics]]. A count is rarely the whole presentation. Reopened work, elapsed time between handoffs, and repeated customer contact may describe the health of the system better than the number of tasks each department closed.
 

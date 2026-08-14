@@ -19,11 +19,11 @@ Here's what I learned from having a lot of them.
 
 ## The Main Thing
 
-Most hard conversations feel enormous before they happen and are over in three minutes.
+Many of the conversations I dreaded were shorter than the time I spent rehearsing them.
 
 The anticipation is the worst part. The longer you wait, the more the thing grows in your head, and the more damage it does in the meantime — to the crew member, to the team, and to your credibility as someone who handles things.
 
-Have the conversation. Have it sooner than feels comfortable. You'll get through it.
+I learned to address a problem while there were still options besides formal discipline, without confusing speed with recklessness. I still needed facts, privacy, policy, and enough time to understand what I was seeing.
 
 ---
 
@@ -31,7 +31,7 @@ Have the conversation. Have it sooner than feels comfortable. You'll get through
 
 **Personal hygiene.** New FTOs ask about this constantly. The answer is the same as everything else: private, direct, kind, fast. "Hey, I want to give you a heads up — there's a hygiene concern that's come up. I want to address it now before it becomes a bigger issue for you on the job. Can we talk through it?" That's it. Don't elaborate beyond what's necessary. Don't make it weird by over-softening it. Say it, give them space to respond, and move on.
 
-**Performance that's declining.** Don't wait until it's a disciplinary issue. The earlier you have the conversation, the more options everyone has. "I've noticed X, and I want to check in before it becomes a pattern. What's going on?" leaves the door open. Waiting until you're writing someone up closes it.
+**Performance that's declining.** Don't wait until it becomes a disciplinary issue. The earlier conversation can be specific without assuming a cause: "I've noticed the last three reports have come back for the same correction. I wanted to check in before it becomes a pattern. What are you seeing?" Waiting until you're writing someone up leaves everyone fewer options.
 
 **Interpersonal conflict between crew members.** Don't pick sides. Don't adjudicate who was right. Talk to each person separately first, understand what they actually experienced, then decide if a joint conversation makes sense. Sometimes people just need to be heard. Sometimes the issue is structural and the conflict is just the symptom.
 
@@ -45,13 +45,15 @@ When that happens:
 
 **Be the person they came to.** They came to you for a reason. Honor that. Listen fully before you do anything else.
 
-**Be clear about what you're required to do.** Don't make promises you can't keep about confidentiality. If what they're describing requires you to report, tell them that — before they finish the story if possible, or immediately after. Don't let them believe the conversation stayed between you when it didn't.
+**Be honest about confidentiality.** I would not promise to keep something secret before I knew what it was. If the concern involved harassment, discrimination, retaliation, safety, misconduct, or another reportable issue, my responsibility was to follow organizational policy and bring it promptly to the appropriate HR, compliance, or leadership channel. I could still explain that I would share it only with people who needed to respond.
 
-**Act quickly.** The moment you know, you're on the clock. Slow-walking it protects no one and creates liability for everyone including you.
+**Do not investigate beyond your role.** Preserve what the person told you, ask only what you need to understand the immediate concern, and follow the required reporting process promptly. A supervisor improvising a private investigation can make a serious situation worse.
 
-**Follow up.** Whatever happened to the person who came to you matters. Check in. You don't always have the ability to share details, but you can say "I want you to know I took this seriously and it's being handled."
+**Follow up without promising an outcome you do not control.** You may not be allowed to share details, but you can check on the person's immediate safety, remind them how to report retaliation, and confirm that you followed the process available to you.
 
-The measure of a supervisor in these moments isn't perfection — it's whether the person who came to you felt heard, protected, and respected.
+I wanted the person to feel heard and respected. I also had to remember that care, confidentiality, impartial review, and due process all matter. This is an area where employer policy and qualified HR or legal guidance take precedence over a leadership essay on the internet.
+
+For supervisors in the United States, the EEOC's [*Promising Practices for Preventing Harassment*](https://www.eeoc.gov/laws/guidance/promising-practices-preventing-harassment) is a useful public starting point on reporting channels, confidentiality to the extent possible, prompt and impartial review, and protection from retaliation. It is still not a substitute for knowing your own role and policy before somebody needs you to use them.
 
 ---
 
@@ -61,7 +63,7 @@ Crew makes a mistake. Something bad happens on a call. Now what?
 
 Resist the urge to make it immediately about accountability. Lead with the person first — how are they doing, what are they carrying. Then, when the moment is right, move into the debrief. See [[the-debrief|The Debrief]] for the full framework.
 
-The goal is not to begin with blame. The goal is to understand what happened, support the crew member through it, and recover whatever learning is available. Those are related jobs, but they are not the same conversation. [[incident-reports-can-be-accurate-and-still-incomplete|The formal record may establish the event without carrying the reasoning and conditions the later conversation reveals.]]
+I wanted to understand what happened, support the crew member through it, and recover whatever learning was available without beginning from blame. Those are related jobs, but they may require different conversations. [[incident-reports-can-be-accurate-and-still-incomplete|The formal record may establish the event without carrying the reasoning and conditions the later conversation reveals.]]
 
 ---
 
@@ -69,7 +71,7 @@ The goal is not to begin with blame. The goal is to understand what happened, su
 
 You're going to have supervisors above you who are wrong, political, inconsistent, or ineffective. You're going to have to disagree with people who have more authority than you.
 
-Be specific and factual. "I'm concerned about X because Y" is a conversation. "This is unfair" is an argument. Bring the data when you can. Pick your moments — not in front of others, not when the other person is already defensive.
+Be specific and factual. "I'm concerned that the new posting plan leaves Unit 4 without a realistic meal break; here are the last two weeks of calls" gives the other person something they can examine. "This is unfair" may be true, but it does not yet show them what you want reconsidered. Pick the setting carefully and bring the record when you can.
 
 And sometimes you'll be right, make the case clearly, and still not win. That's part of the job. Disagree, document if necessary, and continue doing your work well.
 

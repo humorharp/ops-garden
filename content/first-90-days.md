@@ -11,27 +11,27 @@ modified: 2026-08-14
 
 # First 90 Days as an EMS Supervisor
 
-You just got promoted. You were excellent in the field — that's why they picked you. Now you're responsible for a crew, a shift, documentation metrics, fleet safety, and conversations nobody trained you for.
+You just got promoted. Yesterday you were responsible for your own work. Now you may be responsible for a crew, a shift, documentation metrics, fleet safety, and conversations nobody trained you for.
 
-Here's what to actually focus on.
+This is what I would focus on first.
 
 ---
 
 ## The First Thing to Understand
 
-Your job changed completely. Not incrementally — completely.
+Your clinical skill still matters. It just is not the whole job anymore.
 
-You are no longer evaluated on your clinical skill. You are evaluated on what your crew does when you're not in the room. That is a fundamentally different challenge, and most new supervisors spend the first six months not fully accepting it.
+As a field provider, I could often solve the problem in front of me myself. As a supervisor, I had to help other people make good decisions when I was not in the room. That was a much larger identity change than the promotion made it sound.
 
-The sooner you internalize that your success is now measured through other people, the sooner you can stop trying to be the best clinician in the room and start building the crew that doesn't need you to be.
+The question I wish I had asked earlier was: what will this crew be able to handle without me?
 
 ---
 
 ## Days 1–30: Listen First
 
-Do not come in with changes. Do not announce what you're going to fix. Do not announce a vision.
+I would resist the urge to arrive with a list of changes. The title gives you a new view of the operation, but it does not mean you understand it yet.
 
-Go to where your crew works. Watch. Ask questions. Understand what they deal with, what frustrates them, what's broken that nobody has bothered to fix, what works better than leadership knows. Your first 30 days are an intelligence-gathering operation.
+Go where your crew works. Watch. Ask questions. Learn what frustrates them, what has been broken for a while, and what works better than leadership realizes. The dates here are a useful rhythm, not a law. Some operations will require action before Day 30.
 
 Specific things to do in the first 30 days:
 
@@ -44,21 +44,21 @@ Specific things to do in the first 30 days:
 
 ## Days 31–60: Build Credibility
 
-Credibility comes before authority. You have the title. The credibility is earned separately.
+By the second month, you should have heard enough to act on something real. The title may give you authority. People still need evidence that you listened.
 
 This is the phase where you start acting on what you learned — slowly and visibly. Fix one thing that's been annoying the crew for a while and that you can actually fix. Not the biggest systemic problem. Something concrete, small, and immediately visible.
 
-When people see you heard something and then did something about it, trust accelerates.
+Fixing one concrete problem is a good way to show that the first month was not a listening performance.
 
-This is also the phase to establish your standards — clearly, consistently, without drama. Not a memo about expectations. Expectations become clear through how you respond when they're not met. Handle the first few instances calmly, specifically, and without letting them slide. The pattern you set in months 2-3 is what your crew will calibrate to for the rest of your tenure.
+This is also when I would begin making expectations visible: calmly, specifically, and without a dramatic memo announcing a new era. What you consistently notice and address will teach people more than a speech about standards.
 
 ---
 
 ## Days 61–90: Start Building Systems
 
-By now you have enough data and credibility to start working on the underlying structure.
+By now you may have enough context to choose one or two underlying problems. If you do not, keep learning rather than forcing the calendar.
 
-Pick one or two operational areas that need attention — based on what you observed and what the numbers are telling you — and build a real improvement approach. Not a policy. A system. Something that changes behavior, not just describes expected behavior.
+Choose them from what you observed and what the records suggest. Define the problem, establish a baseline, try something proportionate, and decide how you will know whether it helped. A new policy may be part of the response, but publishing one is not the same as changing the operation.
 
 For fleet safety, see [[fleet-safety|Fleet Safety]]. For documentation, look at where your addenda are clustering. For crew development, build a simple FTO feedback cadence if you don't have one.
 
@@ -68,7 +68,7 @@ Document what you're doing and why. Not for credit — for continuity. If you le
 
 ## The Things That Will Trip You Up
 
-**Friendship vs. leadership.** Some of the people you're now supervising were your peers, maybe your friends. This is the hardest part of the transition for most new supervisors. You can maintain relationships — good ones, even — but the dynamic has changed and pretending it hasn't serves no one. You can be warm and still hold standards.
+**Friendship vs. leadership.** Some of the people you're now supervising may have been your peers or friends. The relationship does not need to become cold, but pretending nothing changed creates confusion. You can be warm and still hold standards.
 
 **Trying to have all the answers.** You will not. And you should not pretend to. “I don't know, let me find out” is a legitimate response, especially in the first 90 days. What erodes credibility is not the absence of an immediate answer; it is pretending to know and being wrong. Later, you may face the opposite problem: [[stop-being-the-answer|knowing so many answers that the team begins routing every decision through you]].
 
@@ -76,22 +76,22 @@ Document what you're doing and why. Not for credit — for continuity. If you le
 
 The fires will always argue that they are more urgent than the system. That is why [[build-the-sprinkler-system|preventive work has to become part of the operating rhythm]] before the crisis decides the rhythm for you.
 
-**Waiting to have hard conversations.** See [[hard-conversations|Hard Conversations]]. The math always works out better when you have them sooner.
+**Waiting to have hard conversations.** See [[hard-conversations|Hard Conversations]]. In my experience, delay usually reduced the options available to everyone.
 
 ---
 
 ## What Success Looks Like at Day 90
 
-You know your crew. You know your numbers and what's driving them. You've handled at least one difficult situation with some degree of competence. You've fixed at least one thing.
+By Day 90, I would want to know the crew well enough to stop guessing about their work, understand the baseline numbers without pretending they explain themselves, and have followed through on at least one problem people trusted me with.
 
-You're probably still uncomfortable. That's correct. The discomfort means you're paying attention. It doesn't go away — it just gets more familiar.
+You may still feel uncomfortable. I did. A calendar does not finish the transition; it only gives you somewhere to begin.
 
 ---
 
 ## Related
 
 - [[leadership-philosophy|Leadership Philosophy]] — the mindset underneath all of this
-- [[the-debrief|The Debrief]] — your most important tool
+- [[the-debrief|The Debrief]] — a core conversation to practice
 - [[operational-metrics|Operational Metrics]] — the numbers you need to know
 - [[hard-conversations|Hard Conversations]] — you'll need this sooner than you think
 - [[training-ftos|Training FTOs]] — if you have FTOs reporting to you

@@ -33,9 +33,9 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       if (typeof status === "string") {
         const labels: Record<string, string> = {
           reference: "Reference note",
-          evergreen: "Evergreen note",
-          growing: "Growing note",
-          seedling: "Seedling note",
+          evergreen: "Living note",
+          growing: "Work in progress",
+          seedling: "Early note",
         }
         const label = labels[status.toLowerCase()] ?? `${status} note`
         segments.push(<span class={`note-status status-${status.toLowerCase()}`}>{label}</span>)

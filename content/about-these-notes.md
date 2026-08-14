@@ -33,10 +33,10 @@ Some notes are practical, like [[first-90-days|what to focus on during your firs
 
 The status of a note tells you how I currently think about it:
 
-- **Reference** notes are maps, tools, or explanations meant to be fairly stable.
-- **Evergreen** notes are durable ideas I expect to keep refining.
-- **Growing** notes have enough shape to share but still contain real unresolved edges.
-- **Seedling** notes are early. Most seedlings stay private until there is enough there to be useful.
+- **Reference notes** are maps, tools, or explanations meant to be fairly stable.
+- **Living notes** are durable ideas I expect to keep refining.
+- **Work in progress** means the note has enough shape to share but still contains real unresolved edges.
+- **Early notes** are exactly that. Most stay private until there is enough there to be useful.
 
 Nothing here is finished merely because it has a URL.
 
@@ -60,9 +60,7 @@ This Garden is curated by me. An idea appearing in my private notes does not ent
 
 I remove identifying details unless they are already intentionally public and necessary. I do not publish patient information. I do not name employees, customers, or organizations merely to make an example feel concrete. I do not turn uncertain memories into clean case studies. When a measurement matters, I try to preserve what it actually measured.
 
-Cleaned up does not mean invented. Anonymous does not mean context-free. Professional does not have to mean bloodless.
-
-That is the balance I am trying to hold.
+I am trying to clean the notes up without inventing a better history, protect the people inside the examples without removing all their meaning, and write professionally without sanding off everything human.
 
 ## Where to begin
 
