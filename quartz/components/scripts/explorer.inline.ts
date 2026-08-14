@@ -176,49 +176,54 @@ async function setupExplorer(currentSlug: FullSlug) {
       serializedExplorerState.map((entry: FolderState) => [entry.path, entry.collapsed]),
     )
 
-    const data = await fetchData
-    const entries = [...Object.entries(data)] as [FullSlug, ContentDetails][]
-    const trie = FileTrieNode.fromEntries(entries)
-
-    // Apply functions in order
-    for (const fn of opts.order) {
-      switch (fn) {
-        case "filter":
-          if (opts.filterFn) trie.filter(opts.filterFn)
-          break
-        case "map":
-          if (opts.mapFn) trie.map(opts.mapFn)
-          break
-        case "sort":
-          if (opts.sortFn) trie.sort(opts.sortFn)
-          break
-      }
-    }
-
-    // Get folder paths for state management
-    const folderPaths = trie.getFolderPaths()
-    currentExplorerState = folderPaths.map((path) => {
-      const previousState = oldIndex.get(path)
-      return {
-        path,
-        collapsed:
-          previousState === undefined ? opts.folderDefaultState === "collapsed" : previousState,
-      }
-    })
-
     const explorerUl = explorer.querySelector(".explorer-ul")
     if (!explorerUl) continue
 
-    // Create and insert new content
-    const fragment = document.createDocumentFragment()
-    for (const child of trie.children) {
-      const node = child.isFolder
-        ? createFolderNode(currentSlug, child, opts)
-        : createFileNode(currentSlug, child)
+    const isCurated = explorer.dataset.curated === "true"
+    if (!isCurated) {
+      const data = await fetchData
+      const entries = [...Object.entries(data)] as [FullSlug, ContentDetails][]
+      const trie = FileTrieNode.fromEntries(entries)
 
-      fragment.appendChild(node)
+      // Apply functions in order
+      for (const fn of opts.order) {
+        switch (fn) {
+          case "filter":
+            if (opts.filterFn) trie.filter(opts.filterFn)
+            break
+          case "map":
+            if (opts.mapFn) trie.map(opts.mapFn)
+            break
+          case "sort":
+            if (opts.sortFn) trie.sort(opts.sortFn)
+            break
+        }
+      }
+
+      // Get folder paths for state management
+      const folderPaths = trie.getFolderPaths()
+      currentExplorerState = folderPaths.map((path) => {
+        const previousState = oldIndex.get(path)
+        return {
+          path,
+          collapsed:
+            previousState === undefined ? opts.folderDefaultState === "collapsed" : previousState,
+        }
+      })
+
+      // Create and insert new content
+      const fragment = document.createDocumentFragment()
+      for (const child of trie.children) {
+        const node = child.isFolder
+          ? createFolderNode(currentSlug, child, opts)
+          : createFileNode(currentSlug, child)
+
+        fragment.appendChild(node)
+      }
+      explorerUl.insertBefore(fragment, explorerUl.firstChild)
+    } else {
+      currentExplorerState = []
     }
-    explorerUl.insertBefore(fragment, explorerUl.firstChild)
 
     // restore explorer scrollTop position if it exists
     const scrollTop = sessionStorage.getItem("explorerScrollTop")

@@ -160,6 +160,118 @@ button.desktop-explorer {
   }
 }
 
+.curated-explorer-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+
+  .curated-home-item {
+    margin-bottom: 0.7rem;
+  }
+
+  .curated-home-link {
+    display: flex;
+    align-items: center;
+    min-height: 2.4rem;
+    box-sizing: border-box;
+    padding: 0.45rem 0.7rem;
+    border-left: 3px solid var(--secondary);
+    border-radius: 0 6px 6px 0;
+    background: color-mix(in srgb, var(--secondary) 9%, transparent);
+    color: var(--dark);
+    font-family: var(--headerFont);
+    font-weight: $semiBoldWeight;
+    opacity: 1;
+
+    &::before {
+      content: "⌂";
+      margin-right: 0.5rem;
+      color: var(--secondary);
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    &:hover,
+    &.active {
+      color: var(--tertiary);
+      background: color-mix(in srgb, var(--secondary) 15%, transparent);
+    }
+  }
+
+  .curated-orientation {
+    padding-bottom: 0.65rem;
+    margin-bottom: 0.45rem;
+    border-bottom: 1px solid var(--lightgray);
+
+    .curated-eyebrow {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--gray);
+      font-size: 0.68rem;
+      font-weight: $semiBoldWeight;
+      letter-spacing: 0.09em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+  }
+
+  .curated-link {
+    display: block;
+    padding: 0.22rem 0.5rem;
+    border-left: 2px solid transparent;
+    line-height: 1.35;
+
+    &.active {
+      border-left-color: var(--secondary);
+      color: var(--tertiary);
+      opacity: 1;
+    }
+  }
+
+  .curated-group {
+    details {
+      border-bottom: 1px solid color-mix(in srgb, var(--lightgray) 72%, transparent);
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.55rem 0.15rem;
+      color: var(--darkgray);
+      cursor: pointer;
+      font-family: var(--headerFont);
+      font-size: 0.84rem;
+      font-weight: $semiBoldWeight;
+      line-height: 1.25;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &:hover {
+        color: var(--tertiary);
+      }
+
+      svg {
+        flex-shrink: 0;
+        opacity: 0.65;
+        transform: rotate(-90deg);
+      }
+    }
+
+    details[open] summary svg {
+      transform: rotate(0);
+    }
+
+    details > ul {
+      padding: 0 0 0.55rem 0.35rem;
+    }
+  }
+}
+
 .folder-container {
   flex-direction: row;
   display: flex;

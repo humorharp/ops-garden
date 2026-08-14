@@ -8,8 +8,25 @@ import { i18n } from "../i18n"
 import { FileTrieNode } from "../util/fileTrie"
 import OverflowListFactory from "./OverflowList"
 import { concatenateResources } from "../util/resources"
+import { FullSlug, resolveRelative, simplifySlug } from "../util/path"
 
 type OrderEntries = "sort" | "filter" | "map"
+
+export interface CuratedLink {
+  title: string
+  slug: string
+}
+
+export interface CuratedGroup {
+  title: string
+  links: CuratedLink[]
+}
+
+export interface CuratedNavigation {
+  home: CuratedLink
+  orientation: CuratedLink[]
+  groups: CuratedGroup[]
+}
 
 export interface Options {
   title?: string
@@ -20,6 +37,7 @@ export interface Options {
   filterFn: (node: FileTrieNode) => boolean
   mapFn: (node: FileTrieNode) => void
   order: OrderEntries[]
+  curated?: CuratedNavigation
 }
 
 const defaultOptions: Options = {
@@ -60,8 +78,19 @@ export default ((userOpts?: Partial<Options>) => {
   const opts: Options = { ...defaultOptions, ...userOpts }
   const { OverflowList, overflowListAfterDOMLoaded } = OverflowListFactory()
 
-  const Explorer: QuartzComponent = ({ cfg, displayClass }: QuartzComponentProps) => {
+  const Explorer: QuartzComponent = ({ cfg, fileData, displayClass }: QuartzComponentProps) => {
     const id = `explorer-${numExplorers++}`
+    const currentSlug = simplifySlug(fileData.slug!)
+    const isActive = (slug: string) => currentSlug === simplifySlug(slug as FullSlug)
+    const curatedLink = (link: CuratedLink, className = "curated-link") => (
+      <a
+        href={resolveRelative(fileData.slug!, link.slug as FullSlug)}
+        class={`${className} internal${isActive(link.slug) ? " active" : ""}`}
+        data-for={link.slug}
+      >
+        {link.title}
+      </a>
+    )
 
     return (
       <div
@@ -69,6 +98,7 @@ export default ((userOpts?: Partial<Options>) => {
         data-behavior={opts.folderClickBehavior}
         data-collapsed={opts.folderDefaultState}
         data-savestate={opts.useSavedState}
+        data-curated={opts.curated ? "true" : "false"}
         data-data-fns={JSON.stringify({
           order: opts.order,
           sortFn: opts.sortFn.toString(),
@@ -120,7 +150,54 @@ export default ((userOpts?: Partial<Options>) => {
           </svg>
         </button>
         <div id={id} class="explorer-content" aria-expanded={false} role="group">
-          <OverflowList class="explorer-ul" />
+          <OverflowList class={`explorer-ul${opts.curated ? " curated-explorer-ul" : ""}`}>
+            {opts.curated && (
+              <>
+                <li class="curated-home-item">
+                  {curatedLink(opts.curated.home, "curated-home-link")}
+                </li>
+                <li class="curated-orientation" aria-label="Start here">
+                  <span class="curated-eyebrow">Start here</span>
+                  <ul>
+                    {opts.curated.orientation.map((link) => (
+                      <li>{curatedLink(link)}</li>
+                    ))}
+                  </ul>
+                </li>
+                {opts.curated.groups.map((group) => {
+                  const containsActiveLink = group.links.some((link) => isActive(link.slug))
+                  return (
+                    <li class="curated-group">
+                      <details open={containsActiveLink}>
+                        <summary>
+                          <span>{group.title}</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="14"
+                            viewBox="5 8 14 8"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                          >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                          </svg>
+                        </summary>
+                        <ul>
+                          {group.links.map((link) => (
+                            <li>{curatedLink(link)}</li>
+                          ))}
+                        </ul>
+                      </details>
+                    </li>
+                  )
+                })}
+              </>
+            )}
+          </OverflowList>
         </div>
         <template id="template-file">
           <li>
