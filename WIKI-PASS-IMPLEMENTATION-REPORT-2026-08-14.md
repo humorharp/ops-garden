@@ -142,6 +142,8 @@ These sources bound high-stakes public guidance. They do not replace local polic
 ### Publication record
 
 - Correction-pass commit: `ef2eb52` — `Refine Garden copy and surface living-note status`
+- Documentation commit: `108a9bd` — `Document Garden copy pass and rollback`
 - Publication branch: `origin/main`
+- Live verification after push: `https://garden.christopherjharper.com/chatir` returned HTTP 200 and contained both the graph pointer and the visible `Work in progress` label.
 - Private Obsidian notes changed: none
 - Generated Quartz cache and TypeScript build-info files included in the commit: none
