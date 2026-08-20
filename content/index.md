@@ -6,7 +6,7 @@ tags: [index, start-here]
 type: map
 status: reference
 created: 2026-06-04
-modified: 2026-08-14
+modified: 2026-08-20
 ---
 
 # Ops Knowledge Garden
@@ -31,12 +31,13 @@ If you just got promoted into a supervisory role and need something useful now, 
 
 If you are developing other people, follow [[training-ftos|Training FTOs]], [[the-debrief|The Debrief]], and [[stop-being-the-answer|Stop Being the Answer]].
 
-If you are trying to understand the systems thinking underneath my work, start with [[build-the-sprinkler-system|Build the Sprinkler System]] and [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]]
+If you are trying to understand the systems thinking underneath my work, start with [[build-the-sprinkler-system|Build the Sprinkler System]], [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]], and [[what-the-form-cannot-see|What the Form Can't See]].
 
 The [[garden-map|Garden Map]] shows the current structure. [[open-questions|Open Questions]] collects the parts I have not resolved.
 
 ## Notes currently at the center
 
+- [[what-the-form-cannot-see|What the Form Can't See]] — the instrument gap, why one-at-a-time review cannot close it, and the honest limits of reading a record of losses
 - [[build-the-sprinkler-system|Build the Sprinkler System]] — why competent recovery can conceal the need for prevention
 - [[incident-reports-can-be-accurate-and-still-incomplete|The Report Was Accurate. It Was Still Incomplete.]] — the record problem underneath chatIR
 - [[stop-being-the-answer|Stop Being the Answer]] — how a supervisor's expertise can create dependence
@@ -54,6 +55,6 @@ The practical EMS-supervision material is still here. Seven printable tools grew
 
 I'm [Christopher Harper](https://christopherjharper.com?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=index), founder of [[chatir|chatIR]]. I am trying to build software that helps operational and safety teams recover context, see recurring conditions, and make better-informed decisions without pretending the software should replace their judgment.
 
-This site is the thinking. chatIR is one tool growing from it. If something here is useful—or if you think I have it wrong—I would like to hear about it.
+This site is the thinking. chatIR is one tool growing from it. If something here is useful, or if you think I have it wrong, I would like to hear about it.
 
 *Built with [Quartz](https://quartz.jzhao.xyz). [Source on GitHub](https://github.com/humorharp/ops-garden).*
