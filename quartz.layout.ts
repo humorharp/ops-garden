@@ -63,7 +63,10 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       "About these notes": "/about-these-notes",
       "Garden map": "/garden-map",
-      "Christopher Harper": "https://christopherjharper.com",
+      "Christopher Harper":
+        "https://christopherjharper.com?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=footer",
+      ChatIR:
+        "https://chatir.io?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=footer",
       "Source on GitHub": "https://github.com/humorharp/ops-garden",
     },
   }),
