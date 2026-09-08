@@ -1,7 +1,7 @@
 ---
 title: Ops Knowledge Garden
 aliases: [Home, Ops Knowledge Garden]
-description: Essays and working notes by Christopher Harper about operational leadership, safety, organizational learning, and the ideas behind ChatIR.
+description: Essays and working notes by Christopher Harper about operational leadership, safety, organizational learning, and the ideas behind chatIR.
 tags: [index, start-here]
 type: map
 status: reference
@@ -44,7 +44,7 @@ The essays are entrances, not a reading order. Links inside them trace ideas acr
 
 Use the [[garden-map|Garden Map]] for the larger shape. [[open-questions|Open Questions]] holds the parts I have not resolved. The status and last-tended date on each page show how settled a note is and when I last changed it.
 
-One branch of this thinking became [ChatIR](https://chatir.io?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=homepage), software for helping operational and safety teams recover context from incident records and see recurring conditions without handing judgment to the software. The [[chatir|ChatIR note]] follows the ideas, boundaries, and unanswered questions behind it.
+One branch of this thinking became [chatIR](https://chatir.io?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=homepage), software for helping operational and safety teams recover context from incident records and see recurring conditions without handing judgment to the software. The [[chatir|chatIR note]] follows the ideas, boundaries, and unanswered questions behind it.
 
 ## Field tools
 
