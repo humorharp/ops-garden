@@ -1,4 +1,5 @@
 import ReadingConstellation from "./ReadingConstellation";
+import RecordIllustration from "./RecordIllustration";
 import { QuartzComponent, QuartzComponentProps } from "./types";
 
 const routes = [
@@ -81,8 +82,8 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
           </ul>
         </div>
       </section>
-      <section class="shared-reading" aria-labelledby="shared-reading-title">
-        <h2 id="shared-reading-title">Ideas that connect</h2>
+      <details class="shared-reading">
+        <summary>Explore the connections between these notes</summary>
         <div class="shared-reading-notes">
           <p>
             <a href="/open-questions">Open Questions</a> connects all four
@@ -100,9 +101,10 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
             depending on the same people to make the same save?
           </p>
         </div>
-      </section>
+      </details>
       <section class="featured-note">
-        <div>
+        <RecordIllustration />
+        <div class="featured-note-copy">
           <p class="garden-byline">A question at the center</p>
           <h2>
             <a href="/what-the-form-cannot-see">
@@ -111,8 +113,6 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
               )}
             </a>
           </h2>
-        </div>
-        <div>
           <p>
             What do incident forms make visible, and what stays in the
             narrative? A working note on the limits of the record and the
@@ -138,7 +138,7 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
               </h3>
               <p>{route.description}</p>
               <a class="read-note" href={`/${route.slug}`}>
-                Read the note <span aria-hidden="true">↗</span>
+                Read the note
               </a>
             </article>
           ))}
