@@ -23,6 +23,8 @@ document.addEventListener("nav", () => {
         y: Number(el.dataset.y),
         fx: null as number | null,
         fy: null as number | null,
+        driftX: 0,
+        driftY: 0,
         vx: 0,
         vy: 0,
         initialX: Number(el.dataset.x),
@@ -33,12 +35,18 @@ document.addEventListener("nav", () => {
   const paths = Array.from(svg.querySelectorAll<SVGPathElement>("[data-from]"));
   function draw() {
     for (const node of nodes.values())
-      node.el.setAttribute("transform", `translate(${node.x} ${node.y})`);
+      node.el.setAttribute(
+        "transform",
+        `translate(${node.x + node.driftX} ${node.y + node.driftY})`,
+      );
     for (const path of paths) {
       const a = nodes.get(path.dataset.from!)!,
         b = nodes.get(path.dataset.to!)!;
 
-      path.setAttribute("d", `M ${a.x} ${a.y} L ${b.x} ${b.y}`);
+      path.setAttribute(
+        "d",
+        `M ${a.x + a.driftX} ${a.y + a.driftY} L ${b.x + b.driftX} ${b.y + b.driftY}`,
+      );
     }
   }
   function move(node: { x: number; y: number }, x: number, y: number) {
@@ -48,9 +56,10 @@ document.addEventListener("nav", () => {
   }
   type Idea = (typeof nodes extends Map<string, infer N> ? N : never) &
     SimulationNodeDatum;
-  const reducedMotion = window.matchMedia(
+  const motionPreference = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
-  ).matches;
+  );
+  let reducedMotion = motionPreference.matches;
   const simulation = forceSimulation<Idea>([...nodes.values()])
     .force(
       "links",
@@ -87,6 +96,78 @@ document.addEventListener("nav", () => {
       draw();
     } else simulation.restart();
   }
+  let driftTime = 0,
+    previousTime = 0,
+    animationFrame = 0;
+  let driftPaused = false,
+    inView = false;
+  const pauseButton = document.createElement("button");
+  pauseButton.type = "button";
+  pauseButton.className = "constellation-reset";
+  pauseButton.textContent = "Pause drift";
+  pauseButton.hidden = reducedMotion;
+  panel.querySelector(".map-caption")!.append(pauseButton);
+  pauseButton.addEventListener(
+    "click",
+    () => {
+      driftPaused = !driftPaused;
+      pauseButton.textContent = driftPaused ? "Resume drift" : "Pause drift";
+      pauseButton.setAttribute("aria-pressed", String(driftPaused));
+    },
+    options,
+  );
+  const observer = new IntersectionObserver(([entry]) => {
+    inView = entry.isIntersecting;
+  });
+  observer.observe(svg);
+  function absorbDrift() {
+    for (const node of nodes.values()) {
+      node.x += node.driftX;
+      node.y += node.driftY;
+      node.driftX = 0;
+      node.driftY = 0;
+    }
+    driftTime = 0;
+  }
+  function drift(now: number) {
+    const elapsed = previousTime ? Math.min(now - previousTime, 50) : 0;
+    previousTime = now;
+    if (
+      !reducedMotion &&
+      !driftPaused &&
+      inView &&
+      !document.hidden &&
+      !svg!.querySelector(".idea-node:hover") &&
+      !svg!.querySelector(":focus-visible")
+    ) {
+      driftTime += elapsed / 1000;
+      let i = 0;
+      for (const node of nodes.values()) {
+        const phase = i++ * 0.8;
+        // Bounded displacement, never cumulative: slow, slightly different currents.
+        node.driftX = 5 * (Math.sin(driftTime / 9 + phase) - Math.sin(phase));
+        node.driftY =
+          3.5 *
+          (Math.sin(driftTime / 12 + phase * 1.3) - Math.sin(phase * 1.3));
+      }
+      draw();
+    }
+    animationFrame = requestAnimationFrame(drift);
+  }
+  motionPreference.addEventListener(
+    "change",
+    () => {
+      reducedMotion = motionPreference.matches;
+      pauseButton.hidden = reducedMotion;
+      if (reducedMotion) {
+        absorbDrift();
+        simulation.stop();
+        draw();
+      }
+    },
+    options,
+  );
+  animationFrame = requestAnimationFrame(drift);
   for (const node of nodes.values()) {
     const handle = node.el.querySelector<SVGCircleElement>(".idea-handle")!;
     let activePointer: number | null = null;
@@ -107,6 +188,7 @@ document.addEventListener("nav", () => {
         const p = point(event);
         if (!p) return;
         event.preventDefault();
+        absorbDrift();
         handle.focus();
         activePointer = event.pointerId;
         node.fx = node.x;
@@ -154,6 +236,7 @@ document.addEventListener("nav", () => {
         };
         if (!delta[event.key]) return;
         event.preventDefault();
+        absorbDrift();
         const step = event.shiftKey ? 30 : 10;
         move(
           node,
@@ -169,7 +252,10 @@ document.addEventListener("nav", () => {
     "click",
     () => {
       simulation.stop();
+      driftTime = 0;
       for (const node of nodes.values()) {
+        node.driftX = 0;
+        node.driftY = 0;
         node.fx = null;
         node.fy = null;
         node.vx = 0;
@@ -183,7 +269,10 @@ document.addEventListener("nav", () => {
   );
   panel.dataset.interactive = "true";
   window.addCleanup(() => {
+    cancelAnimationFrame(animationFrame);
+    observer.disconnect();
     controller.abort();
     simulation.stop();
   });
 });
+
