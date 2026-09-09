@@ -73,8 +73,8 @@ article h3 {
   color: var(--dark);
 }
 .content-meta {
-  color: var(--gray);
-  font-size: 0.85rem;
+  color: #a4b6cb;
+  font-size: 0.95rem;
 }
 .note-status {
   border-color: #416586 !important;
@@ -84,7 +84,7 @@ article h3 {
   gap: 0.5rem;
 }
 .tags a {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: #a9c7e3;
 }
 .graph > .graph-outer {
@@ -95,11 +95,11 @@ article h3 {
 .graph > h3,
 .toc h3,
 .backlinks h3 {
-  font-size: 0.85rem;
-  color: var(--gray);
+  font-size: 0.95rem;
+  color: #a4b6cb;
 }
 .explorer-content {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 .explorer-content a {
   font-weight: 400 !important;
@@ -111,7 +111,7 @@ footer {
   border-top: 1px solid var(--lightgray);
   padding-top: 24px;
   opacity: 1;
-  color: var(--gray);
+  color: #a4b6cb;
 }
 footer ul {
   flex-wrap: wrap;
@@ -193,8 +193,8 @@ hr {
   padding: 66px 0;
 }
 .garden-byline {
-  font-size: 0.83rem;
-  color: var(--gray);
+  font-size: 1rem;
+  color: #a4b6cb;
   margin: 0 0 20px;
 }
 .garden-deck {
@@ -243,8 +243,8 @@ hr {
   margin: 0;
 }
 .map-caption span {
-  font-size: 0.7rem;
-  color: var(--gray);
+  font-size: 0.95rem;
+  color: #a4b6cb;
 }
 .transit-panel svg {
   display: block;
@@ -271,7 +271,7 @@ hr {
 }
 .transit-stations text {
   fill: #c6d3e2;
-  font-size: 13px;
+  font-size: 17px;
   font-family: var(--bodyFont);
 }
 .transit-stations a:hover circle {
@@ -300,7 +300,7 @@ hr {
 }
 .route-legend li {
   margin: 0;
-  font-size: 0.72rem;
+  font-size: 0.95rem;
 }
 .route-label {
   display: flex;
@@ -360,7 +360,7 @@ hr {
   font-size: 1.65rem;
 }
 .garden-section-title > a {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 .route-articles {
   display: grid;
@@ -382,8 +382,8 @@ hr {
   border-color: var(--route-violet);
 }
 .route-article > .route-label {
-  font-size: 0.78rem;
-  color: var(--gray);
+  font-size: 1rem;
+  color: #a4b6cb;
   margin: 0 0 16px;
 }
 .route-article h3 {
@@ -398,7 +398,7 @@ hr {
   font-size: 0.9rem;
 }
 .read-note {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 .garden-outposts {
   display: grid;
@@ -419,7 +419,7 @@ hr {
 }
 .graph-intro p {
   font-size: 0.9rem;
-  color: var(--gray);
+  color: #a4b6cb;
 }
 @media (max-width: 1200px) {
   .page > #quartz-body {
@@ -513,7 +513,7 @@ hr {
     margin-top: 5px;
   }
   .transit-stations text {
-    font-size: 15px;
+    font-size: 17px;
   }
   .route-article {
     padding-bottom: 12px;
@@ -553,4 +553,14 @@ hr {
 .transit-map-viewport {
   min-width: 0;
   max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .garden-intro {
+    grid-template-columns: 1fr;
+  }
+  .transit-panel {
+    width: auto;
+    max-width: 650px;
+  }
 }

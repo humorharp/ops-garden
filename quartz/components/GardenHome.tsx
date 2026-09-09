@@ -88,58 +88,86 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
               </desc>
               <g
                 fill="none"
-                stroke-width="5"
+                stroke-width="8"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path class="route-blue" d="M35 95 H190 L285 190 H520" />
-                <path class="route-teal" d="M85 35 V95 L285 295 H520" />
-                <path class="route-amber" d="M35 295 H180 L380 95 H520" />
-                <path class="route-violet" d="M285 355 V190 L385 90 V35" />
+                <path
+                  class="route-blue"
+                  d="M24 264 H168 Q184 264 196 252 L322 126 Q334 114 334 96 V28"
+                />
+                <path
+                  class="route-teal"
+                  d="M24 278 H174 Q190 278 202 266 L344 124 Q356 112 372 112 H532"
+                />
+                <path
+                  class="route-amber"
+                  d="M24 292 H180 Q196 292 208 280 L328 160 Q340 148 356 148 H438 Q454 148 454 164 V238 Q454 254 470 254 H532"
+                />
+                <path
+                  class="route-violet"
+                  d="M24 306 H186 Q202 306 214 294 L314 194 Q326 182 342 182 H378 Q394 182 394 198 V334 Q394 350 410 350 H532"
+                />
               </g>
               <g class="transit-stations">
-                <a
-                  href="/stop-being-the-answer"
-                  aria-label="Leadership: Stop Being the Answer"
-                >
-                  <rect
-                    x="30"
-                    y="40"
-                    width="180"
-                    height="75"
-                    fill="transparent"
-                  />
-                  <circle cx="85" cy="95" r="8" />
-                  <text x="36" y="62">
-                    Stop being the answer
-                  </text>
-                </a>
                 <a
                   href="/incident-reports-can-be-accurate-and-still-incomplete"
                   aria-label="Operational learning: The Report Was Accurate. It Was Still Incomplete."
                 >
                   <rect
-                    x="178"
-                    y="65"
-                    width="170"
-                    height="48"
+                    x="35"
+                    y="213"
+                    width="220"
+                    height="62"
                     fill="transparent"
                   />
-                  <circle cx="190" cy="95" r="8" />
-                  <text x="214" y="83">
+                  <circle cx="92" cy="264" r="7" />
+                  <text x="36" y="236">
                     An incomplete record
+                  </text>
+                </a>
+                <a
+                  href="/what-the-form-cannot-see"
+                  aria-label="Operational learning: What the Form Can't See"
+                >
+                  <rect
+                    x="30"
+                    y="34"
+                    width="317"
+                    height="53"
+                    fill="transparent"
+                  />
+                  <circle cx="334" cy="60" r="7" />
+                  <text x="310" y="65" text-anchor="end">
+                    What the form can’t see
+                  </text>
+                </a>
+                <a
+                  href="/stop-being-the-answer"
+                  aria-label="Leadership: Stop Being the Answer"
+                >
+                  <rect
+                    x="352"
+                    y="66"
+                    width="192"
+                    height="60"
+                    fill="transparent"
+                  />
+                  <circle cx="490" cy="112" r="7" />
+                  <text x="540" y="88" text-anchor="end">
+                    Stop being the answer
                   </text>
                 </a>
                 <a href="/the-debrief" aria-label="Leadership: The Debrief">
                   <rect
-                    x="30"
-                    y="174"
-                    width="170"
-                    height="40"
+                    x="34"
+                    y="308"
+                    width="152"
+                    height="65"
                     fill="transparent"
                   />
-                  <circle cx="185" cy="195" r="8" />
-                  <text x="36" y="199">
+                  <circle cx="92" cy="278" r="7" />
+                  <text x="36" y="349">
                     The debrief
                   </text>
                 </a>
@@ -148,63 +176,42 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
                   aria-label="Systems: Build the Sprinkler System"
                 >
                   <rect
-                    x="30"
-                    y="280"
-                    width="210"
-                    height="58"
+                    x="328"
+                    y="267"
+                    width="216"
+                    height="38"
                     fill="transparent"
                   />
-                  <circle cx="100" cy="295" r="8" />
-                  <text x="35" y="328">
+                  <circle cx="490" cy="254" r="7" />
+                  <text x="540" y="286" text-anchor="end">
                     Build the sprinkler system
-                  </text>
-                </a>
-                <a
-                  href="/what-the-form-cannot-see"
-                  aria-label="Operational learning: What the Form Can't See"
-                >
-                  <rect
-                    x="350"
-                    y="140"
-                    width="180"
-                    height="65"
-                    fill="transparent"
-                  />
-                  <circle cx="430" cy="190" r="8" />
-                  <text x="355" y="164">
-                    What the form can’t see
                   </text>
                 </a>
                 <a href="/chatir" aria-label="Building: chatIR">
                   <rect
-                    x="370"
-                    y="40"
-                    width="150"
-                    height="45"
+                    x="402"
+                    y="311"
+                    width="140"
+                    height="53"
                     fill="transparent"
                   />
-                  <circle cx="385" cy="60" r="8" />
-                  <text x="408" y="64">
+                  <circle cx="490" cy="350" r="7" />
+                  <text x="540" y="326" text-anchor="end">
                     Building chatIR
                   </text>
                 </a>
                 <a href="/open-questions" aria-label="Open Questions">
                   <rect
-                    x="370"
-                    y="277"
-                    width="160"
-                    height="63"
+                    x="144"
+                    y="141"
+                    width="171"
+                    height="48"
                     fill="transparent"
                   />
-                  <circle cx="430" cy="295" r="8" />
-                  <text x="375" y="328">
-                    Open questions
+                  <text x="152" y="170">
+                    Open questions ↗
                   </text>
                 </a>
-                <circle class="interchange" cx="285" cy="190" r="13" />
-                <text class="interchange-label" x="298" y="221">
-                  Learning
-                </text>
               </g>
             </svg>
           </div>
