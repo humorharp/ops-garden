@@ -8,6 +8,7 @@ import {
   QuartzComponentProps,
 } from "../types";
 import GardenHome from "../GardenHome";
+import ReadNext from "../ReadNext";
 import { Root } from "hast";
 
 const Content: QuartzComponent = (props: QuartzComponentProps) => {
@@ -34,7 +35,12 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
   const content = htmlToJsx(fileData.filePath!, bodyTree) as ComponentChildren;
   const classes: string[] = fileData.frontmatter?.cssclasses ?? [];
   const classString = ["popover-hint", ...classes].join(" ");
-  return <article class={classString}>{content}</article>;
+  return (
+    <>
+      <article class={classString}>{content}</article>
+      <ReadNext {...props} />
+    </>
+  );
 };
 
 Content.afterDOMLoaded = constellationScript;

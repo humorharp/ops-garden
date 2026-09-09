@@ -43,6 +43,7 @@ document.addEventListener("nav", () => {
         text,
         width: text.getComputedTextLength(),
         offset: [0, 34] as [number, number],
+        rendered: [0, 34] as [number, number],
       };
     })
     .sort(
@@ -59,29 +60,32 @@ document.addEventListener("nav", () => {
   function placeLabels() {
     const placed: LabelBox[] = [];
     const dots = [...nodes.values()].map((n) => ({
-      left: n.x + n.driftX - 24,
-      right: n.x + n.driftX + 24,
-      top: n.y + n.driftY - 24,
-      bottom: n.y + n.driftY + 24,
+      left: n.x + n.driftX - 18,
+      right: n.x + n.driftX + 18,
+      top: n.y + n.driftY - 18,
+      bottom: n.y + n.driftY + 18,
     }));
     for (const label of labels) {
-      const { node, text, width } = label;
+      const { node, width } = label;
       const x = node.x + node.driftX,
         y = node.y + node.driftY;
       const side = width / 2 + 30;
-      const candidates: [number, number][] = [
-        label.offset,
-        [0, 38],
-        [0, -32],
-        [side, 5],
-        [-side, 5],
-        [side, 38],
-        [-side, 38],
-        [side, -32],
-        [-side, -32],
-        [0, 65],
-        [0, -58],
-      ];
+      const reading = node.el.matches(":hover, :focus-within");
+      const candidates: [number, number][] = reading
+        ? [label.offset]
+        : [
+            label.offset,
+            [0, 38],
+            [0, -32],
+            [side, 5],
+            [-side, 5],
+            [side, 38],
+            [-side, 38],
+            [side, -32],
+            [-side, -32],
+            [0, 65],
+            [0, -58],
+          ];
       let best = label.offset,
         bestBox: LabelBox | undefined,
         bestScore = Infinity;
@@ -98,10 +102,12 @@ document.addEventListener("nav", () => {
           Math.max(0, box.right - 892) +
           Math.max(0, 8 - box.top) +
           Math.max(0, box.bottom - 492);
+        const movement = Math.hypot(dx - label.offset[0], dy - label.offset[1]);
         const score =
           outside * 1000 +
           placed.reduce((sum, b) => sum + overlap(box, b), 0) * 10 +
-          dots.reduce((sum, b) => sum + overlap(box, b), 0);
+          dots.reduce((sum, b) => sum + overlap(box, b), 0) +
+          movement * 8;
         if (score < bestScore) {
           bestScore = score;
           best = candidate;
@@ -111,10 +117,30 @@ document.addEventListener("nav", () => {
         if (score === 0) break;
       }
       label.offset = best;
-      text.setAttribute("text-anchor", "middle");
-      text.setAttribute("x", String(best[0]));
-      text.setAttribute("y", String(best[1]));
       placed.push(bestBox!);
+    }
+  }
+  // Layout chooses destinations; a separate clock moves labels continuously.
+  // The speed cap prevents a large relocation from becoming a fast sweep.
+  function renderLabels(elapsed: number, immediate = false) {
+    for (const label of labels) {
+      if (!immediate && label.node.el.matches(":hover, :focus-within"))
+        continue;
+      const dx = label.offset[0] - label.rendered[0];
+      const dy = label.offset[1] - label.rendered[1];
+      const distance = Math.hypot(dx, dy);
+      const blend =
+        immediate || distance < 0.05
+          ? 1
+          : Math.min(
+              1 - Math.exp(-elapsed / 220),
+              (120 * elapsed) / 1000 / distance,
+            );
+      label.rendered[0] += dx * blend;
+      label.rendered[1] += dy * blend;
+      label.text.setAttribute("text-anchor", "middle");
+      label.text.setAttribute("x", String(label.rendered[0]));
+      label.text.setAttribute("y", String(label.rendered[1]));
     }
   }
   document.fonts.ready.then(() => {
@@ -122,6 +148,7 @@ document.addEventListener("nav", () => {
     for (const label of labels)
       label.width = label.text.getComputedTextLength();
     placeLabels();
+    renderLabels(0, reducedMotion);
   });
 
   function draw() {
@@ -140,6 +167,7 @@ document.addEventListener("nav", () => {
       );
     }
     placeLabels();
+    if (reducedMotion) renderLabels(0, true);
   }
   function move(node: { x: number; y: number }, x: number, y: number) {
     node.x = Math.max(25, Math.min(875, x));
@@ -244,6 +272,7 @@ document.addEventListener("nav", () => {
       }
       draw();
     }
+    if (inView && !document.hidden) renderLabels(elapsed, reducedMotion);
     animationFrame = requestAnimationFrame(drift);
   }
   motionPreference.addEventListener(
@@ -360,6 +389,7 @@ document.addEventListener("nav", () => {
     options,
   );
   placeLabels();
+  renderLabels(0, true);
   panel.dataset.interactive = "true";
   window.addCleanup(() => {
     cancelAnimationFrame(animationFrame);
