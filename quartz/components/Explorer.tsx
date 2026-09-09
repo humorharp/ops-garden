@@ -1,3 +1,4 @@
+import { brandText } from "./ChatIRWordmark"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/explorer.scss"
 
@@ -88,7 +89,7 @@ export default ((userOpts?: Partial<Options>) => {
         class={`${className} internal${isActive(link.slug) ? " active" : ""}`}
         data-for={link.slug}
       >
-        {link.title}
+        {brandText(link.title)}
       </a>
     )
 
@@ -170,7 +171,7 @@ export default ((userOpts?: Partial<Options>) => {
                     <li class="curated-group">
                       <details open={containsActiveLink}>
                         <summary>
-                          <span>{group.title}</span>
+                          <span>{brandText(group.title)}</span>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="14"

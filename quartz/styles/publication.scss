@@ -1,0 +1,265 @@
+// The constellation is the one moving scene; the publication around it stays quiet.
+.garden-home {
+  .garden-intro {
+    padding: 76px 0 24px;
+    gap: 54px;
+  }
+  .garden-intro-copy {
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    column-gap: 72px;
+    align-items: start;
+  }
+  .garden-byline {
+    grid-column: 1 / -1;
+  }
+  .garden-intro-copy h1 {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    font-size: clamp(2.8rem, 4.8vw, 4.6rem);
+    line-height: 1.06;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+    margin: 0;
+  }
+  .garden-intro-copy > p:not(.garden-byline),
+  .garden-actions {
+    grid-column: 2;
+  }
+  .garden-deck {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+  }
+  .garden-intro-copy > p:not(.garden-deck):not(.garden-byline) {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  .garden-actions {
+    margin-top: 24px;
+    gap: 20px;
+    font-size: 1rem;
+  }
+  .idea-map-wrap {
+    max-width: none;
+    padding: 12px 0 28px;
+    position: relative;
+    isolation: isolate;
+  }
+  .idea-map-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 60px 0 20px;
+    z-index: -1;
+    background: radial-gradient(ellipse at 50% 50%, #1d49763d, #0d172600 68%);
+    pointer-events: none;
+  }
+  .constellation-panel {
+    max-width: 1000px;
+    margin: auto;
+  }
+  .constellation-panel .map-caption h2 {
+    font-size: 1.15rem;
+    color: #a4b6cb;
+  }
+  .constellation-reset {
+    border-color: transparent;
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+  .constellation-reset:hover {
+    border-color: #416586;
+  }
+  .constellation-help {
+    font-size: 1rem;
+  }
+  .reading-constellation {
+    max-height: 490px;
+  }
+  .shared-reading {
+    border-top: 1px solid var(--lightgray);
+    padding: 20px 0;
+    margin: 0 0 54px;
+  }
+  .shared-reading summary {
+    cursor: pointer;
+    color: var(--darkgray);
+    font-size: 1.05rem;
+  }
+  .shared-reading-notes {
+    padding: 24px 0 4px;
+  }
+  .featured-note {
+    border: 0;
+    border-radius: 14px;
+    background: #142b45;
+    padding: 32px;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+    gap: 44px;
+  }
+  .featured-note h2 {
+    font-size: clamp(2.1rem, 3.7vw, 3.1rem);
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+  .featured-note-copy > p:not(.garden-byline) {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    margin: 20px 0;
+  }
+  .featured-note-copy > a {
+    font-size: 1.05rem;
+  }
+  .record-illustration {
+    margin: 0;
+    min-width: 0;
+  }
+  .record-illustration svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    font-family: var(--bodyFont);
+  }
+  .record-illustration figcaption {
+    text-align: center;
+    color: #b6cbe1;
+    font-size: 1rem;
+    margin-top: 6px;
+  }
+  .garden-section-title {
+    margin: 80px 0 34px;
+  }
+  .garden-section-title h2 {
+    font-size: 2rem;
+  }
+  .route-articles {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 64px;
+  }
+  .route-article {
+    --topic: var(--route-blue);
+    position: relative;
+    border: 0;
+    border-top: 1px solid var(--lightgray);
+    padding: 32px 0 42px 24px;
+  }
+  .route-article::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 36px;
+    width: 5px;
+    height: 20px;
+    border-radius: 4px;
+    background: var(--topic);
+  }
+  .route-article.teal {
+    --topic: var(--route-teal);
+  }
+  .route-article.amber {
+    --topic: var(--route-amber);
+  }
+  .route-article.violet {
+    --topic: var(--route-violet);
+  }
+  .route-article > .route-label {
+    color: var(--topic);
+    margin: 0 0 18px;
+  }
+  .route-article > .route-label::before {
+    display: none;
+  }
+  .route-article h3 {
+    font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+    line-height: 1.2;
+    text-wrap: balance;
+    max-width: 24ch;
+  }
+  .route-article > p:not(.route-label) {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    max-width: 43ch;
+  }
+  .read-note {
+    font-size: 1rem;
+  }
+  .garden-outposts {
+    margin-top: 30px;
+    padding: 44px 0;
+  }
+  .garden-outposts p,
+  .graph-intro p {
+    font-size: 1.05rem;
+  }
+}
+
+// Give essays a comfortable measure without enlarging navigation chrome.
+#quartz-root:not(:has(.garden-home)) .center > article {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+#quartz-root:not(:has(.garden-home)) .center > article p {
+  line-height: 1.8;
+}
+#quartz-root:not(:has(.garden-home)) .center > article h2 {
+  line-height: 1.25;
+}
+
+@media (max-width: 850px) {
+  .garden-home {
+    .garden-intro {
+      padding-top: 44px;
+      gap: 28px;
+    }
+    .garden-intro-copy {
+      display: block;
+      max-width: 660px;
+    }
+    .garden-intro-copy h1 {
+      margin-bottom: 24px;
+      font-size: clamp(2.6rem, 7vw, 4rem);
+    }
+    .garden-intro-copy > p:not(.garden-deck):not(.garden-byline) {
+      margin-top: 12px;
+    }
+    .featured-note {
+      gap: 24px;
+      padding: 24px;
+    }
+    .route-articles {
+      column-gap: 32px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .garden-home {
+    .featured-note {
+      grid-template-columns: minmax(0, 1fr);
+      padding: 20px;
+    }
+    .record-illustration {
+      max-width: 400px;
+      margin: auto;
+    }
+    .featured-note-copy {
+      padding: 12px 0 8px;
+    }
+    .route-articles {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .garden-section-title {
+      margin-top: 56px;
+    }
+    .shared-reading {
+      margin-bottom: 28px;
+    }
+    .map-caption {
+      display: flex;
+      gap: 4px;
+    }
+    .constellation-panel .map-caption h2 {
+      flex-basis: 100%;
+    }
+  }
+}

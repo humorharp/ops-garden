@@ -15,6 +15,15 @@ async function* processFile(ctx: BuildCtx, file: VFile) {
         : aliasTarget
     ) as FullSlug
 
+    // Windows cannot store a case-only redirect beside its canonical article.
+    // Keep the article; case-insensitive lookup already resolves that alias.
+    // Linux builds still emit the distinct alias for existing public URLs.
+    if (
+      process.platform === "win32" &&
+      aliasTargetSlug.replaceAll("\\", "/").toLowerCase() ===
+        file.data.slug!.toLowerCase()
+    ) continue
+
     const redirUrl = resolveRelative(aliasTargetSlug, ogSlug)
     yield write({
       ctx,
