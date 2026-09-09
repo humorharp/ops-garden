@@ -167,7 +167,7 @@ document.addEventListener("nav", () => {
       );
     }
     placeLabels();
-    if (reducedMotion) renderLabels(0, true);
+    if (reducedMotion || driftPaused) renderLabels(0, true);
   }
   function move(node: { x: number; y: number }, x: number, y: number) {
     node.x = Math.max(25, Math.min(875, x));
@@ -221,6 +221,25 @@ document.addEventListener("nav", () => {
     animationFrame = 0;
   let driftPaused = false,
     inView = false;
+  function shouldAnimate() {
+    return (
+      !controller.signal.aborted &&
+      !reducedMotion &&
+      !driftPaused &&
+      inView &&
+      !document.hidden
+    );
+  }
+  function stopAnimation() {
+    if (animationFrame) cancelAnimationFrame(animationFrame);
+    animationFrame = 0;
+    previousTime = 0;
+  }
+  function startAnimation() {
+    if (!animationFrame && shouldAnimate()) {
+      animationFrame = requestAnimationFrame(drift);
+    }
+  }
   const pauseButton = document.createElement("button");
   pauseButton.type = "button";
   pauseButton.className = "constellation-reset";
@@ -233,11 +252,16 @@ document.addEventListener("nav", () => {
       driftPaused = !driftPaused;
       pauseButton.textContent = driftPaused ? "Resume drift" : "Pause drift";
       pauseButton.setAttribute("aria-pressed", String(driftPaused));
+      if (driftPaused) {
+        stopAnimation();
+        renderLabels(0, true);
+      } else startAnimation();
     },
     options,
   );
   const observer = new IntersectionObserver(([entry]) => {
     inView = entry.isIntersecting;
+    inView ? startAnimation() : stopAnimation();
   });
   observer.observe(svg);
   function absorbDrift() {
@@ -250,13 +274,11 @@ document.addEventListener("nav", () => {
     driftTime = 0;
   }
   function drift(now: number) {
+    animationFrame = 0;
+    if (!shouldAnimate()) return;
     const elapsed = previousTime ? Math.min(now - previousTime, 50) : 0;
     previousTime = now;
     if (
-      !reducedMotion &&
-      !driftPaused &&
-      inView &&
-      !document.hidden &&
       !svg!.querySelector(".idea-node:hover") &&
       !svg!.querySelector(":focus-visible")
     ) {
@@ -272,8 +294,8 @@ document.addEventListener("nav", () => {
       }
       draw();
     }
-    if (inView && !document.hidden) renderLabels(elapsed, reducedMotion);
-    animationFrame = requestAnimationFrame(drift);
+    renderLabels(elapsed);
+    startAnimation();
   }
   motionPreference.addEventListener(
     "change",
@@ -281,14 +303,19 @@ document.addEventListener("nav", () => {
       reducedMotion = motionPreference.matches;
       pauseButton.hidden = reducedMotion;
       if (reducedMotion) {
+        stopAnimation();
         absorbDrift();
         simulation.stop();
         draw();
-      }
+      } else startAnimation();
     },
     options,
   );
-  animationFrame = requestAnimationFrame(drift);
+  document.addEventListener(
+    "visibilitychange",
+    () => (document.hidden ? stopAnimation() : startAnimation()),
+    options,
+  );
   for (const node of nodes.values()) {
     const handle = node.el.querySelector<SVGCircleElement>(".idea-handle")!;
     let activePointer: number | null = null;
@@ -392,7 +419,7 @@ document.addEventListener("nav", () => {
   renderLabels(0, true);
   panel.dataset.interactive = "true";
   window.addCleanup(() => {
-    cancelAnimationFrame(animationFrame);
+    stopAnimation();
     observer.disconnect();
     controller.abort();
     simulation.stop();

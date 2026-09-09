@@ -499,7 +499,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   if (enableZoom) {
     select<HTMLCanvasElement, NodeData>(app.canvas).call(
       zoom<HTMLCanvasElement, NodeData>()
-        .extent(() => [
+        .extent((): [[number, number], [number, number]] => [
           [0, 0],
           [width, height],
         ])
