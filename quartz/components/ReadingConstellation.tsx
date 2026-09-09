@@ -4,7 +4,7 @@ const nodes = [
     slug: "open-questions",
     label: "Open questions",
     x: 450,
-    y: 245,
+    y: 250,
     color: "blue",
     hub: true,
   },
@@ -12,8 +12,8 @@ const nodes = [
     id: "debrief",
     slug: "the-debrief",
     label: "The debrief",
-    x: 270,
-    y: 200,
+    x: 335,
+    y: 245,
     color: "teal",
     hub: true,
   },
@@ -21,40 +21,40 @@ const nodes = [
     id: "record",
     slug: "incident-reports-can-be-accurate-and-still-incomplete",
     label: "An incomplete record",
-    x: 140,
-    y: 90,
+    x: 270,
+    y: 95,
     color: "blue",
   },
   {
     id: "form",
     slug: "what-the-form-cannot-see",
     label: "What the form can’t see",
-    x: 370,
-    y: 70,
+    x: 455,
+    y: 60,
     color: "blue",
   },
   {
     id: "answer",
     slug: "stop-being-the-answer",
     label: "Stop being the answer",
-    x: 115,
-    y: 275,
+    x: 185,
+    y: 245,
     color: "teal",
   },
   {
     id: "recognition",
     slug: "recognition-is-evidence-of-attention",
     label: "Recognition & attention",
-    x: 250,
-    y: 385,
+    x: 265,
+    y: 400,
     color: "teal",
   },
   {
     id: "sprinkler",
     slug: "build-the-sprinkler-system",
     label: "Build the sprinkler system",
-    x: 625,
-    y: 165,
+    x: 560,
+    y: 235,
     color: "amber",
     hub: true,
   },
@@ -62,32 +62,32 @@ const nodes = [
     id: "metrics",
     slug: "operational-metrics",
     label: "Operational metrics",
-    x: 770,
-    y: 65,
+    x: 650,
+    y: 95,
     color: "amber",
   },
   {
     id: "tools",
     slug: "tools",
     label: "Field tools",
-    x: 555,
-    y: 405,
+    x: 455,
+    y: 435,
     color: "violet",
   },
   {
     id: "chatir",
     slug: "chatir",
     label: "Building chatIR",
-    x: 765,
-    y: 300,
+    x: 640,
+    y: 395,
     color: "violet",
   },
   {
     id: "fleet",
     slug: "fleet-safety",
     label: "Fleet safety",
-    x: 800,
-    y: 430,
+    x: 740,
+    y: 280,
     color: "violet",
   },
 ];
@@ -118,7 +118,7 @@ export default function ReadingConstellation() {
       <p class="constellation-help">
         Follow a title to read.{" "}
         <span class="drag-help">
-          Drag a dot to rearrange; use arrow keys when a dot is focused.
+          Pull a dot and its neighbors follow. Arrow keys work too.
         </span>
       </p>
       <div
@@ -138,18 +138,17 @@ export default function ReadingConstellation() {
             dots mark ideas that connect several topics. Titles link to notes.
           </desc>
           <g class="constellation-edges" fill="none">
-            {edges.map(([from, to, color], i) => {
+            {edges.map(([from, to, color]) => {
               const a = nodes.find((n) => n.id === from)!;
               const b = nodes.find((n) => n.id === to)!;
-              const bend = i % 2 === 0 ? 0.15 : -0.15;
+
               return (
                 <path
                   key={from + to}
                   class={"route-" + color}
                   data-from={from}
                   data-to={to}
-                  data-bend={bend}
-                  d={`M ${a.x} ${a.y} Q ${(a.x + b.x) / 2 - (b.y - a.y) * bend} ${(a.y + b.y) / 2 + (b.x - a.x) * bend} ${b.x} ${b.y}`}
+                  d={`M ${a.x} ${a.y} L ${b.x} ${b.y}`}
                 />
               );
             })}
@@ -173,7 +172,17 @@ export default function ReadingConstellation() {
                 aria-label={"Move " + n.label}
               />
               <a href={"/" + n.slug}>
-                <text text-anchor="middle" y={n.hub ? 43 : 32}>
+                <text
+                  text-anchor={
+                    n.id === "debrief"
+                      ? "end"
+                      : n.id === "sprinkler"
+                        ? "start"
+                        : "middle"
+                  }
+                  x={n.id === "debrief" ? -20 : n.id === "sprinkler" ? 20 : 0}
+                  y={n.id === "questions" ? 65 : n.hub ? 43 : 32}
+                >
                   {n.label}
                 </text>
               </a>
