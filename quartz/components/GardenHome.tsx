@@ -75,7 +75,7 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
             aria-label="Reading route map; scroll horizontally on small screens"
           >
             <svg
-              viewBox="0 0 560 390"
+              viewBox="0 0 900 500"
               role="group"
               aria-labelledby="transit-title transit-desc"
             >
@@ -94,125 +94,201 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
               >
                 <path
                   class="route-blue"
-                  d="M24 264 H168 Q184 264 196 252 L322 126 Q334 114 334 96 V28"
+                  d="M30 260 H270 Q286 260 298 248 L444 102 Q456 90 474 90 H870"
                 />
                 <path
                   class="route-teal"
-                  d="M24 278 H174 Q190 278 202 266 L344 124 Q356 112 372 112 H532"
+                  d="M30 276 H277 Q293 276 305 264 L411 158 Q423 146 441 146 H870"
                 />
                 <path
                   class="route-amber"
-                  d="M24 292 H180 Q196 292 208 280 L328 160 Q340 148 356 148 H438 Q454 148 454 164 V238 Q454 254 470 254 H532"
+                  d="M30 292 H284 Q300 292 312 280 L378 214 Q390 202 408 202 H496 Q512 202 512 218 V302 Q512 318 528 318 H870"
                 />
                 <path
                   class="route-violet"
-                  d="M24 306 H186 Q202 306 214 294 L314 194 Q326 182 342 182 H378 Q394 182 394 198 V334 Q394 350 410 350 H532"
+                  d="M30 308 H291 Q307 308 319 296 L345 270 Q357 258 375 258 H420 Q436 258 436 274 V414 Q436 430 452 430 H870"
                 />
               </g>
               <g class="transit-stations">
                 <a
-                  href="/incident-reports-can-be-accurate-and-still-incomplete"
-                  aria-label="Operational learning: The Report Was Accurate. It Was Still Incomplete."
+                  href="/the-debrief"
+                  aria-label="The Debrief: shared station for operational learning and leadership"
                 >
                   <rect
-                    x="35"
-                    y="213"
-                    width="220"
-                    height="62"
+                    x="40"
+                    y="211"
+                    width="140"
+                    height="73"
                     fill="transparent"
                   />
-                  <circle cx="92" cy="264" r="7" />
-                  <text x="36" y="236">
+                  <rect
+                    class="shared-station"
+                    x="78"
+                    y="253"
+                    width="16"
+                    height="30"
+                    rx="8"
+                  />
+                  <text x="44" y="234">
+                    The debrief
+                  </text>
+                </a>
+                <a
+                  href="/open-questions"
+                  aria-label="Open Questions: interchange for all four routes"
+                >
+                  <rect
+                    x="153"
+                    y="250"
+                    width="146"
+                    height="110"
+                    fill="transparent"
+                  />
+                  <rect
+                    class="shared-station"
+                    x="194"
+                    y="251"
+                    width="20"
+                    height="66"
+                    rx="10"
+                  />
+                  <text x="155" y="346">
+                    Open questions
+                  </text>
+                </a>
+                <a
+                  href="/incident-reports-can-be-accurate-and-still-incomplete"
+                  aria-label="An incomplete record"
+                >
+                  <rect
+                    x="440"
+                    y="42"
+                    width="200"
+                    height="63"
+                    fill="transparent"
+                  />
+                  <circle cx="540" cy="90" r="7" />
+                  <text x="540" y="62" text-anchor="middle">
                     An incomplete record
                   </text>
                 </a>
                 <a
                   href="/what-the-form-cannot-see"
-                  aria-label="Operational learning: What the Form Can't See"
+                  aria-label="What the form can’t see"
                 >
                   <rect
-                    x="30"
-                    y="34"
-                    width="317"
-                    height="53"
+                    x="665"
+                    y="42"
+                    width="200"
+                    height="63"
                     fill="transparent"
                   />
-                  <circle cx="334" cy="60" r="7" />
-                  <text x="310" y="65" text-anchor="end">
+                  <circle cx="765" cy="90" r="7" />
+                  <text x="765" y="62" text-anchor="middle">
                     What the form can’t see
                   </text>
                 </a>
                 <a
                   href="/stop-being-the-answer"
-                  aria-label="Leadership: Stop Being the Answer"
+                  aria-label="Stop being the answer"
                 >
                   <rect
-                    x="352"
-                    y="66"
-                    width="192"
-                    height="60"
+                    x="440"
+                    y="126"
+                    width="200"
+                    height="68"
                     fill="transparent"
                   />
-                  <circle cx="490" cy="112" r="7" />
-                  <text x="540" y="88" text-anchor="end">
+                  <circle cx="540" cy="146" r="7" />
+                  <text x="540" y="179" text-anchor="middle">
                     Stop being the answer
                   </text>
                 </a>
-                <a href="/the-debrief" aria-label="Leadership: The Debrief">
+                <a
+                  href="/recognition-is-evidence-of-attention"
+                  aria-label="Recognition &amp; attention"
+                >
                   <rect
-                    x="34"
-                    y="308"
-                    width="152"
-                    height="65"
+                    x="665"
+                    y="126"
+                    width="200"
+                    height="68"
                     fill="transparent"
                   />
-                  <circle cx="92" cy="278" r="7" />
-                  <text x="36" y="349">
-                    The debrief
+                  <circle cx="765" cy="146" r="7" />
+                  <text x="765" y="179" text-anchor="middle">
+                    Recognition &amp; attention
                   </text>
                 </a>
                 <a
                   href="/build-the-sprinkler-system"
-                  aria-label="Systems: Build the Sprinkler System"
+                  aria-label="Build the sprinkler system"
                 >
                   <rect
-                    x="328"
-                    y="267"
-                    width="216"
-                    height="38"
+                    x="520"
+                    y="265"
+                    width="200"
+                    height="68"
                     fill="transparent"
                   />
-                  <circle cx="490" cy="254" r="7" />
-                  <text x="540" y="286" text-anchor="end">
+                  <circle cx="620" cy="318" r="7" />
+                  <text x="620" y="285" text-anchor="middle">
                     Build the sprinkler system
                   </text>
                 </a>
-                <a href="/chatir" aria-label="Building: chatIR">
+                <a href="/operational-metrics" aria-label="Operational metrics">
                   <rect
-                    x="402"
-                    y="311"
-                    width="140"
-                    height="53"
+                    x="675"
+                    y="298"
+                    width="200"
+                    height="74"
                     fill="transparent"
                   />
-                  <circle cx="490" cy="350" r="7" />
-                  <text x="540" y="326" text-anchor="end">
+                  <circle cx="775" cy="318" r="7" />
+                  <text x="775" y="357" text-anchor="middle">
+                    Operational metrics
+                  </text>
+                </a>
+                <a href="/tools" aria-label="Field tools">
+                  <rect
+                    x="435"
+                    y="410"
+                    width="200"
+                    height="70"
+                    fill="transparent"
+                  />
+                  <circle cx="535" cy="430" r="7" />
+                  <text x="535" y="465" text-anchor="middle">
+                    Field tools
+                  </text>
+                </a>
+                <a href="/chatir" aria-label="Building chatIR">
+                  <rect
+                    x="585"
+                    y="379"
+                    width="200"
+                    height="66"
+                    fill="transparent"
+                  />
+                  <circle cx="685" cy="430" r="7" />
+                  <text x="685" y="399" text-anchor="middle">
                     Building chatIR
                   </text>
                 </a>
-                <a href="/open-questions" aria-label="Open Questions">
+                <a href="/fleet-safety" aria-label="Fleet safety">
                   <rect
-                    x="144"
-                    y="141"
-                    width="171"
-                    height="48"
+                    x="715"
+                    y="410"
+                    width="200"
+                    height="70"
                     fill="transparent"
                   />
-                  <text x="152" y="170">
-                    Open questions ↗
+                  <circle cx="815" cy="430" r="7" />
+                  <text x="815" y="465" text-anchor="middle">
+                    Fleet safety
                   </text>
                 </a>
-              </g>
+              </g>{" "}
             </svg>
           </div>
           <ul class="route-legend">
@@ -227,6 +303,26 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+      <section class="shared-reading" aria-labelledby="shared-reading-title">
+        <h2 id="shared-reading-title">Where the lines meet</h2>
+        <div class="shared-reading-notes">
+          <p>
+            <a href="/open-questions">Open Questions</a> is the interchange:
+            leadership judgment, incomplete records, hidden system debt, and the
+            boundaries of AI.
+          </p>
+          <p>
+            <a href="/the-debrief">The Debrief</a> connects leadership and
+            operational learning through the practice of asking better
+            questions.
+          </p>
+          <p>
+            <a href="/build-the-sprinkler-system">Build the Sprinkler System</a>{" "}
+            bridges leadership, prevention, and product-building: how do we stop
+            depending on the same people to make the same save?
+          </p>
         </div>
       </section>
       <section class="featured-note">

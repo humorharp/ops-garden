@@ -60,8 +60,12 @@ const defaultOptions: GraphOptions = {
 }
 
 export default ((opts?: Partial<GraphOptions>) => {
-  const Graph: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
-    const localGraph = { ...defaultOptions.localGraph, ...opts?.localGraph }
+  const Graph: QuartzComponent = ({ displayClass, cfg, fileData }: QuartzComponentProps) => {
+    const localGraph = {
+      ...defaultOptions.localGraph,
+      ...(fileData.slug === "index" ? { depth: -1, showTags: false, repelForce: 1.4, linkDistance: 65, fontSize: 1 } : {}),
+      ...opts?.localGraph,
+    }
     const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
     return (
       <div class={classNames(displayClass, "graph")}>

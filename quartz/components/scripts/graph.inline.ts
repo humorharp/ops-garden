@@ -161,8 +161,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       })),
   }
 
-  const width = graph.offsetWidth
-  const height = Math.max(graph.offsetHeight, 250)
+  let width = graph.offsetWidth
+  let height = Math.max(graph.offsetHeight, 250)
 
   // we virtualize the simulation and use pixi to actually render it
   const simulation: Simulation<NodeData, LinkData> = forceSimulation<NodeData>(graphData.nodes)
@@ -499,7 +499,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   if (enableZoom) {
     select<HTMLCanvasElement, NodeData>(app.canvas).call(
       zoom<HTMLCanvasElement, NodeData>()
-        .extent([
+        .extent(() => [
           [0, 0],
           [width, height],
         ])
@@ -522,6 +522,17 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         }),
     )
   }
+
+  // Keep the canvas centered when the responsive container changes size.
+  const resizeObserver = new ResizeObserver(() => {
+    const nextWidth = graph.offsetWidth
+    const nextHeight = Math.max(graph.offsetHeight, 250)
+    if (nextWidth <= 0 || (nextWidth === width && nextHeight === height)) return
+    width = nextWidth
+    height = nextHeight
+    app.renderer.resize(width, height)
+  })
+  resizeObserver.observe(graph)
 
   let stopAnimation = false
   function animate(time: number) {
@@ -552,6 +563,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   requestAnimationFrame(animate)
   return () => {
     stopAnimation = true
+    resizeObserver.disconnect()
+    simulation.stop()
     app.destroy()
   }
 }

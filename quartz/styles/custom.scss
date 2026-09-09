@@ -564,3 +564,49 @@ hr {
     max-width: 650px;
   }
 }
+
+.garden-intro {
+  grid-template-columns: minmax(0, 1fr);
+}
+.garden-intro-copy {
+  max-width: 760px;
+}
+.garden-intro .transit-panel {
+  max-width: none;
+  width: auto;
+}
+.transit-map-viewport svg {
+  min-width: 800px;
+}
+.transit-stations .shared-station {
+  fill: #111f32;
+  stroke: #edf4fd;
+  stroke-width: 3;
+}
+.transit-stations a:hover .shared-station {
+  fill: var(--secondary);
+}
+.shared-reading {
+  margin: 0 0 44px;
+}
+.shared-reading-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+.shared-reading-notes p {
+  margin: 0;
+}
+.graph-container {
+  width: 100%;
+  height: 100%;
+}
+.graph-container canvas {
+  display: block;
+}
+@media (max-width: 800px) {
+  .shared-reading-notes {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
