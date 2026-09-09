@@ -610,3 +610,118 @@ hr {
     gap: 18px;
   }
 }
+.idea-map-wrap {
+  width: 100%;
+  max-width: 920px;
+  justify-self: center;
+}
+.constellation-panel {
+  padding: 24px 0 8px;
+}
+.constellation-panel .map-caption {
+  flex-wrap: wrap;
+}
+.constellation-panel .map-caption h2 {
+  font-size: 1.35rem;
+}
+.constellation-help {
+  color: #a4b6cb;
+  font-size: 0.95rem;
+  margin: 12px 0 0;
+}
+.constellation-reset {
+  background: transparent;
+  border: 1px solid #416586;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--dark);
+  font: inherit;
+  cursor: pointer;
+}
+.constellation-reset,
+.drag-help {
+  display: none;
+}
+.constellation-panel[data-interactive] .constellation-reset,
+.constellation-panel[data-interactive] .drag-help {
+  display: inline;
+}
+.constellation-viewport {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #368ee3 #111f32;
+}
+.reading-constellation {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+  max-height: 510px;
+}
+.constellation-edges path {
+  stroke-width: 2;
+  opacity: 0.65;
+}
+.idea-node {
+  --idea-color: var(--route-blue);
+}
+.idea-node.teal {
+  --idea-color: var(--route-teal);
+}
+.idea-node.amber {
+  --idea-color: var(--route-amber);
+}
+.idea-node.violet {
+  --idea-color: var(--route-violet);
+}
+.idea-dot {
+  fill: var(--idea-color);
+}
+.idea-halo {
+  fill: none;
+  stroke: var(--idea-color);
+  stroke-width: 1;
+  opacity: 0.25;
+}
+.idea-hub .idea-halo {
+  stroke-dasharray: 2 5;
+  opacity: 0.7;
+}
+.idea-handle {
+  fill: transparent;
+  stroke: transparent;
+  touch-action: none;
+  cursor: grab;
+}
+.idea-handle:focus-visible {
+  outline: none;
+  stroke: var(--idea-color);
+  stroke-width: 2;
+}
+.idea-node.dragging .idea-handle {
+  cursor: grabbing;
+}
+.idea-node.dragging .idea-halo {
+  opacity: 1;
+}
+.idea-node text {
+  font: 17px var(--bodyFont);
+  fill: var(--darkgray);
+  paint-order: stroke;
+  stroke: var(--light);
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+.idea-node a:hover text {
+  fill: white;
+}
+.idea-node a:focus-visible {
+  outline: none;
+}
+.idea-node a:focus-visible text {
+  fill: var(--route-amber);
+  text-decoration: underline;
+}
+.idea-map-wrap .route-legend {
+  justify-content: center;
+  font-size: 1rem;
+}

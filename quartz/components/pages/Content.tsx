@@ -1,3 +1,5 @@
+// @ts-ignore: bundled by Quartz as a browser script
+import constellationScript from "../scripts/constellation.inline";
 import { ComponentChildren } from "preact";
 import { htmlToJsx } from "../../util/jsx";
 import {
@@ -35,4 +37,5 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
   return <article class={classString}>{content}</article>;
 };
 
+Content.afterDOMLoaded = constellationScript;
 export default (() => Content) satisfies QuartzComponentConstructor;

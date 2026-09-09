@@ -1,3 +1,4 @@
+import ReadingConstellation from "./ReadingConstellation";
 import { QuartzComponent, QuartzComponentProps } from "./types";
 
 const routes = [
@@ -64,233 +65,8 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
             <a href="/about-these-notes">About this garden</a>
           </div>
         </div>
-        <div class="transit-panel">
-          <div class="map-caption">
-            <h2>A few ways through</h2>
-            <span>Curated reading routes</span>
-          </div>
-          <div
-            class="transit-map-viewport"
-            tabindex={0}
-            aria-label="Reading route map; scroll horizontally on small screens"
-          >
-            <svg
-              viewBox="0 0 900 500"
-              role="group"
-              aria-labelledby="transit-title transit-desc"
-            >
-              <title id="transit-title">Four connected reading routes</title>
-              <desc id="transit-desc">
-                Leadership, operational learning, systems, and building meet
-                around the question of how organizations learn. Each named stop
-                links to an essay. These are editorial reading routes; the
-                note-link graph appears below.
-              </desc>
-              <g
-                fill="none"
-                stroke-width="8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  class="route-blue"
-                  d="M30 260 H270 Q286 260 298 248 L444 102 Q456 90 474 90 H870"
-                />
-                <path
-                  class="route-teal"
-                  d="M30 276 H277 Q293 276 305 264 L411 158 Q423 146 441 146 H870"
-                />
-                <path
-                  class="route-amber"
-                  d="M30 292 H284 Q300 292 312 280 L378 214 Q390 202 408 202 H496 Q512 202 512 218 V302 Q512 318 528 318 H870"
-                />
-                <path
-                  class="route-violet"
-                  d="M30 308 H291 Q307 308 319 296 L345 270 Q357 258 375 258 H420 Q436 258 436 274 V414 Q436 430 452 430 H870"
-                />
-              </g>
-              <g class="transit-stations">
-                <a
-                  href="/the-debrief"
-                  aria-label="The Debrief: shared station for operational learning and leadership"
-                >
-                  <rect
-                    x="40"
-                    y="211"
-                    width="140"
-                    height="73"
-                    fill="transparent"
-                  />
-                  <rect
-                    class="shared-station"
-                    x="78"
-                    y="253"
-                    width="16"
-                    height="30"
-                    rx="8"
-                  />
-                  <text x="44" y="234">
-                    The debrief
-                  </text>
-                </a>
-                <a
-                  href="/open-questions"
-                  aria-label="Open Questions: interchange for all four routes"
-                >
-                  <rect
-                    x="153"
-                    y="250"
-                    width="146"
-                    height="110"
-                    fill="transparent"
-                  />
-                  <rect
-                    class="shared-station"
-                    x="194"
-                    y="251"
-                    width="20"
-                    height="66"
-                    rx="10"
-                  />
-                  <text x="155" y="346">
-                    Open questions
-                  </text>
-                </a>
-                <a
-                  href="/incident-reports-can-be-accurate-and-still-incomplete"
-                  aria-label="An incomplete record"
-                >
-                  <rect
-                    x="440"
-                    y="42"
-                    width="200"
-                    height="63"
-                    fill="transparent"
-                  />
-                  <circle cx="540" cy="90" r="7" />
-                  <text x="540" y="62" text-anchor="middle">
-                    An incomplete record
-                  </text>
-                </a>
-                <a
-                  href="/what-the-form-cannot-see"
-                  aria-label="What the form can’t see"
-                >
-                  <rect
-                    x="665"
-                    y="42"
-                    width="200"
-                    height="63"
-                    fill="transparent"
-                  />
-                  <circle cx="765" cy="90" r="7" />
-                  <text x="765" y="62" text-anchor="middle">
-                    What the form can’t see
-                  </text>
-                </a>
-                <a
-                  href="/stop-being-the-answer"
-                  aria-label="Stop being the answer"
-                >
-                  <rect
-                    x="440"
-                    y="126"
-                    width="200"
-                    height="68"
-                    fill="transparent"
-                  />
-                  <circle cx="540" cy="146" r="7" />
-                  <text x="540" y="179" text-anchor="middle">
-                    Stop being the answer
-                  </text>
-                </a>
-                <a
-                  href="/recognition-is-evidence-of-attention"
-                  aria-label="Recognition &amp; attention"
-                >
-                  <rect
-                    x="665"
-                    y="126"
-                    width="200"
-                    height="68"
-                    fill="transparent"
-                  />
-                  <circle cx="765" cy="146" r="7" />
-                  <text x="765" y="179" text-anchor="middle">
-                    Recognition &amp; attention
-                  </text>
-                </a>
-                <a
-                  href="/build-the-sprinkler-system"
-                  aria-label="Build the sprinkler system"
-                >
-                  <rect
-                    x="520"
-                    y="265"
-                    width="200"
-                    height="68"
-                    fill="transparent"
-                  />
-                  <circle cx="620" cy="318" r="7" />
-                  <text x="620" y="285" text-anchor="middle">
-                    Build the sprinkler system
-                  </text>
-                </a>
-                <a href="/operational-metrics" aria-label="Operational metrics">
-                  <rect
-                    x="675"
-                    y="298"
-                    width="200"
-                    height="74"
-                    fill="transparent"
-                  />
-                  <circle cx="775" cy="318" r="7" />
-                  <text x="775" y="357" text-anchor="middle">
-                    Operational metrics
-                  </text>
-                </a>
-                <a href="/tools" aria-label="Field tools">
-                  <rect
-                    x="435"
-                    y="410"
-                    width="200"
-                    height="70"
-                    fill="transparent"
-                  />
-                  <circle cx="535" cy="430" r="7" />
-                  <text x="535" y="465" text-anchor="middle">
-                    Field tools
-                  </text>
-                </a>
-                <a href="/chatir" aria-label="Building chatIR">
-                  <rect
-                    x="585"
-                    y="379"
-                    width="200"
-                    height="66"
-                    fill="transparent"
-                  />
-                  <circle cx="685" cy="430" r="7" />
-                  <text x="685" y="399" text-anchor="middle">
-                    Building chatIR
-                  </text>
-                </a>
-                <a href="/fleet-safety" aria-label="Fleet safety">
-                  <rect
-                    x="715"
-                    y="410"
-                    width="200"
-                    height="70"
-                    fill="transparent"
-                  />
-                  <circle cx="815" cy="430" r="7" />
-                  <text x="815" y="465" text-anchor="middle">
-                    Fleet safety
-                  </text>
-                </a>
-              </g>{" "}
-            </svg>
-          </div>
+        <div class="idea-map-wrap">
+          <ReadingConstellation />
           <ul class="route-legend">
             {routes.map((route) => (
               <li>
@@ -306,12 +82,12 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
         </div>
       </section>
       <section class="shared-reading" aria-labelledby="shared-reading-title">
-        <h2 id="shared-reading-title">Where the lines meet</h2>
+        <h2 id="shared-reading-title">Ideas that connect</h2>
         <div class="shared-reading-notes">
           <p>
-            <a href="/open-questions">Open Questions</a> is the interchange:
-            leadership judgment, incomplete records, hidden system debt, and the
-            boundaries of AI.
+            <a href="/open-questions">Open Questions</a> connects all four
+            themes: leadership judgment, incomplete records, hidden system debt,
+            and the boundaries of AI.
           </p>
           <p>
             <a href="/the-debrief">The Debrief</a> connects leadership and
@@ -391,7 +167,7 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
         <h2>The actual connections</h2>
         <p>
           The graph below follows links between published notes. It is separate
-          from the curated reading routes above.
+          from the curated connections above.
         </p>
       </div>
     </article>
