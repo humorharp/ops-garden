@@ -1,5 +1,5 @@
-import { PageLayout, SharedLayout } from "./quartz/cfg"
-import * as Component from "./quartz/components"
+import { PageLayout, SharedLayout } from "./quartz/cfg";
+import * as Component from "./quartz/components";
 
 const gardenExplorer = () =>
   Component.Explorer({
@@ -29,7 +29,10 @@ const gardenExplorer = () =>
         {
           title: "Safety & operational learning",
           links: [
-            { title: "Build the Sprinkler System", slug: "build-the-sprinkler-system" },
+            {
+              title: "Build the Sprinkler System",
+              slug: "build-the-sprinkler-system",
+            },
             { title: "Fleet Safety", slug: "fleet-safety" },
             { title: "The Debrief", slug: "the-debrief" },
             {
@@ -52,7 +55,7 @@ const gardenExplorer = () =>
         },
       ],
     },
-  })
+  });
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -70,7 +73,7 @@ export const sharedPageComponents: SharedLayout = {
       "Source on GitHub": "https://github.com/humorharp/ops-garden",
     },
   }),
-}
+};
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
@@ -79,9 +82,18 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
-    Component.TagList(),
+    Component.ConditionalRender({
+      component: Component.ArticleTitle(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.ContentMeta(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.TagList(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
   ],
   left: [
     Component.PageTitle(),
@@ -92,7 +104,7 @@ export const defaultContentPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
-        { Component: Component.Darkmode() },
+
         { Component: Component.ReaderMode() },
       ],
     }),
@@ -103,11 +115,15 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
-}
+};
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
@@ -117,10 +133,9 @@ export const defaultListPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
-        { Component: Component.Darkmode() },
       ],
     }),
     gardenExplorer(),
   ],
   right: [],
-}
+};

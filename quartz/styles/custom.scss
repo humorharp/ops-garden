@@ -1,3 +1,556 @@
 @use "./base.scss";
+:root,
+:root[saved-theme="dark"],
+:root[saved-theme="light"] {
+  color-scheme: dark;
+  --light: #0d1726;
+  --lightgray: #263a50;
+  --gray: #7d91a9;
+  --darkgray: #c6d3e2;
+  --dark: #edf4fd;
+  --secondary: #6ab2ef;
+  --tertiary: #56c5b5;
+  --highlight: #2474c724;
+  --textHighlight: #2474c744;
+  --route-blue: #368ee3;
+  --route-teal: #4cc7b2;
+  --route-amber: #e5b565;
+  --route-violet: #b394e9;
+}
+body {
+  background: var(--light);
+}
+a {
+  transition: color 0.15s;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--route-amber);
+  outline-offset: 5px;
+}
+a.internal {
+  background: transparent;
+  border-radius: 0;
+}
+article p,
+article li {
+  line-height: 1.85;
+}
+article h2 {
+  margin-top: 2.7rem;
+}
+article h3 {
+  margin-top: 2rem;
+}
+.article-title {
+  font-size: clamp(2rem, 3.7vw, 3.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+.page {
+  max-width: 1600px;
+}
+.page > #quartz-body {
+  grid-template-columns: 230px minmax(0, 760px) 260px;
+  column-gap: 36px;
+  padding: 0 32px;
+}
+.page > #quartz-body .sidebar {
+  padding: 48px 0 24px;
+  gap: 24px;
+}
+.page > #quartz-body .page-header {
+  margin-top: 48px;
+}
+.page-title {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+.page-title a {
+  color: var(--dark);
+}
+.content-meta {
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+.note-status {
+  border-color: #416586 !important;
+  background: #1a3048;
+}
+.tags {
+  gap: 0.5rem;
+}
+.tags a {
+  font-size: 0.8rem;
+  color: #a9c7e3;
+}
+.graph > .graph-outer {
+  background: #111f32;
+  border-color: var(--lightgray);
+  border-radius: 12px;
+}
+.graph > h3,
+.toc h3,
+.backlinks h3 {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+.explorer-content {
+  font-size: 0.85rem;
+}
+.explorer-content a {
+  font-weight: 400 !important;
+}
+.explorer-content .curated-group {
+  border-color: var(--lightgray);
+}
+footer {
+  border-top: 1px solid var(--lightgray);
+  padding-top: 24px;
+  opacity: 1;
+  color: var(--gray);
+}
+footer ul {
+  flex-wrap: wrap;
+  gap: 15px;
+}
+blockquote {
+  border-left: 3px solid var(--route-blue);
+  background: #142438;
+  padding: 12px 20px;
+  margin-left: 0;
+}
+hr {
+  background: var(--lightgray);
+}
 
-// put your custom CSS here!
+#quartz-root:has(.garden-home) {
+  max-width: 1320px;
+}
+#quartz-root:has(.garden-home) > #quartz-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "grid-sidebar-left" "grid-center" "grid-sidebar-right" "grid-footer";
+  padding: 0 40px;
+  gap: 0;
+}
+#quartz-root:has(.garden-home) .left.sidebar {
+  position: static;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  height: auto;
+  padding: 27px 0 !important;
+  border-bottom: 1px solid var(--lightgray);
+}
+#quartz-root:has(.garden-home) .left.sidebar .explorer,
+#quartz-root:has(.garden-home) .left.sidebar .spacer {
+  display: none;
+}
+#quartz-root:has(.garden-home) .left.sidebar > .flex-component {
+  max-width: 310px;
+}
+#quartz-root:has(.garden-home) .page-header {
+  margin: 0 !important;
+}
+#quartz-root:has(.garden-home) .center > hr,
+#quartz-root:has(.garden-home) .page-footer {
+  display: none;
+}
+#quartz-root:has(.garden-home) .right.sidebar {
+  position: static;
+  height: auto;
+  display: block !important;
+  padding: 12px 0 40px !important;
+}
+#quartz-root:has(.garden-home) .right.sidebar .toc,
+#quartz-root:has(.garden-home) .right.sidebar .backlinks {
+  display: none;
+}
+#quartz-root:has(.garden-home) .right.sidebar .graph-outer {
+  height: 340px;
+}
+.garden-home h1 {
+  font-size: clamp(2.4rem, 4.5vw, 4.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  margin: 0 0 24px;
+  display: block !important;
+}
+.garden-home h2 {
+  margin: 0 0 16px;
+  letter-spacing: -0.025em;
+}
+.garden-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 66px 0;
+}
+.garden-byline {
+  font-size: 0.83rem;
+  color: var(--gray);
+  margin: 0 0 20px;
+}
+.garden-deck {
+  font-size: 1.25rem;
+  line-height: 1.5 !important;
+  color: var(--dark);
+}
+.garden-intro-copy > p:not(.garden-deck):not(.garden-byline) {
+  font-size: 1rem;
+  max-width: 47ch;
+}
+.garden-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  font-size: 0.9rem;
+}
+.garden-primary {
+  background: #2474c7;
+  color: white;
+  padding: 11px 19px;
+  border-radius: 6px;
+}
+.garden-primary:hover {
+  background: #3284d7;
+  color: white;
+}
+.transit-panel {
+  background: #111f32;
+  border: 1px solid #29415b;
+  border-radius: 18px;
+  padding: 24px 22px;
+  box-shadow: 0 20px 60px #0002;
+}
+.map-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.map-caption h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+.map-caption span {
+  font-size: 0.7rem;
+  color: var(--gray);
+}
+.transit-panel svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 12px 0;
+}
+.route-blue {
+  stroke: var(--route-blue);
+}
+.route-teal {
+  stroke: var(--route-teal);
+}
+.route-amber {
+  stroke: var(--route-amber);
+}
+.route-violet {
+  stroke: var(--route-violet);
+}
+.transit-stations circle {
+  fill: #111f32;
+  stroke: #dfeaf7;
+  stroke-width: 3;
+}
+.transit-stations text {
+  fill: #c6d3e2;
+  font-size: 13px;
+  font-family: var(--bodyFont);
+}
+.transit-stations a:hover circle {
+  fill: var(--secondary);
+  stroke: white;
+}
+.transit-stations a:hover text {
+  fill: white;
+}
+.transit-stations .interchange {
+  fill: #edf4fd;
+  stroke: #111f32;
+  stroke-width: 5;
+}
+.transit-stations .interchange-label {
+  fill: #edf4fd;
+  font-size: 12px;
+}
+.route-legend {
+  padding: 0;
+  margin: 12px 0 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+.route-legend li {
+  margin: 0;
+  font-size: 0.72rem;
+}
+.route-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.route-label::before {
+  content: "";
+  width: 18px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--route-blue);
+  display: inline-block;
+  flex-shrink: 0;
+}
+.route-label.teal::before {
+  background: var(--route-teal);
+}
+.route-label.amber::before {
+  background: var(--route-amber);
+}
+.route-label.violet::before {
+  background: var(--route-violet);
+}
+.route-legend a {
+  color: var(--darkgray);
+}
+.featured-note {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  border-top: 1px solid var(--lightgray);
+  border-bottom: 1px solid var(--lightgray);
+  padding: 38px 0;
+}
+.featured-note h2 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+.featured-note h2 a {
+  color: var(--dark);
+}
+.featured-note p {
+  margin-top: 0;
+}
+.featured-note .garden-byline {
+  margin-bottom: 12px;
+}
+.garden-section-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: baseline;
+  margin: 50px 0 24px;
+}
+.garden-section-title h2 {
+  font-size: 1.65rem;
+}
+.garden-section-title > a {
+  font-size: 0.85rem;
+}
+.route-articles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+}
+.route-article {
+  border-top: 3px solid var(--route-blue);
+  padding-top: 20px;
+  scroll-margin-top: 24px;
+}
+.route-article.teal {
+  border-color: var(--route-teal);
+}
+.route-article.amber {
+  border-color: var(--route-amber);
+}
+.route-article.violet {
+  border-color: var(--route-violet);
+}
+.route-article > .route-label {
+  font-size: 0.78rem;
+  color: var(--gray);
+  margin: 0 0 16px;
+}
+.route-article h3 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 0 0 14px;
+}
+.route-article h3 a {
+  color: var(--dark);
+}
+.route-article > p:not(.route-label) {
+  font-size: 0.9rem;
+}
+.read-note {
+  font-size: 0.85rem;
+}
+.garden-outposts {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+  margin-top: 56px;
+  padding: 36px 0;
+  border-top: 1px solid var(--lightgray);
+}
+.garden-outposts h2 {
+  font-size: 1.6rem;
+}
+.garden-outposts p {
+  font-size: 0.95rem;
+}
+.graph-intro h2 {
+  font-size: 1.3rem;
+}
+.graph-intro p {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+@media (max-width: 1200px) {
+  .page > #quartz-body {
+    grid-template-columns: 200px minmax(0, 1fr);
+    padding: 0 24px;
+    column-gap: 30px;
+  }
+  .page > #quartz-body .right.sidebar {
+    position: static;
+    height: auto;
+  }
+  .garden-intro {
+    gap: 30px;
+  }
+  .route-articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .page > #quartz-body {
+    display: block;
+    padding: 0 22px;
+  }
+  .page > #quartz-body .sidebar.left {
+    padding: 24px 0;
+    gap: 15px;
+  }
+  .page > #quartz-body .page-header {
+    margin-top: 28px;
+  }
+  #quartz-root:has(.garden-home) > #quartz-body {
+    padding: 0 22px;
+  }
+  #quartz-root:has(.garden-home) .left.sidebar {
+    gap: 18px;
+  }
+  .garden-intro {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+    gap: 30px;
+  }
+  .garden-home h1 {
+    font-size: 2.7rem;
+  }
+  .garden-intro-copy > p {
+    max-width: 60ch;
+  }
+  .transit-panel {
+    max-width: 650px;
+    padding: 20px 12px;
+  }
+  .featured-note {
+    gap: 25px;
+  }
+  .garden-section-title {
+    display: block;
+  }
+  .garden-outposts {
+    gap: 30px;
+  }
+  .page-title {
+    font-size: 1.1rem;
+  }
+  #quartz-root:has(.garden-home) .left.sidebar > .flex-component {
+    max-width: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .garden-home h1 {
+    font-size: 2.3rem;
+  }
+  #quartz-root:has(.garden-home) .left.sidebar {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  #quartz-root:has(.garden-home) .left.sidebar > .flex-component {
+    max-width: none;
+    width: 100%;
+  }
+  .featured-note,
+  .garden-outposts,
+  .route-articles {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .map-caption {
+    display: block;
+  }
+  .map-caption span {
+    display: block;
+    margin-top: 5px;
+  }
+  .transit-stations text {
+    font-size: 15px;
+  }
+  .route-article {
+    padding-bottom: 12px;
+  }
+  .garden-outposts {
+    margin-top: 32px;
+  }
+  .article-title {
+    font-size: 2.2rem;
+  }
+  #quartz-root:has(.garden-home) .right.sidebar .graph-outer {
+    height: 270px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  a {
+    transition: none;
+  }
+}
+
+.transit-map-viewport {
+  overflow-x: auto;
+  scrollbar-color: #368ee3 #111f32;
+  scrollbar-width: thin;
+}
+.transit-map-viewport:focus-visible {
+  outline: 2px solid var(--route-amber);
+  outline-offset: 3px;
+}
+@media (max-width: 500px) {
+  .transit-map-viewport svg {
+    min-width: 500px;
+  }
+}
+.garden-intro > *,
+.transit-panel,
+.transit-map-viewport {
+  min-width: 0;
+  max-width: 100%;
+}
