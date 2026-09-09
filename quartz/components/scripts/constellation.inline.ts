@@ -33,6 +33,97 @@ document.addEventListener("nav", () => {
     ]),
   );
   const paths = Array.from(svg.querySelectorAll<SVGPathElement>("[data-from]"));
+
+  type LabelBox = { left: number; right: number; top: number; bottom: number };
+  const labels = [...nodes.values()]
+    .map((node) => {
+      const text = node.el.querySelector<SVGTextElement>("text")!;
+      return {
+        node,
+        text,
+        width: text.getComputedTextLength(),
+        offset: [0, 34] as [number, number],
+      };
+    })
+    .sort(
+      (a, b) =>
+        Number(b.node.el.classList.contains("idea-hub")) -
+        Number(a.node.el.classList.contains("idea-hub")),
+    );
+  function overlap(a: LabelBox, b: LabelBox) {
+    return (
+      Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left)) *
+      Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top))
+    );
+  }
+  function placeLabels() {
+    const placed: LabelBox[] = [];
+    const dots = [...nodes.values()].map((n) => ({
+      left: n.x + n.driftX - 24,
+      right: n.x + n.driftX + 24,
+      top: n.y + n.driftY - 24,
+      bottom: n.y + n.driftY + 24,
+    }));
+    for (const label of labels) {
+      const { node, text, width } = label;
+      const x = node.x + node.driftX,
+        y = node.y + node.driftY;
+      const side = width / 2 + 30;
+      const candidates: [number, number][] = [
+        label.offset,
+        [0, 38],
+        [0, -32],
+        [side, 5],
+        [-side, 5],
+        [side, 38],
+        [-side, 38],
+        [side, -32],
+        [-side, -32],
+        [0, 65],
+        [0, -58],
+      ];
+      let best = label.offset,
+        bestBox: LabelBox | undefined,
+        bestScore = Infinity;
+      for (const candidate of candidates) {
+        const [dx, dy] = candidate;
+        const box = {
+          left: x + dx - width / 2 - 6,
+          right: x + dx + width / 2 + 6,
+          top: y + dy - 19,
+          bottom: y + dy + 7,
+        };
+        const outside =
+          Math.max(0, 8 - box.left) +
+          Math.max(0, box.right - 892) +
+          Math.max(0, 8 - box.top) +
+          Math.max(0, box.bottom - 492);
+        const score =
+          outside * 1000 +
+          placed.reduce((sum, b) => sum + overlap(box, b), 0) * 10 +
+          dots.reduce((sum, b) => sum + overlap(box, b), 0);
+        if (score < bestScore) {
+          bestScore = score;
+          best = candidate;
+          bestBox = box;
+        }
+        // Keep the previous placement whenever it still has room.
+        if (score === 0) break;
+      }
+      label.offset = best;
+      text.setAttribute("text-anchor", "middle");
+      text.setAttribute("x", String(best[0]));
+      text.setAttribute("y", String(best[1]));
+      placed.push(bestBox!);
+    }
+  }
+  document.fonts.ready.then(() => {
+    if (controller.signal.aborted) return;
+    for (const label of labels)
+      label.width = label.text.getComputedTextLength();
+    placeLabels();
+  });
+
   function draw() {
     for (const node of nodes.values())
       node.el.setAttribute(
@@ -48,6 +139,7 @@ document.addEventListener("nav", () => {
         `M ${a.x + a.driftX} ${a.y + a.driftY} L ${b.x + b.driftX} ${b.y + b.driftY}`,
       );
     }
+    placeLabels();
   }
   function move(node: { x: number; y: number }, x: number, y: number) {
     node.x = Math.max(25, Math.min(875, x));
@@ -267,6 +359,7 @@ document.addEventListener("nav", () => {
     },
     options,
   );
+  placeLabels();
   panel.dataset.interactive = "true";
   window.addCleanup(() => {
     cancelAnimationFrame(animationFrame);
@@ -275,4 +368,3 @@ document.addEventListener("nav", () => {
     simulation.stop();
   });
 });
-
