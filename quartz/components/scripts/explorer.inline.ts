@@ -293,7 +293,9 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
 
     if (mobileExplorer.checkVisibility()) {
       explorer.classList.add("collapsed")
-      mobileExplorer.setAttribute("aria-expanded", "false")
+      explorer.querySelectorAll(".explorer-toggle").forEach((button) => {
+        button.setAttribute("aria-expanded", "false")
+      })
       explorer.setAttribute("aria-expanded", "false")
 
       // Allow <html> to be scrollable when mobile explorer is collapsed
