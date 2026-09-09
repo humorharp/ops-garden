@@ -20,9 +20,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: { name: "DM Serif Text", weights: [400], includeItalic: false },
+        body: { name: "DM Sans", weights: [400, 500, 600, 700] },
+        code: { name: "DM Mono", weights: [400, 500], includeItalic: false },
       },
       colors: {
         lightMode: {
