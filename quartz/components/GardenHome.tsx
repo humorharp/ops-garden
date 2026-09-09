@@ -1,6 +1,7 @@
 import { brandText, ChatIRWordmark } from "./ChatIRWordmark";
 import ReadingConstellation from "./ReadingConstellation";
 import RecordIllustration from "./RecordIllustration";
+import { gardenNavigation } from "./gardenNavigation";
 import { QuartzComponent, QuartzComponentProps } from "./types";
 
 const routes = [
@@ -67,7 +68,8 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
             <a class="garden-primary" href="#selected-writing">
               Start reading
             </a>
-            <a href="/about-these-notes">About this garden</a>
+            <a href="/garden-map">Garden Map</a>
+            <a href="#browse-garden">Browse by topic</a>
           </div>
         </div>
         <div class="idea-map-wrap">
@@ -170,6 +172,37 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
           </p>
         </div>
       </section>
+      <nav
+        id="browse-garden"
+        class="home-garden-browser"
+        aria-labelledby="browse-garden-title"
+      >
+        <div class="garden-section-title">
+          <h2 id="browse-garden-title">Browse the garden</h2>
+          <a href="/garden-map">Open the Garden Map</a>
+        </div>
+        <ul class="garden-orientation">
+          {gardenNavigation.orientation.map((link) => (
+            <li>
+              <a href={`/${link.slug}`}>{brandText(link.title)}</a>
+            </li>
+          ))}
+        </ul>
+        <div class="garden-topic-groups">
+          {gardenNavigation.groups.map((group) => (
+            <details>
+              <summary>{brandText(group.title)}</summary>
+              <ul>
+                {group.links.map((link) => (
+                  <li>
+                    <a href={`/${link.slug}`}>{brandText(link.title)}</a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
+      </nav>
       <div class="graph-intro">
         <h2>The actual connections</h2>
         <p>
