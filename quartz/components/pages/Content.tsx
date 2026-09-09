@@ -1,3 +1,4 @@
+import { brandProse } from "../../util/brand";
 // @ts-ignore: bundled by Quartz as a browser script
 import constellationScript from "../scripts/constellation.inline";
 import { ComponentChildren } from "preact";
@@ -32,9 +33,10 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
       firstHeading.properties = { ...firstHeading.properties, hidden: true };
     }
   }
+  brandProse(bodyTree);
   const content = htmlToJsx(fileData.filePath!, bodyTree) as ComponentChildren;
   const classes: string[] = fileData.frontmatter?.cssclasses ?? [];
-  const classString = ["popover-hint", ...classes].join(" ");
+  const classString = ["popover-hint", "garden-essay", ...classes].join(" ");
   return (
     <>
       <article class={classString}>{content}</article>

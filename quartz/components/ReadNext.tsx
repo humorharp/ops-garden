@@ -1,3 +1,4 @@
+import { brandText } from "./ChatIRWordmark";
 import { QuartzComponentProps } from "./types";
 import { resolveRelative } from "../util/path";
 
@@ -84,7 +85,7 @@ export default function ReadNext({ fileData, allFiles }: QuartzComponentProps) {
         href={resolveRelative(fileData.slug!, next.slug)}
       >
         <span class="read-next-label">Read next</span>
-        <span class="read-next-title">{next.frontmatter.title}</span>
+        <span class="read-next-title">{brandText(next.frontmatter.title)}</span>
         <svg
           class="read-next-arrow"
           aria-hidden="true"
@@ -98,7 +99,7 @@ export default function ReadNext({ fileData, allFiles }: QuartzComponentProps) {
           <path d="M6 16h20M18 8l8 8-8 8" />
         </svg>
       </a>
-      <p class="read-next-reason">{reason}</p>
+      <p class="read-next-reason">{brandText(reason)}</p>
       {index?.slug && (
         <a
           class="read-next-all internal"

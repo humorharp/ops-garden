@@ -1,3 +1,4 @@
+import { brandText, ChatIRWordmark } from "./ChatIRWordmark";
 import ReadingConstellation from "./ReadingConstellation";
 import RecordIllustration from "./RecordIllustration";
 import { QuartzComponent, QuartzComponentProps } from "./types";
@@ -56,8 +57,11 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
           </p>
           <p>
             Ideas from EMS, leadership, reading, and building{" "}
-            <a href="https://chatir.io/">chatIR</a>. Some are practical. Some
-            are still taking shape. This is where they meet.
+            <a href="https://chatir.io/">
+              <ChatIRWordmark />
+            </a>
+            . Some are practical. Some are still taking shape. This is where
+            they meet.
           </p>
           <div class="garden-actions">
             <a class="garden-primary" href="#selected-writing">
@@ -116,7 +120,7 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
           <p>
             What do incident forms make visible, and what stays in the
             narrative? A working note on the limits of the record and the
-            questions behind chatIR.
+            questions behind <ChatIRWordmark />.
           </p>
           <a href="/what-the-form-cannot-see">Read the working note</a>
         </div>
@@ -134,7 +138,7 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
             >
               <p class={`route-label ${route.color}`}>{route.name}</p>
               <h3>
-                <a href={`/${route.slug}`}>{route.title}</a>
+                <a href={`/${route.slug}`}>{brandText(route.title)}</a>
               </h3>
               <p>{route.description}</p>
               <a class="read-note" href={`/${route.slug}`}>
@@ -159,7 +163,10 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
             For my background and earlier projects, visit{" "}
             <a href="https://christopherjharper.com/">christopherjharper.com</a>
             . For the software growing from part of this work, explore{" "}
-            <a href="https://chatir.io/">chatIR</a>.
+            <a href="https://chatir.io/">
+              <ChatIRWordmark />
+            </a>
+            .
           </p>
         </div>
       </section>

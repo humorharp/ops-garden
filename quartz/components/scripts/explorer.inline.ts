@@ -1,3 +1,4 @@
+import { brandLabel } from "./brand"
 import { FileTrieNode } from "../../util/fileTrie"
 import { FullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
@@ -87,6 +88,7 @@ function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElemen
   a.href = resolveRelative(currentSlug, node.slug)
   a.dataset.for = node.slug
   a.textContent = node.displayName
+    brandLabel(a)
 
   if (currentSlug === node.slug) {
     a.classList.add("active")
@@ -123,10 +125,12 @@ function createFolderNode(
     a.dataset.for = folderPath
     a.className = "folder-title"
     a.textContent = node.displayName
+    brandLabel(a)
     button.replaceWith(a)
   } else {
     const span = titleContainer.querySelector(".folder-title") as HTMLElement
     span.textContent = node.displayName
+      brandLabel(span)
   }
 
   // if the saved state is collapsed or the default state is collapsed

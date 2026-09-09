@@ -1,5 +1,5 @@
 import { i18n } from "../i18n"
-import { FullSlug, getFileExtension, joinSegments, pathToRoot, simplifySlug } from "../util/path"
+import { FullSlug, joinSegments, pathToRoot, simplifySlug } from "../util/path"
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
 import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
@@ -36,7 +36,7 @@ export default (() => {
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
       (e) => e.name === CustomOgImagesEmitterName,
     )
-    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
+    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/garden-social-2026-09.png`
 
     return (
       <head>
@@ -62,16 +62,19 @@ export default (() => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta property="og:description" content={description} />
-        <meta property="og:image:alt" content={description} />
 
         {!usesCustomOgImage && (
           <>
             <meta property="og:image" content={ogImageDefaultPath} />
             <meta property="og:image:url" content={ogImageDefaultPath} />
             <meta name="twitter:image" content={ogImageDefaultPath} />
+            <meta property="og:image:width" content="1730" />
+            <meta property="og:image:height" content="909" />
+            <meta property="og:image:alt" content="Ops Knowledge Garden by Christopher Harper, with a branching leaf and node illustration." />
+            <meta name="twitter:image:alt" content="Ops Knowledge Garden by Christopher Harper, with a branching leaf and node illustration." />
             <meta
               property="og:image:type"
-              content={`image/${getFileExtension(ogImageDefaultPath) ?? "png"}`}
+              content="image/png"
             />
           </>
         )}

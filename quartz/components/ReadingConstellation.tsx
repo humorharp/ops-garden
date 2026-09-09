@@ -183,7 +183,16 @@ export default function ReadingConstellation() {
                   x={n.id === "debrief" ? -20 : n.id === "sprinkler" ? 20 : 0}
                   y={n.id === "questions" ? 65 : n.hub ? 43 : 32}
                 >
-                  {n.label}
+                  {n.label.split(/(\bchatIR\b)/g).map((part) =>
+                    part === "chatIR" ? (
+                      <tspan class="chatir-wordmark">
+                        <tspan class="chatir-wordmark__chat">chat</tspan>
+                        <tspan class="chatir-wordmark__ir">IR</tspan>
+                      </tspan>
+                    ) : (
+                      part
+                    ),
+                  )}
                 </text>
               </a>
             </g>
