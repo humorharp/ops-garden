@@ -162,10 +162,11 @@ function init() {
     }
     const room = x - textRight - 22;
     plantScale = small
-      ? 0.58
+      ? 0.22
       : Math.min(1.55, Math.max(0.8, room / 150), Math.max(1, t.height / 110));
     const beside = !small && room > 110;
-    plantX = beside ? textRight + 22 + room * 0.53 : x;
+    // Keep the mobile root cluster wholly inside the reserved reading gutter.
+    plantX = small ? x + 8 : beside ? textRight + 22 + room * 0.53 : x;
     plantY = beside ? t.bottom + scrollY - 18 : startY;
     startY = plantY;
     // Stable per essay, regenerated only for layout changes. No noise simulation per frame.

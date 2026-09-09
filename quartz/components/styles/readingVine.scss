@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as *;
+
 .reading-vine {
   position: absolute;
   top: 0;
@@ -72,4 +74,10 @@
 .reading-vine .vine-tip .vine-leaf {
   fill: #69b8db;
   stroke: none;
+}
+
+@media all and ($mobile) {
+  html:has(.explorer:not(.collapsed)) .reading-vine {
+    visibility: hidden;
+  }
 }
