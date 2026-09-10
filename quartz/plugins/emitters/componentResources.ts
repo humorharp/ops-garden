@@ -1,3 +1,5 @@
+// @ts-ignore
+import analyticsPreferences from "../../components/scripts/analyticsPreferences.inline"
 import { FullSlug, joinSegments } from "../../util/path"
 import { QuartzEmitterPlugin } from "../types"
 
@@ -9,6 +11,7 @@ import styles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
 import { BuildCtx } from "../../util/ctx"
 import { QuartzComponent } from "../../components/types"
+import { publicCampaign } from "../../util/publicCampaign"
 import {
   googleFontHref,
   googleFontSubsetHref,
@@ -87,22 +90,40 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
 
   if (cfg.analytics?.provider === "google") {
     const tagId = cfg.analytics.tagId
+    componentResources.afterDOMLoaded.push(analyticsPreferences)
     componentResources.afterDOMLoaded.push(`
-      if (location.hostname === "garden.christopherjharper.com") {
+      if (location.hostname === "garden.christopherjharper.com" && window.siteAnalyticsAllowed?.()) {
+      const campaign = (${publicCampaign.toString()})(location.search);
       const gtagScript = document.createElement('script');
       gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=${tagId}';
       gtagScript.defer = true;
       gtagScript.onload = () => {
+        if (!window.siteAnalyticsAllowed?.()) return;
         window.dataLayer = window.dataLayer || [];
         function gtag() {
           dataLayer.push(arguments);
         }
         gtag('js', new Date());
-        gtag('config', '${tagId}', { send_page_view: false });
-        gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
-        document.addEventListener('nav', () => {
-          gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
+        gtag('config', '${tagId}', {
+          ...campaign, send_page_view: false,
+          allow_google_signals: false, allow_ad_personalization_signals: false,
+          cookie_expires: 0, cookie_update: false, cookie_domain: "none",
+    page_referrer: (() => { try { return document.referrer ? new URL(document.referrer).origin : ""; } catch { return ""; } })(),
+          linker: { domains: [], accept_incoming: false, decorate_forms: false },
+          page_location: location.origin + location.pathname
         });
+        let lastPath;
+        const reportPage = () => {
+          if (!window.siteAnalyticsAllowed?.() || lastPath === location.pathname) return;
+          lastPath = location.pathname;
+          gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: location.origin + location.pathname,
+            page_path: location.pathname
+          });
+        };
+        reportPage();
+        document.addEventListener('nav', reportPage);
       };
 
       document.head.appendChild(gtagScript);
