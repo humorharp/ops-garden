@@ -9,7 +9,7 @@ created: 2026-06-04
 modified: 2026-09-08
 ---
 
-Writing by [Christopher Harper](https://christopherjharper.com?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=homepage-intro) about operational leadership, safety, and how organizations learn from difficult work.
+Writing by [Christopher Harper](https://christopherjharper.com) about operational leadership, safety, and how organizations learn from difficult work.
 
 Most of these ideas began during the decade I spent in EMS as an EMT, field training officer, and operations supervisor. They have since followed me into incident investigation, systems thinking, software, and the company I am building.
 
@@ -44,7 +44,7 @@ The essays are entrances, not a reading order. Links inside them trace ideas acr
 
 Use the [[garden-map|Garden Map]] for the larger shape. [[open-questions|Open Questions]] holds the parts I have not resolved. The status and last-tended date on each page show how settled a note is and when I last changed it.
 
-One branch of this thinking became [chatIR](https://chatir.io?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=homepage), software for helping operational and safety teams recover context from incident records and see recurring conditions without handing judgment to the software. The [[chatir|chatIR note]] follows the ideas, boundaries, and unanswered questions behind it.
+One branch of this thinking became [chatIR](https://chatir.io), software for helping operational and safety teams recover context from incident records and see recurring conditions without handing judgment to the software. The [[chatir|chatIR note]] follows the ideas, boundaries, and unanswered questions behind it.
 
 ## Field tools
 
@@ -52,6 +52,6 @@ Seven printable tools grew from the practical EMS-supervision notes: investigati
 
 ---
 
-I am [Christopher Harper](https://christopherjharper.com?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=homepage-about). This garden is where ideas from different parts of my work can meet before I know exactly what they will become. If something here is useful, or you think I have it wrong, I would like to hear about it.
+I am [Christopher Harper](https://christopherjharper.com). This garden is where ideas from different parts of my work can meet before I know exactly what they will become. If something here is useful, or you think I have it wrong, I would like to hear about it.
 
 _Built with [Quartz](https://quartz.jzhao.xyz). [Source on GitHub](https://github.com/humorharp/ops-garden)._

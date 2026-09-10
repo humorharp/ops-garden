@@ -9,6 +9,7 @@ import styles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
 import { BuildCtx } from "../../util/ctx"
 import { QuartzComponent } from "../../components/types"
+import { publicCampaign } from "../../util/publicCampaign"
 import {
   googleFontHref,
   googleFontSubsetHref,
@@ -89,6 +90,7 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     const tagId = cfg.analytics.tagId
     componentResources.afterDOMLoaded.push(`
       if (location.hostname === "garden.christopherjharper.com") {
+      const campaign = (${publicCampaign.toString()})(location.search);
       const gtagScript = document.createElement('script');
       gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=${tagId}';
       gtagScript.defer = true;
@@ -98,11 +100,24 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
           dataLayer.push(arguments);
         }
         gtag('js', new Date());
-        gtag('config', '${tagId}', { send_page_view: false });
-        gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
-        document.addEventListener('nav', () => {
-          gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
+        gtag('config', '${tagId}', {
+          ...campaign, send_page_view: false,
+          allow_google_signals: false, allow_ad_personalization_signals: false,
+          cookie_expires: 0, cookie_update: false,
+          page_location: location.origin + location.pathname
         });
+        let lastPath;
+        const reportPage = () => {
+          if (lastPath === location.pathname) return;
+          lastPath = location.pathname;
+          gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: location.origin + location.pathname,
+            page_path: location.pathname
+          });
+        };
+        reportPage();
+        document.addEventListener('nav', reportPage);
       };
 
       document.head.appendChild(gtagScript);
