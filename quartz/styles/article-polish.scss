@@ -227,3 +227,117 @@
     }
   }
 }
+
+// Single-essay trial: native sticky headings above one viewport-wide glass layer.
+#quartz-root .center > article.garden-essay .reading-section {
+  display: flow-root;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  > h2 {
+    position: static;
+    top: 16px;
+    z-index: 21;
+    margin: 0 0 1.4rem;
+    scroll-margin-top: 100px;
+  }
+  :is(h3, a, button, input) {
+    scroll-margin-top: 100px;
+  }
+}
+.reading-glass {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  pointer-events: none;
+  box-sizing: border-box;
+  background: rgba(13, 23, 38, 0.68);
+  border-bottom: 1px solid #6ab2ef24;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 160ms ease,
+    visibility 160ms;
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+body:has(.search-container.active) .reading-glass,
+body:has(#quartz-body.lock-scroll) .reading-glass {
+  visibility: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reading-glass {
+    transition: none;
+  }
+}
+@media print {
+  .reading-glass {
+    display: none;
+  }
+}
+
+@media print {
+  .reading-section > h2 {
+    position: static !important;
+  }
+}
+
+// Reserve space for the tallest reading heading so sidebars never duck under glass.
+@media (min-width: 801px) {
+  #quartz-root:has(.reading-section) > #quartz-body .sidebar.left {
+    padding-top: max(48px, var(--reading-sidebar-clearance, 100px));
+  }
+}
+@media (min-width: 1201px) {
+  #quartz-root:has(.reading-section) > #quartz-body .sidebar.right {
+    padding-top: max(48px, var(--reading-sidebar-clearance, 100px));
+  }
+}
+
+html.reading-glass-enabled
+  #quartz-root
+  .center
+  > article.garden-essay
+  .reading-section
+  > h2 {
+  position: sticky;
+}
+html.reading-glass-enabled
+  #quartz-root
+  .center
+  > article.garden-essay
+  .reading-section:has(:focus-visible)
+  > h2 {
+  position: static;
+}
+body:has(
+  .search-container.active,
+  .global-graph-outer.active,
+  #quartz-body.lock-scroll
+) {
+  .reading-glass {
+    visibility: hidden;
+  }
+  #quartz-root .center > article.garden-essay .reading-section > h2 {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+  #quartz-root:has(.reading-section)
+    > #quartz-body
+    .sidebar.left:has(.explorer) {
+    position: static;
+  }
+  body:has(.reading-section):has(.explorer:not(.collapsed)) {
+    .reading-glass {
+      visibility: hidden;
+    }
+    #quartz-root .center > article.garden-essay .reading-section > h2 {
+      visibility: hidden;
+    }
+  }
+}

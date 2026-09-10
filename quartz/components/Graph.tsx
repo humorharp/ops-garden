@@ -9,6 +9,7 @@ export interface D3Config {
   drag: boolean
   zoom: boolean
   depth: number
+  hubAndSpoke?: boolean
   scale: number
   repelForce: number
   centerForce: number
@@ -63,7 +64,9 @@ export default ((opts?: Partial<GraphOptions>) => {
   const Graph: QuartzComponent = ({ displayClass, cfg, fileData }: QuartzComponentProps) => {
     const localGraph = {
       ...defaultOptions.localGraph,
-      ...(fileData.slug === "index" ? { depth: -1, showTags: false, repelForce: 1.4, linkDistance: 65, fontSize: 1 } : {}),
+      ...(fileData.slug === "index" || fileData.slug === "garden-map"
+        ? { depth: -1, showTags: false, repelForce: 1.4, linkDistance: 65, fontSize: 1 }
+        : { hubAndSpoke: true }),
       ...opts?.localGraph,
     }
     const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
