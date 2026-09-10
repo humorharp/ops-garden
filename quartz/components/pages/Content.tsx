@@ -1,6 +1,8 @@
 import { brandProse } from "../../util/brand";
 // @ts-ignore: bundled by Quartz as a browser script
 import constellationScript from "../scripts/constellation.inline";
+// @ts-ignore: bundled by Quartz as a browser script
+import readingGlassScript from "../scripts/reading-glass.inline";
 import { ComponentChildren } from "preact";
 import { htmlToJsx } from "../../util/jsx";
 import {
@@ -10,7 +12,7 @@ import {
 } from "../types";
 import GardenHome from "../GardenHome";
 import ReadNext from "../ReadNext";
-import { Root } from "hast";
+import { Root, Element } from "hast";
 
 const Content: QuartzComponent = (props: QuartzComponentProps) => {
   const { fileData, tree } = props;
@@ -33,6 +35,25 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
       firstHeading.properties = { ...firstHeading.properties, hidden: true };
     }
   }
+  // Local design trial: each section bounds its own sticky heading.
+  if (fileData.slug === "what-the-form-cannot-see") {
+    const children = bodyTree.children;
+    bodyTree.children = [];
+    let section: Element | undefined;
+    for (const child of children) {
+      if (child.type === "element" && child.tagName === "h2") {
+        section = {
+          type: "element",
+          tagName: "section",
+          properties: { className: ["reading-section"] },
+          children: [],
+        };
+        bodyTree.children.push(section);
+      }
+      if (section) section.children.push(child as Element["children"][number]);
+      else bodyTree.children.push(child);
+    }
+  }
   brandProse(bodyTree);
   const content = htmlToJsx(fileData.filePath!, bodyTree) as ComponentChildren;
   const classes: string[] = fileData.frontmatter?.cssclasses ?? [];
@@ -45,5 +66,5 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
   );
 };
 
-Content.afterDOMLoaded = constellationScript;
+Content.afterDOMLoaded = constellationScript + "\n" + readingGlassScript;
 export default (() => Content) satisfies QuartzComponentConstructor;
