@@ -1,3 +1,5 @@
+// @ts-ignore
+import analyticsPreferences from "../../components/scripts/analyticsPreferences.inline"
 import { FullSlug, joinSegments } from "../../util/path"
 import { QuartzEmitterPlugin } from "../types"
 
@@ -88,13 +90,15 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
 
   if (cfg.analytics?.provider === "google") {
     const tagId = cfg.analytics.tagId
+    componentResources.afterDOMLoaded.push(analyticsPreferences)
     componentResources.afterDOMLoaded.push(`
-      if (location.hostname === "garden.christopherjharper.com") {
+      if (location.hostname === "garden.christopherjharper.com" && window.siteAnalyticsAllowed?.()) {
       const campaign = (${publicCampaign.toString()})(location.search);
       const gtagScript = document.createElement('script');
       gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=${tagId}';
       gtagScript.defer = true;
       gtagScript.onload = () => {
+        if (!window.siteAnalyticsAllowed?.()) return;
         window.dataLayer = window.dataLayer || [];
         function gtag() {
           dataLayer.push(arguments);
@@ -103,12 +107,14 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
         gtag('config', '${tagId}', {
           ...campaign, send_page_view: false,
           allow_google_signals: false, allow_ad_personalization_signals: false,
-          cookie_expires: 0, cookie_update: false,
+          cookie_expires: 0, cookie_update: false, cookie_domain: "none",
+    page_referrer: (() => { try { return document.referrer ? new URL(document.referrer).origin : ""; } catch { return ""; } })(),
+          linker: { domains: [], accept_incoming: false, decorate_forms: false },
           page_location: location.origin + location.pathname
         });
         let lastPath;
         const reportPage = () => {
-          if (lastPath === location.pathname) return;
+          if (!window.siteAnalyticsAllowed?.() || lastPath === location.pathname) return;
           lastPath = location.pathname;
           gtag('event', 'page_view', {
             page_title: document.title,

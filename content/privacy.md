@@ -1,10 +1,12 @@
 ---
 title: Privacy
-description: How this garden measures visits and page interactions.
+description: How this garden handles optional analytics.
 ---
 
-This garden uses Google Analytics to measure visits, navigation, and scrolling. Approved campaign labels help me see which posts brought readers here. Page locations sent to Google Analytics omit query strings. Advertising signals are disabled, and its cookies expire with the browser session.
+Optional Google Analytics is off by default. Analytics preferences at the bottom of each page lets you enable it or turn it off. This browser remembers your choice for 180 days. Global Privacy Control and Do Not Track signals keep optional analytics off.
 
-The garden, my personal site, and chatIR's public marketing pages use a shared analytics stream to help me understand navigation between them. The signed-in chatIR product and customer reports are outside that stream.
+When enabled, analytics measures public page visits, scrolling, and link use. Approved campaign labels help identify which posts brought readers here. Page locations omit query strings; advertising signals are disabled. Analytics cookies last for the browser session and are scoped to this host.
 
-These measurements have gaps. A scroll does not tell me whether someone read an essay, and a visit does not tell me who that person is.
+The garden, my personal site, and chatIR public pages share an analytics reporting destination. Each site requires its own choice, and automatic cross-site cookie linking is disabled. The signed-in product and customer reports are outside that stream. Session replay is not loaded.
+
+Hosting providers still process requests to deliver and secure the site. These measurements have gaps: a scroll does not tell me whether someone read an essay.
