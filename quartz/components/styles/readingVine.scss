@@ -26,6 +26,9 @@
   width: calc(100% - 96px);
 }
 @media (max-width: 700px) {
+  .vine-enabled .page-header .article-title {
+    padding-top: 110px;
+  }
   .vine-enabled #quartz-root .center:has(> article.garden-essay) > .page-header,
   .vine-enabled
     #quartz-root
@@ -36,6 +39,9 @@
   }
 }
 @media print {
+  .vine-enabled .page-header .article-title {
+    padding-top: 0;
+  }
   .reading-vine {
     display: none;
   }

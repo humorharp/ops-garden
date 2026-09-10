@@ -162,12 +162,16 @@ function init() {
     }
     const room = x - textRight - 22;
     plantScale = small
-      ? 0.22
+      ? 0.7
       : Math.min(1.55, Math.max(0.8, room / 150), Math.max(1, t.height / 110));
     const beside = !small && room > 110;
-    // Keep the mobile root cluster wholly inside the reserved reading gutter.
-    plantX = small ? x + 8 : beside ? textRight + 22 + room * 0.53 : x;
-    plantY = beside ? t.bottom + scrollY - 18 : startY;
+    // A reserved band above the mobile title gives the sprig room to grow.
+    plantX = small ? x - 25 : beside ? textRight + 22 + room * 0.53 : x;
+    plantY = small
+      ? t.top + scrollY + 105
+      : beside
+        ? t.bottom + scrollY - 18
+        : startY;
     startY = plantY;
     // Stable per essay, regenerated only for layout changes. No noise simulation per frame.
     let seed = 2166136261;
@@ -181,12 +185,12 @@ function init() {
       high = Math.min(w - 20, x + (small ? 9 : 19));
     const within = (n: number) => Math.max(low, Math.min(high, n));
     let px = x,
-      py = beside ? t.bottom + scrollY + 115 : startY,
+      py = small ? plantY + 75 : beside ? t.bottom + scrollY + 115 : startY,
       slope = 0,
       d = `M${plantX} ${plantY}`;
-    if (beside)
+    if (beside || small)
       d += ` C${plantX + (py - plantY) * 0.32} ${plantY + (py - plantY) * 0.59} ${x - 6} ${py - 57} ${x} ${py}`;
-    if (beside) slope = 6 / 57;
+    if (beside || small) slope = 6 / 57;
     let nextCurl = startY + 240 + random() * 400;
     while (py < endY - 230) {
       const step = 180 + random() * 310;
