@@ -78,7 +78,7 @@ Some of the current questions live in [[open-questions#What should AI be allowed
 
 ## Current public doorway
 
-[chatir.io](https://chatir.io?utm_source=garden&utm_medium=cta&utm_campaign=chatir&utm_content=chatir) is the product site. [christopherjharper.com](https://christopherjharper.com?utm_source=garden&utm_medium=referral&utm_campaign=garden&utm_content=chatir) has my background and contact information.
+[chatir.io](https://chatir.io) is the product site. [christopherjharper.com](https://christopherjharper.com) has my background and contact information.
 
 This note will keep changing as the product earns—or fails to earn—the claims I currently make about it.
 
