@@ -8,6 +8,7 @@ type GardenAnalyticsWindow = Window & {
 const analyticsWindow = window as GardenAnalyticsWindow
 
 function trackGardenEvent(name: string, parameters: Record<string, string | number | boolean>) {
+  if (location.hostname !== "garden.christopherjharper.com") return
   analyticsWindow.dataLayer = analyticsWindow.dataLayer ?? []
   analyticsWindow.gtag =
     analyticsWindow.gtag ??
