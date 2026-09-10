@@ -144,7 +144,7 @@ function init() {
     svg.setAttribute("height", "0");
     const w = document.documentElement.clientWidth,
       h = document.documentElement.scrollHeight;
-    small = w < 700;
+    small = w <= 700;
     svg.setAttribute("width", String(w));
     svg.setAttribute("height", String(h));
     startY = t.top + scrollY + t.height * 0.55;
