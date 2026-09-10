@@ -805,3 +805,10 @@ hr {
     transform: none;
   }
 }
+
+@media (max-width: 600px) {
+  .constellation-viewport { overflow-x: hidden; }
+  .reading-constellation { min-width: 0; width: 100%; aspect-ratio: 5 / 9; max-height: none; }
+  .garden-home .reading-constellation { max-height: none; }
+  .reading-constellation .idea-node text { font-size: 22px; }
+}

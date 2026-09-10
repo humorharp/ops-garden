@@ -124,7 +124,7 @@ export default function ReadingConstellation() {
       <div
         class="constellation-viewport"
         tabIndex={0}
-        aria-label="Connected ideas; scroll horizontally on small screens"
+        aria-label="Connected ideas"
       >
         <svg
           class="reading-constellation"

@@ -12,6 +12,9 @@ document.addEventListener("nav", () => {
   const panel = document.querySelector<HTMLElement>(".constellation-panel");
   const svg = panel?.querySelector<SVGSVGElement>(".reading-constellation");
   if (!panel || !svg) return;
+  const compact = window.matchMedia("(max-width: 600px)");
+  let sceneWidth = 900,
+    sceneHeight = 500;
   const controller = new AbortController();
   const options = { signal: controller.signal };
   const nodes = new Map(
@@ -99,9 +102,9 @@ document.addEventListener("nav", () => {
         };
         const outside =
           Math.max(0, 8 - box.left) +
-          Math.max(0, box.right - 892) +
+          Math.max(0, box.right - (sceneWidth - 8)) +
           Math.max(0, 8 - box.top) +
-          Math.max(0, box.bottom - 492);
+          Math.max(0, box.bottom - (sceneHeight - 8));
         const movement = Math.hypot(dx - label.offset[0], dy - label.offset[1]);
         const score =
           outside * 1000 +
@@ -152,11 +155,14 @@ document.addEventListener("nav", () => {
   });
 
   function draw() {
-    for (const node of nodes.values())
+    for (const node of nodes.values()) {
+      node.x = Math.max(30, Math.min(sceneWidth - 30, node.x));
+      node.y = Math.max(35, Math.min(sceneHeight - 40, node.y));
       node.el.setAttribute(
         "transform",
         `translate(${node.x + node.driftX} ${node.y + node.driftY})`,
       );
+    }
     for (const path of paths) {
       const a = nodes.get(path.dataset.from!)!,
         b = nodes.get(path.dataset.to!)!;
@@ -170,8 +176,8 @@ document.addEventListener("nav", () => {
     if (reducedMotion || driftPaused) renderLabels(0, true);
   }
   function move(node: { x: number; y: number }, x: number, y: number) {
-    node.x = Math.max(25, Math.min(875, x));
-    node.y = Math.max(25, Math.min(460, y));
+    node.x = Math.max(25, Math.min(sceneWidth - 25, x));
+    node.y = Math.max(25, Math.min(sceneHeight - 40, y));
     draw();
   }
   type Idea = (typeof nodes extends Map<string, infer N> ? N : never) &
@@ -208,6 +214,54 @@ document.addEventListener("nav", () => {
     .alphaDecay(0.045)
     .on("tick", draw)
     .stop();
+  function layoutScene() {
+    const narrow = compact.matches;
+    sceneWidth = narrow ? 500 : 900;
+    sceneHeight = narrow ? 900 : 500;
+    svg!.setAttribute("viewBox", `0 0 ${sceneWidth} ${sceneHeight}`);
+    for (const node of nodes.values()) {
+      const sourceX = Number(node.el.dataset.x),
+        sourceY = Number(node.el.dataset.y);
+      node.initialX = narrow ? 250 + (sourceY - 250) * 0.75 : sourceX;
+      node.initialY = narrow ? 450 + (sourceX - 450) * 1.25 : sourceY;
+      node.x = node.initialX;
+      node.y = node.initialY;
+      node.fx = null;
+      node.fy = null;
+      node.vx = 0;
+      node.vy = 0;
+      node.driftX = 0;
+      node.driftY = 0;
+    }
+    simulation
+      .stop()
+      .force(
+        "petals",
+        narrow
+          ? null
+          : forceRadial<Idea>(
+              (n) => (n.el.classList.contains("idea-hub") ? 65 : 185),
+              450,
+              250,
+            ).strength(0.12),
+      )
+      .force(
+        "x",
+        forceX<Idea>((n) => (narrow ? n.initialX : 450)).strength(
+          narrow ? 0.08 : 0.004,
+        ),
+      )
+      .force(
+        "y",
+        forceY<Idea>((n) => (narrow ? n.initialY : 250)).strength(
+          narrow ? 0.08 : 0.004,
+        ),
+      );
+    for (const label of labels)
+      label.width = label.text.getComputedTextLength();
+    draw();
+    renderLabels(0, true);
+  }
   function settle() {
     simulation.alphaTarget(0).alpha(0.5);
     if (reducedMotion) {
@@ -415,8 +469,8 @@ document.addEventListener("nav", () => {
     },
     options,
   );
-  placeLabels();
-  renderLabels(0, true);
+  layoutScene();
+  compact.addEventListener("change", layoutScene, options);
   panel.dataset.interactive = "true";
   window.addCleanup(() => {
     stopAnimation();
