@@ -355,7 +355,8 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     .explorer-content {
       box-sizing: border-box;
       z-index: 100;
-      position: absolute;
+      // The mobile panel belongs to the viewport, not the inset sidebar.
+      position: fixed;
       top: 0;
       left: 0;
       margin-top: 0;
@@ -367,7 +368,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
         transform 200ms ease,
         visibility 200ms ease;
       overflow: hidden;
-      padding: 4rem 0 2rem 0;
+      padding: 4rem 16px 2rem;
       height: 100dvh;
       max-height: 100dvh;
       visibility: hidden;

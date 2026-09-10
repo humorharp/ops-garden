@@ -1,3 +1,4 @@
+import ReadingVine from "./ReadingVine"
 import Content from "./pages/Content"
 import TagContent from "./pages/TagContent"
 import FolderContent from "./pages/FolderContent"
@@ -52,4 +53,5 @@ export {
   Flex,
   ConditionalRender,
   GardenAnalytics,
+  ReadingVine,
 }

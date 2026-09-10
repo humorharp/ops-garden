@@ -1,0 +1,83 @@
+@use "../../styles/variables.scss" as *;
+
+.reading-vine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
+}
+.reading-vine .vine-stem {
+  fill: none;
+  stroke: #609ebc;
+  stroke-width: 1.35;
+  opacity: 0.55;
+}
+.vine-enabled .read-next-arrow {
+  opacity: 0;
+}
+.vine-enabled #quartz-root .center:has(> article.garden-essay) > .page-header,
+.vine-enabled
+  #quartz-root
+  .center:has(> article.garden-essay)
+  > article.garden-essay,
+.vine-enabled #quartz-root .center:has(> article.garden-essay) > .read-next {
+  width: calc(100% - 96px);
+}
+@media (max-width: 700px) {
+  .vine-enabled #quartz-root .center:has(> article.garden-essay) > .page-header,
+  .vine-enabled
+    #quartz-root
+    .center:has(> article.garden-essay)
+    > article.garden-essay,
+  .vine-enabled #quartz-root .center:has(> article.garden-essay) > .read-next {
+    width: calc(100% - 32px);
+  }
+}
+@media print {
+  .reading-vine {
+    display: none;
+  }
+  .vine-enabled .read-next-arrow {
+    opacity: 1;
+  }
+  .vine-enabled #quartz-root .center:has(> article.garden-essay) > .page-header,
+  .vine-enabled
+    #quartz-root
+    .center:has(> article.garden-essay)
+    > article.garden-essay,
+  .vine-enabled #quartz-root .center:has(> article.garden-essay) > .read-next {
+    width: 100%;
+  }
+}
+
+.reading-vine .vine-plant .vine-leaf {
+  fill: #55c2c1;
+  stroke: none;
+}
+.reading-vine .vine-plant .vine-sprout:nth-child(odd) .vine-leaf {
+  fill: #6ac5e4;
+}
+.reading-vine .vine-plant .vine-vein {
+  display: none;
+}
+
+/* The same delicate foliage throughout the reading journey. */
+.reading-vine .vine-leaf {
+  fill: #55b8b5;
+  stroke: none;
+}
+.reading-vine .vine-vein {
+  display: none;
+}
+.reading-vine .vine-tip .vine-leaf {
+  fill: #69b8db;
+  stroke: none;
+}
+
+@media all and ($mobile) {
+  html:has(.explorer:not(.collapsed)) .reading-vine {
+    visibility: hidden;
+  }
+}

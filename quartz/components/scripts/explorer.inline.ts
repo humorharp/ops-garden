@@ -30,6 +30,10 @@ function toggleExplorer(this: HTMLElement) {
     nearestExplorer.getAttribute("aria-expanded") === "true" ? "false" : "true",
   )
 
+  nearestExplorer.querySelectorAll(".explorer-toggle").forEach((button) => {
+    button.setAttribute("aria-expanded", String(!explorerCollapsed))
+  })
+
   if (!explorerCollapsed) {
     // Stop <html> from being scrollable when mobile explorer is open
     document.documentElement.classList.add("mobile-no-scroll")
@@ -289,6 +293,9 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
 
     if (mobileExplorer.checkVisibility()) {
       explorer.classList.add("collapsed")
+      explorer.querySelectorAll(".explorer-toggle").forEach((button) => {
+        button.setAttribute("aria-expanded", "false")
+      })
       explorer.setAttribute("aria-expanded", "false")
 
       // Allow <html> to be scrollable when mobile explorer is collapsed
