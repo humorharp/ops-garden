@@ -13,8 +13,6 @@ modified: 2026-08-14
 
 Training a field training officer is different from training an EMT. Clinical competence still matters, but the new work is helping somebody else learn.
 
-I trained about 30 people at Royal Ambulance over my time as an FTO and supervisor. Here's what I learned.
-
 ---
 
 ## The Core Problem
