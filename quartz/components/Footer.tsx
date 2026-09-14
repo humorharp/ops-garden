@@ -1,3 +1,4 @@
+import { brandText } from "./ChatIRWordmark"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
 import { version } from "../../package.json"
@@ -20,7 +21,7 @@ export default ((opts?: Options) => {
         <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>
-              <a href={link}>{text}</a>
+              <a href={link}>{brandText(text)}</a>
             </li>
           ))}
         </ul>

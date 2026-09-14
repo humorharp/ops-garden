@@ -77,6 +77,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     drag: enableDrag,
     zoom: enableZoom,
     depth,
+    hubAndSpoke = false,
     scale,
     repelForce,
     centerForce,
@@ -154,21 +155,31 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const graphData: { nodes: NodeData[]; links: LinkData[] } = {
     nodes,
     links: links
-      .filter((l) => neighbourhood.has(l.source) && neighbourhood.has(l.target))
+      .filter((l) =>
+        neighbourhood.has(l.source) && neighbourhood.has(l.target) &&
+        (!hubAndSpoke || l.source === slug || l.target === slug),
+      )
       .map((l) => ({
         source: nodes.find((n) => n.id === l.source)!,
         target: nodes.find((n) => n.id === l.target)!,
       })),
   }
 
-  const width = graph.offsetWidth
-  const height = Math.max(graph.offsetHeight, 250)
+  let width = graph.offsetWidth
+  let height = Math.max(graph.offsetHeight, 250)
 
   // we virtualize the simulation and use pixi to actually render it
   const simulation: Simulation<NodeData, LinkData> = forceSimulation<NodeData>(graphData.nodes)
     .force("charge", forceManyBody().strength(-100 * repelForce))
     .force("center", forceCenter().strength(centerForce))
-    .force("link", forceLink(graphData.links).distance(linkDistance))
+    .force("link", forceLink(graphData.links).distance((link) => {
+      if (!hubAndSpoke) return linkDistance
+      // Stable, uneven spacing makes the local neighborhood a loose cluster.
+      const neighbor = link.source.id === slug ? link.target.id : link.source.id
+      let hash = 0
+      for (const char of neighbor) hash = (Math.imul(hash, 31) + char.charCodeAt(0)) >>> 0
+      return linkDistance * (0.9 + (hash % 101) / 55)
+    }))
     .force("collide", forceCollide<NodeData>((n) => nodeRadius(n)).iterations(3))
 
   const radius = (Math.min(width, height) / 2) * 0.8
@@ -499,7 +510,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   if (enableZoom) {
     select<HTMLCanvasElement, NodeData>(app.canvas).call(
       zoom<HTMLCanvasElement, NodeData>()
-        .extent([
+        .extent((): [[number, number], [number, number]] => [
           [0, 0],
           [width, height],
         ])
@@ -523,12 +534,23 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     )
   }
 
+  // Keep the canvas centered when the responsive container changes size.
+  const resizeObserver = new ResizeObserver(() => {
+    const nextWidth = graph.offsetWidth
+    const nextHeight = Math.max(graph.offsetHeight, 250)
+    if (nextWidth <= 0 || (nextWidth === width && nextHeight === height)) return
+    width = nextWidth
+    height = nextHeight
+    app.renderer.resize(width, height)
+  })
+  resizeObserver.observe(graph)
+
   let stopAnimation = false
   function animate(time: number) {
     if (stopAnimation) return
     for (const n of nodeRenderData) {
       const { x, y } = n.simulationData
-      if (!x || !y) continue
+      if (x == null || y == null) continue
       n.gfx.position.set(x + width / 2, y + height / 2)
       if (n.label) {
         n.label.position.set(x + width / 2, y + height / 2)
@@ -552,6 +574,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   requestAnimationFrame(animate)
   return () => {
     stopAnimation = true
+    resizeObserver.disconnect()
+    simulation.stop()
     app.destroy()
   }
 }

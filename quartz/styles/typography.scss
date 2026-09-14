@@ -1,0 +1,58 @@
+// The DM family connects the sites; serif identifies the garden's reading space.
+// UI stays in DM Sans, including navigation, metadata, controls, and graph labels.
+:root {
+  --readingFont: "DM Serif Text", Georgia, serif;
+}
+
+#quartz-root h1,
+#quartz-root h2,
+#quartz-root h3,
+#quartz-root h4,
+#quartz-root h5,
+#quartz-root h6 {
+  font-family: var(--readingFont);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+#quartz-root:not(:has(.garden-home)) .center > article {
+  font-family: var(--readingFont);
+  font-size: 1.2rem;
+  line-height: 1.7;
+
+  p,
+  li,
+  blockquote {
+    font-family: inherit;
+    line-height: 1.7;
+  }
+}
+
+.sidebar,
+.breadcrumb-container,
+.content-meta,
+.tags,
+.garden-byline,
+.garden-actions,
+.route-label,
+.constellation-panel,
+.read-next,
+button,
+input,
+select,
+textarea {
+  font-family: var(--bodyFont);
+}
+
+.sidebar,
+.constellation-panel {
+  --headerFont: var(--bodyFont);
+}
+
+#quartz-root .sidebar h2,
+#quartz-root .sidebar h3,
+#quartz-root .constellation-panel h2,
+#quartz-root .constellation-panel h3 {
+  font-family: var(--bodyFont);
+  font-weight: 600;
+}

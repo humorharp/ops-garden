@@ -1,0 +1,45 @@
+/* chatIR wordmark v1. Keep letters adjacent and retain real, selectable text. */
+.chatir-wordmark {
+  --chatir-chat: #edf4fd;
+  --chatir-ir: #6ab2ef;
+  white-space: nowrap;
+  text-transform: none;
+  font-style: normal;
+}
+.chatir-wordmark__chat {
+  color: var(--chatir-chat);
+}
+.chatir-wordmark__ir {
+  color: var(--chatir-ir);
+}
+.chatir-wordmark--light {
+  --chatir-chat: #132a44;
+  --chatir-ir: #216cba;
+}
+.chatir-wordmark--display {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 650;
+  letter-spacing: -0.055em;
+}
+@media (forced-colors: active) {
+  .chatir-wordmark__chat,
+  .chatir-wordmark__ir {
+    color: CanvasText;
+    -webkit-text-fill-color: currentColor;
+    -webkit-text-stroke: 0;
+  }
+  a .chatir-wordmark__chat,
+  a .chatir-wordmark__ir {
+    color: LinkText;
+  }
+}
+
+.reading-constellation .chatir-wordmark__chat {
+  fill: #edf4fd;
+}
+.reading-constellation .chatir-wordmark__ir {
+  fill: #6ab2ef;
+}
+
+/* Preserve both letter colors against search highlighting. */
+.search .highlight:has(.chatir-wordmark) { background: #102239; box-shadow: inset 0 -1px #56c5b5; }

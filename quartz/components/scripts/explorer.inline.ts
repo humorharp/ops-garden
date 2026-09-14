@@ -1,3 +1,4 @@
+import { brandLabel } from "./brand"
 import { FileTrieNode } from "../../util/fileTrie"
 import { FullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
@@ -28,6 +29,10 @@ function toggleExplorer(this: HTMLElement) {
     "aria-expanded",
     nearestExplorer.getAttribute("aria-expanded") === "true" ? "false" : "true",
   )
+
+  nearestExplorer.querySelectorAll(".explorer-toggle").forEach((button) => {
+    button.setAttribute("aria-expanded", String(!explorerCollapsed))
+  })
 
   if (!explorerCollapsed) {
     // Stop <html> from being scrollable when mobile explorer is open
@@ -87,6 +92,7 @@ function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElemen
   a.href = resolveRelative(currentSlug, node.slug)
   a.dataset.for = node.slug
   a.textContent = node.displayName
+    brandLabel(a)
 
   if (currentSlug === node.slug) {
     a.classList.add("active")
@@ -123,10 +129,12 @@ function createFolderNode(
     a.dataset.for = folderPath
     a.className = "folder-title"
     a.textContent = node.displayName
+    brandLabel(a)
     button.replaceWith(a)
   } else {
     const span = titleContainer.querySelector(".folder-title") as HTMLElement
     span.textContent = node.displayName
+      brandLabel(span)
   }
 
   // if the saved state is collapsed or the default state is collapsed
@@ -285,6 +293,9 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
 
     if (mobileExplorer.checkVisibility()) {
       explorer.classList.add("collapsed")
+      explorer.querySelectorAll(".explorer-toggle").forEach((button) => {
+        button.setAttribute("aria-expanded", "false")
+      })
       explorer.setAttribute("aria-expanded", "false")
 
       // Allow <html> to be scrollable when mobile explorer is collapsed
