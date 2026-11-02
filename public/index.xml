@@ -6,6 +6,24 @@
       <description>Last 10 notes on Ops Knowledge Garden</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Privacy</title>
+    <link>https://garden.christopherjharper.com/privacy</link>
+    <guid>https://garden.christopherjharper.com/privacy</guid>
+    <description><![CDATA[ How this garden handles optional analytics. ]]></description>
+    <pubDate>Mon, 02 Nov 2026 19:29:36 GMT</pubDate>
+  </item><item>
+    <title>Ops Knowledge Garden</title>
+    <link>https://garden.christopherjharper.com/</link>
+    <guid>https://garden.christopherjharper.com/</guid>
+    <description><![CDATA[ Essays and working notes by Christopher Harper about operational leadership, safety, organizational learning, and the ideas behind chatIR. ]]></description>
+    <pubDate>Tue, 08 Sep 2026 07:00:00 GMT</pubDate>
+  </item><item>
+    <title>What the Form Can&#039;t See</title>
+    <link>https://garden.christopherjharper.com/what-the-form-cannot-see</link>
+    <guid>https://garden.christopherjharper.com/what-the-form-cannot-see</guid>
+    <description><![CDATA[ Incident forms count what is easy to count. The conditions that produce losses live in the narrative underneath, where nobody reads them at scale. This is the gap chatIR was built for, and its honest limits. ]]></description>
+    <pubDate>Thu, 20 Aug 2026 07:00:00 GMT</pubDate>
+  </item><item>
     <title>A Problem Passed Around Is a Problem Owned by Nobody</title>
     <link>https://garden.christopherjharper.com/a-problem-passed-around-is-owned-by-nobody</link>
     <guid>https://garden.christopherjharper.com/a-problem-passed-around-is-owned-by-nobody</guid>
@@ -39,31 +57,13 @@
     <title>Fleet Safety</title>
     <link>https://garden.christopherjharper.com/fleet-safety</link>
     <guid>https://garden.christopherjharper.com/fleet-safety</guid>
-    <description><![CDATA[ The system behind a measured 30 percent reduction in ambulance accidents during the first year. ]]></description>
+    <description><![CDATA[ The system behind a measured 25 percent reduction in the ambulance accident rate from 2021 to 2022. ]]></description>
     <pubDate>Fri, 14 Aug 2026 07:00:00 GMT</pubDate>
   </item><item>
     <title>Garden Map</title>
     <link>https://garden.christopherjharper.com/garden-map</link>
     <guid>https://garden.christopherjharper.com/garden-map</guid>
     <description><![CDATA[ A map of the ideas, practices, and open questions in this public knowledge garden. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 07:00:00 GMT</pubDate>
-  </item><item>
-    <title>Hard Conversations</title>
-    <link>https://garden.christopherjharper.com/hard-conversations</link>
-    <guid>https://garden.christopherjharper.com/hard-conversations</guid>
-    <description><![CDATA[ What I learned about being direct without making another person smaller. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 07:00:00 GMT</pubDate>
-  </item><item>
-    <title>The Report Was Accurate. It Was Still Incomplete.</title>
-    <link>https://garden.christopherjharper.com/incident-reports-can-be-accurate-and-still-incomplete</link>
-    <guid>https://garden.christopherjharper.com/incident-reports-can-be-accurate-and-still-incomplete</guid>
-    <description><![CDATA[ A formal incident record can document the required facts without preserving the conditions a safety team needs for learning. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 07:00:00 GMT</pubDate>
-  </item><item>
-    <title>Christopher Harper — Ops Knowledge Garden</title>
-    <link>https://garden.christopherjharper.com/</link>
-    <guid>https://garden.christopherjharper.com/</guid>
-    <description><![CDATA[ Curated working notes about operational leadership, safety, learning, and building chatIR. ]]></description>
     <pubDate>Fri, 14 Aug 2026 07:00:00 GMT</pubDate>
   </item>
     </channel>

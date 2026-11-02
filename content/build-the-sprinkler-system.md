@@ -47,7 +47,7 @@ An ambulance accident happens. The immediate response naturally focuses on the d
 
 The work changed when we stopped treating every collision as a self-contained event and looked across the record. Accident types, training, policy, technology, locations, behavior, and the way supervisors coached after an event were connected.
 
-The measurable result during my project period was a 30% reduction in the accident rate, from 1.0 to 0.7 per 1,000 trips in the first year.
+I contributed to a measured 25% reduction in the ambulance accident rate, from 1.0 accidents per 1,000 trips in 2021 to 0.75 in 2022.
 
 The number matters. The more important lesson for me was that the reduction did not come from finding one root cause or writing one stronger rule. It came from building a system that could notice, learn, intervene, and continue measuring.
 
