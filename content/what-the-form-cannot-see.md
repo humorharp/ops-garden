@@ -43,7 +43,7 @@ Building it meant pulling a year of accident reports into one spreadsheet and re
 
 And frankly, that particular pattern is the kind of thing you could find in a pivot table, if you have the time. Tenure was a column. That is the easy case, and I want to be honest that it was the easy case. The conditions that actually produce losses are almost never columns. They are sentences, buried in a narrative field, phrased forty different ways by forty different people. You cannot pivot on those. That is the harder problem, and it is the one I ended up building for.
 
-We aimed the training differently after that, and accidents came down about 30 percent over the following year, from roughly one per thousand trips to about 0.7. I have told that story a lot of times. The part I keep having to correct in the telling is that it was not an insight. It was an arithmetic operation that we finally got around to performing.
+We aimed the training differently after that. The recorded ambulance accident rate fell 25 percent, from 1.0 per thousand trips in 2021 to 0.75 in 2022. I contributed to that improvement; the before-and-after comparison does not isolate the effect of the training change. I have told that story a lot of times. The part I keep having to correct in the telling is that it was not an insight. It was an arithmetic operation that we finally got around to performing.
 
 ## Five whys, and the person standing at the end of them
 

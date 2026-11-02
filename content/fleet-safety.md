@@ -1,7 +1,7 @@
 ---
 title: Fleet Safety
 aliases: [Ambulance Accident Reduction, The Driving Safety Project]
-description: The system behind a measured 30 percent reduction in ambulance accidents during the first year.
+description: The system behind a measured 25 percent reduction in the ambulance accident rate from 2021 to 2022.
 tags: [safety, fleet, dmaic, metrics, ambulance]
 type: case-study
 status: evergreen
@@ -11,7 +11,7 @@ modified: 2026-08-14
 
 # Fleet Safety
 
-During the first year of this project, the rate moved from 1.0 to 0.7 accidents per 1,000 trips. This is the method we used and what I think it taught me.
+I contributed to a 25% reduction in the ambulance accident rate, from 1.0 accidents per 1,000 trips in 2021 to 0.75 in 2022. This is the method we used and what I think it taught me.
 
 ---
 
@@ -61,7 +61,7 @@ Backing incidents were the highest-frequency category. We did more than issue an
 
 My strongest recollection is that the coaching conversations changed the quality of the work. Sitting with an operator and looking at their own data as a shared safety problem produced a different conversation than beginning with a disciplinary write-up. I cannot isolate how much of the measured reduction came from coaching, spotter practice, training, telematics, or other changes happening at the same time.
 
-The 30% change was measured: the rate moved from 1.0 to 0.7 accidents per 1,000 trips during the first year. The process is documented well enough for another team to adapt and test. The result is not a promise that another fleet—or even the same fleet in another year—will produce the same number.
+My March 7, 2023 self-evaluation records the measured change: from 1.0 accidents per 1,000 trips in 2021 to 0.75 in 2022, a 25% reduction. The 30% reduction to 0.7 was the goal, not the achieved result. The process is documented well enough for another team to adapt and test. The result is not a promise that another fleet—or even the same fleet in another year—will produce the same number.
 
 ---
 
