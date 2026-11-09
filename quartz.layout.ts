@@ -18,7 +18,7 @@ export const sharedPageComponents: SharedLayout = {
       "About these notes": "/about-these-notes",
       "Garden map": "/garden-map",
       "Christopher Harper":
-        "https://christopherjharper.com",
+        "https://www.christopherjharper.com/",
       chatIR:
         "https://chatir.io",
       Privacy: "/privacy",
