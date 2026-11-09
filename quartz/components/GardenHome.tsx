@@ -163,7 +163,9 @@ const GardenHome: QuartzComponent = ({ allFiles }: QuartzComponentProps) => {
         <div>
           <p>
             For my background and earlier projects, visit{" "}
-            <a href="https://christopherjharper.com/">christopherjharper.com</a>
+            <a href="https://www.christopherjharper.com/">
+              christopherjharper.com
+            </a>
             . For the software growing from part of this work, explore{" "}
             <a href="https://chatir.io/">
               <ChatIRWordmark />
