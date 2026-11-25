@@ -12,7 +12,7 @@ const gardenExplorer = () =>
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [Component.GardenAnalytics],
+  afterBody: [Component.GardenAnalytics, Component.ReadingVine],
   footer: Component.Footer({
     links: {
       "About these notes": "/about-these-notes",
