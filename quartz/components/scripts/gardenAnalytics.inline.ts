@@ -1,6 +1,7 @@
 import { sanitizeAnalyticsDestination } from "./gardenAnalyticsUtils"
 
 type GardenAnalyticsWindow = Window & {
+  siteAnalyticsAllowed?: () => boolean
   dataLayer?: IArguments[]
   gtag?: (...args: unknown[]) => void
 }
@@ -8,6 +9,7 @@ type GardenAnalyticsWindow = Window & {
 const analyticsWindow = window as GardenAnalyticsWindow
 
 function trackGardenEvent(name: string, parameters: Record<string, string | number | boolean>) {
+  if (location.hostname !== "garden.christopherjharper.com" || !analyticsWindow.siteAnalyticsAllowed?.()) return
   analyticsWindow.dataLayer = analyticsWindow.dataLayer ?? []
   analyticsWindow.gtag =
     analyticsWindow.gtag ??
